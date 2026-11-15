@@ -1,3 +1,5 @@
+*, *::before, *::after { box-sizing: border-box; }
+
 html, body {
   height: 100%;          /* set full viewport height */
   margin: 0;             /* remove default margins */
@@ -1019,13 +1021,16 @@ body {
   justify-content: center;
 }
 
+/* picker scales with viewport width: 760px up to 1920, ~1140px at 2560 */
 .picker-box {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: min(760px, 100%);
+  --picker-scale: 1;
+  gap: calc(10px * var(--picker-scale));
+  width: clamp(760px, calc(59.375vw - 380px), 1140px);
+  max-width: 100%;
   max-height: 100%;
-  padding: 12px;
+  padding: calc(12px * var(--picker-scale));
   background: rgba(16, 20, 26, 0.98);
   border: 1px solid rgba(255, 215, 0, 0.35);
   border-radius: 14px;
@@ -1037,24 +1042,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: calc(8px * var(--picker-scale));
 }
 
 #picker-title {
-  font-size: 15px;
+  font-size: calc(15px * var(--picker-scale));
   font-weight: bold;
   color: #ffd700;
 }
 
 #picker-close {
-  flex: 0 0 26px;
-  width: 26px;
-  height: 26px;
+  flex: 0 0 calc(26px * var(--picker-scale));
+  width: calc(26px * var(--picker-scale));
+  height: calc(26px * var(--picker-scale));
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   color: #fff;
-  font-size: 12px;
+  font-size: calc(12px * var(--picker-scale));
   line-height: 1;
   cursor: pointer;
 }
@@ -1065,19 +1070,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: calc(8px * var(--picker-scale));
 }
 
 #picker-search {
   flex: 1 1 170px;
   min-width: 0;
-  padding: 6px 10px;
+  padding: calc(6px * var(--picker-scale)) calc(10px * var(--picker-scale));
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: #fff;
   font: inherit;
-  font-size: 13px;
+  font-size: calc(13px * var(--picker-scale));
 }
 
 #picker-search:focus { outline: none; border-color: #ffd700; }
@@ -1085,8 +1090,8 @@ body {
 .picker-check {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
+  gap: calc(5px * var(--picker-scale));
+  font-size: calc(12px * var(--picker-scale));
   color: #b8c0cc;
   cursor: pointer;
 }
@@ -1094,13 +1099,13 @@ body {
 .picker-check input { accent-color: #ffd700; }
 
 #picker-clear {
-  padding: 6px 10px;
+  padding: calc(6px * var(--picker-scale)) calc(10px * var(--picker-scale));
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: #ffb0b0;
   font: inherit;
-  font-size: 12px;
+  font-size: calc(12px * var(--picker-scale));
   cursor: pointer;
 }
 
@@ -1110,23 +1115,25 @@ body {
   color: #fff;
 }
 
+/* 4 karty w rzędzie: kolumny są równe, a karta wypełnia szerokość kafelka */
 #picker-grid {
   flex: 1 1 auto;
-  min-height: 140px;
+  min-height: calc(140px * var(--picker-scale));
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-content: start;
-  gap: 8px;
+  gap: calc(8px * var(--picker-scale));
   padding: 2px;
   overflow-y: auto;
+  container-type: inline-size;
 }
 
 .picker-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: 6px 4px;
+  gap: calc(2px * var(--picker-scale));
+  padding: calc(6px * var(--picker-scale)) calc(4px * var(--picker-scale));
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
@@ -1134,6 +1141,7 @@ body {
   font: inherit;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  container-type: inline-size;
 }
 
 .picker-tile:hover:not(:disabled) {
@@ -1146,27 +1154,32 @@ body {
 
 .picker-tile.off-position { border-color: rgba(255, 107, 107, 0.7); }
 
-/* the card is 243x353; the picker shows it scaled to 27% (66x96) */
+/* karta 243x353; wrap = 100% szerokości kafelka, aspect-ratio jak karta */
 .picker-card-wrap {
   position: relative;
-  width: 66px;
-  height: 96px;
+  width: 100%;
+  aspect-ratio: 243 / 353;
 }
 
+/* karta w pickerze: 90% szerokości kafelka (10% mniejsza), wyśrodkowana.
+   cqw liczy się od najbliższego przodka-container (.picker-tile ma container-type).
+   left:5% (połowa 10%) + scale 0.9 → karta wyśrodkowana w kafelku. */
 .picker-card-wrap .card,
 .picker-card-wrap .card.show {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5%;
   opacity: 1;
-  transform: scale(0.27);
-  transform-origin: 0 0;
+  width: 243px;
+  height: 353px;
+  transform: scale(calc(100cqw / 243px * 0.9));
+  transform-origin: top left;
   transition: none;
   animation: none;
 }
 
 .picker-label {
-  font-size: 11px;
+  font-size: calc(11px * var(--picker-scale));
   font-weight: bold;
   letter-spacing: 0.5px;
   color: #ffd700;
@@ -1174,37 +1187,46 @@ body {
 }
 
 .picker-name {
-  max-width: 96px;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 11px;
+  font-size: calc(11px * var(--picker-scale));
   color: #c7ceda;
   text-align: center;
 }
 
 .picker-empty {
   grid-column: 1 / -1;
-  padding: 24px 8px;
+  padding: calc(24px * var(--picker-scale)) calc(8px * var(--picker-scale));
   color: #8f98a6;
-  font-size: 13px;
+  font-size: calc(13px * var(--picker-scale));
   text-align: center;
 }
 
 #picker-more {
   display: none;
   margin: 0 auto;
-  padding: 7px 14px;
+  padding: calc(7px * var(--picker-scale)) calc(14px * var(--picker-scale));
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 8px;
   font: inherit;
-  font-size: 13px;
+  font-size: calc(13px * var(--picker-scale));
   cursor: pointer;
 }
 
 #picker-more:hover { background: rgba(255, 215, 0, 0.2); border-color: #ffd700; }
+
+/* large screens: scale the whole picker up so cards stay legible */
+@media (min-width: 2200px) {
+  .picker-box { --picker-scale: 1.25; }
+}
+
+@media (min-width: 2500px) {
+  .picker-box { --picker-scale: 1.5; }
+}
 
 @media (max-width: 1200px) {
   #squad-side { max-width: 46%; }
@@ -1236,6 +1258,4 @@ body {
   .squad-side-head span { display: none; }
   .team-name { width: 72px; font-size: 12px; }
   .squad-slot .slot-pos { top: -9px; font-size: 9px; line-height: 13px; }
-  #picker-grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
-  .picker-card-wrap { width: 66px; height: 96px; }
 }

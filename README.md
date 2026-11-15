@@ -1,6 +1,6 @@
-# FIFA 15 Pack Opener ⚽
+# FIFA 15 UT Simulator ⚽
 
-- [🎮 Click here to play the game!](https://mateuszmachowina.github.io/PackOpenerF15/)
+- [🎮 Click here to play the game!](https://mateuszmachowina.github.io/F15_UT/)
 
 A browser-based FIFA 15 pack opening simulator: open packs, collect players, build squads and track team rating and chemistry. It includes **720 cards** representing **408 players**.
 
@@ -25,7 +25,7 @@ I have always learned by setting myself challenges, building projects and solvin
 - 🃏 **Club** – browse, search, filter and sort your collection; sell duplicates or selected cards.
 - ⚽ **Squad** – create multiple teams, choose from 9 formations and assign players from the club.
 - 🟢 **Position badges** – green (exact), yellow (acceptable) and red (wrong position).
-- 📊 **Team stats** – average player rating and chemistry (100 − 3 per acceptable position − 8 per wrong position).
+- 📊 **Team stats** – average player rating and chemistry.
 - 🎶 **Spotify** – [open the official FIFA 15 playlist](https://open.spotify.com/playlist/00i82lDzMDdiHWNjrIGAyw?utm_source=generator) from the menu.
 - 📱 **Responsive** – desktop, tablet and mobile layouts.
 
@@ -73,4 +73,4 @@ All graphics, logos and data are the property of **EA Sports**. This project is 
 
 ## 👨‍💻 Author
 
-[Mateusz Machowina – © 2025](https://github.com/MateuszMachowina)
+[Mateusz Machowina – © 2026](https://github.com/MateuszMachowina)
