@@ -1,6 +1,6 @@
 # FIFA 15 Pack Opener ⚽
 
-- [🎮 Click here to play the game!](https://mateuszmachowina.github.io/PackOpenerF15/)
+- [🎮 Click here to play the game!](https://mateuszmachowina.github.io/F15_UT/)
 
 A browser-based FIFA 15 pack opening simulator: open packs, collect players, build squads and track team rating and chemistry. It includes **720 cards** representing **408 players**.
 
