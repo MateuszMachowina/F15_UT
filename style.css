@@ -1,0 +1,1241 @@
+html, body {
+  height: 100%;          /* set full viewport height */
+  margin: 0;             /* remove default margins */
+  overflow: hidden;      /* prevent scrolling */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #222 url('assets/ui/background.png') no-repeat center center fixed;
+  background-size: cover; /* cover entire viewport */
+  color: white;
+}
+
+#main-logo img {
+  width: 400px;           
+  max-width: 90%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: pulse-logo 3s infinite alternate; /* subtle logo glow animation */
+}
+
+@media (max-width: 1200px) {
+  #main-logo {
+    margin-top: 100px; /* for smaller screens */
+  }
+}
+
+@keyframes pulse-logo {
+  0% { filter: drop-shadow(0 0 1px rgb(255, 255, 255)); }
+  50% { filter: drop-shadow(0 0 3px rgb(255, 255, 255)); }
+  100% { filter: drop-shadow(0 0 1px rgb(255, 255, 255)); }
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  height: 100vh;           /* fill viewport height */
+}
+
+#pack-price {
+  margin-top: 6px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffd700;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+#pack-img {
+  width: 243px;           
+  height: 353px;          
+  object-fit: cover;       /* maintain aspect ratio, crop if needed */
+  cursor: pointer;
+  display: block;
+  margin: -350px auto 0 auto; /* adjust vertical positioning */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#pack-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px gold); /* subtle hover glow */
+}
+
+/* Back and Save buttons - fixed position on all screens */
+#back-btn, #save-btn {
+  position: fixed;          /* always fixed */
+  bottom: 20px;             /* distance from bottom of viewport */
+  width: 100px;
+  cursor: pointer;
+  z-index: 1200;            /* above pack container */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+#back-btn { right: 20px; }   /* Back button on the right */
+#save-btn { right: 180px; display: none; }
+
+#back-btn:hover, #save-btn:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #131313) brightness(1.2);
+}
+
+/* Smaller screens adjustments */
+@media (max-width: 1200px) {
+  #back-btn, #save-btn {
+    bottom: calc(env(safe-area-inset-bottom, 40px) + 20px); /* lift buttons for mobiles/tablets */
+    width: 120px; /* optional smaller width */
+  }
+  #back-btn { right: 20px; }
+  #save-btn { right: 160px; }
+}
+
+#pack-container {
+  display: none;          /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center; /* center content horizontally */
+  align-items: center;     /* center content vertically */
+  background: rgba(0,0,0,0.1); /* semi-transparent overlay */
+  z-index: 1000;           /* on top of other elements */
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;               /* spacing between cards */
+}
+
+.card {
+  position: relative;
+  width: 243px;
+  height: 353px;
+  background-size: cover;
+  border-radius: 12px;
+  overflow: visible;       /* allow shadow to overflow */
+  animation: pulse-shadow 3s infinite alternate; /* subtle card glow animation */
+  filter: drop-shadow(0 0 3px var(--card-color));
+}
+
+/* initial state of card before animation */
+.card {
+  opacity: 0;
+  transform: translateY(50px) rotate(-5deg);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* card shown after pack open */
+.card.show {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+
+/* coin price display */
+.card .coins {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background: rgba(0,0,0,0.5);
+  padding: 2px 6px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* show price on hover */
+.card:hover .coins {
+  opacity: 1;
+}
+
+@keyframes pulse-shadow {
+  0% { filter: drop-shadow(0 0 3px var(--card-color)) brightness(0.90); }
+  50% { filter: drop-shadow(0 0 9px var(--card-color)) brightness(1.10); }
+  100% { filter: drop-shadow(0 0 3px var(--card-color)) brightness(0.90); }
+}
+
+/* player name */
+.name {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* rating and position */
+.rating {
+  position: absolute;
+  top: 60px;
+  left: 28px;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+.position {
+  position: absolute;
+  top: 68px;
+  left: 68px;             /* slightly right of rating */
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+/* club logo and nation flag */
+.club {
+  position: absolute;
+  top: 110px;
+  left: 35px;
+  width: 35px;
+}
+
+.nation {
+  position: absolute;
+  top: 150px;
+  left: 35px;
+  width: 35px;
+}
+
+/* player face */
+.face {
+  position: absolute;
+  top: 63px;
+  left: 105px;
+  width: 120px;
+  height: 120px;
+}
+
+/* stats container */
+.stats {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  font-weight: bold;
+  font-size: 19px;
+  color: white;
+}
+
+/* stats columns */
+.stats .col {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-align: left;
+}
+
+/* stat value and label */
+.stats .stat {
+  display: flex;
+  gap: 5px;
+}
+
+.stats .stat .label {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* author signature in bottom-left corner */
+#author-sign {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgba(0,0,0,0.5);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  z-index: 2000;  /* always on top */
+}
+
+#author-sign:hover {
+  transform: scale(1.05); /* subtle hover effect */
+}
+
+#spotify-btn {
+  position: fixed;
+  top: 20px;        /* distance from top */
+  right: 20px;      /* distance from right */
+  width: 50px;      /* fixed width */
+  height: 50px;     /* fixed height */
+  cursor: pointer;
+  z-index: 1100;    /* above other elements */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+#spotify-btn img {
+  width: 100%;
+  height: 100%;     /* fill the container exactly */
+  object-fit: contain; /* keep aspect ratio inside box */
+}
+
+#spotify-btn:hover {
+  transform: scale(1.05);  
+  filter: drop-shadow(0 0 4px #000f05) brightness(1.1);
+}
+
+/* optional: adjust for smaller screens if needed */
+@media (max-width: 1200px) {
+  #spotify-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#share-btn {
+  position: fixed;
+  top: 20px;
+  right: 90px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  z-index: 1100;
+  display: none;
+}
+
+#share-btn img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Hover efekt */
+#share-btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px #000) brightness(1.2);
+}
+
+/* CTA tooltip */
+#share-btn::after {
+  content: "Share on X! #MyFIFA15Pack";
+  position: absolute;
+  top: 50%;
+  right: 60px; 
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Pokazanie CTA przy hover */
+#share-btn:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-5px);
+}
+
+@media (max-width: 1200px) {
+  #share-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* HUD: coins balance and club size (top-left corner) */
+#hud {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  z-index: 1100;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.55);
+  padding: 4px 12px;
+  border-radius: 8px;
+  min-width: 90px;
+}
+
+#hud-warn {
+  display: none;
+  background: rgba(150, 30, 30, 0.85);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+@media (max-width: 1200px) {
+  #hud { top: 12px; left: 12px; font-size: 15px; }
+}
+
+/* ---------- Bottom navigation ---------- */
+#nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1300;
+}
+
+#nav button, #club-sell-dupes, #club-more {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#nav button:hover, #club-more:hover, #club-sell-dupes:hover:not(:disabled) {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#nav button.active {
+  background: #ffd700;
+  color: #111;
+  border-color: #ffd700;
+}
+
+/* Dark bar behind the bottom navigation (Club screen) */
+#nav-backdrop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 88px;
+  background: #080a0e;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1250;
+  pointer-events: none;
+}
+
+/* ---------- Club screen ---------- */
+#club-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background: rgba(8, 10, 14, 0.8);
+  z-index: 1000;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#club-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0 160px; /* room for the HUD (left) and Spotify/X buttons (right) */
+}
+
+#club-toolbar input[type="search"], #club-toolbar select {
+  background: #1b1f27;
+  color: #fff;
+  border: 1px solid #3a4150;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+#club-search { width: 190px; }
+
+.club-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#club-sell-dupes { padding: 8px 14px; font-size: 14px; }
+#club-sell-dupes:disabled { opacity: 0.45; cursor: default; }
+#club-sell-dupes.confirm, .sell-btn.confirm { background: #b3261e; border-color: #ff8a80; }
+
+#club-info {
+  margin: 10px 160px 0;
+  min-height: 18px;
+  font-size: 13px;
+  color: #b8c0cc;
+}
+
+#club-scroll {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 12px 20px 100px;
+  box-sizing: border-box;
+}
+
+#club-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px 12px;
+  justify-items: center;
+}
+
+#club-empty {
+  display: none;
+  margin-top: 60px;
+  font-size: 18px;
+  color: #b8c0cc;
+}
+
+#club-more {
+  display: none;
+  margin: 24px auto 0;
+}
+
+.club-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* the card is 243x353; the club shows it scaled to 60% (146x212) */
+.club-card-wrap {
+  position: relative;
+  width: 146px;
+  height: 212px;
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+/* hover: subtle zoom + glow */
+.club-tile:hover .club-card-wrap {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.55));
+}
+
+.club-card-wrap .card,
+.club-card-wrap .card.show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(0.6);
+  transform-origin: 0 0;
+  transition: none;
+  animation: none; /* no infinite glow animation on dozens of cards */
+}
+
+.club-card-wrap .coins { font-size: 20px; }
+
+/* price is shown below the card - hide the on-card price on hover */
+.club-card-wrap .card:hover .coins { opacity: 0; }
+
+.count-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  background: #ffd700;
+  color: #111;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 1px 7px;
+  border-radius: 8px;
+}
+
+.sell-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.sell-btn:hover { background: rgba(0, 0, 0, 0.85); }
+.sell-btn.confirm:hover { background: #d32f2f; }
+
+@media (max-width: 1200px) {
+  #club-container { padding-top: 100px; }
+  #club-toolbar { margin: 0 12px; }
+  #club-info { margin: 8px 12px 0; }
+  #club-scroll { padding: 10px 12px 100px; }
+  #nav { bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); }
+}
+
+@media (max-width: 700px) {
+  #nav { bottom: calc(env(safe-area-inset-bottom, 0px) + 56px); } /* above the author signature */
+  #nav-backdrop { height: 128px; }
+  #club-scroll { padding-bottom: 150px; }
+}
+
+/* NEW badge on cards that were not in the club before the pack */
+/* NEW badge on cards that were not in the club before the pack */
+.card .new-badge {
+  position: absolute;
+  top: 6px;
+  left: 14px;
+  background: #ffd700;
+  color: #111;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+}
+
+/* ---------- Squad screen (SQD-01, SQD-02, SQD-06) ---------- */
+#squad-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0a0f08 url('assets/ui/team.png') center center / cover no-repeat;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* przyciemnienie stadionu, żeby interfejs pozostał czytelny */
+#squad-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.12) 30%,
+    rgba(0, 0, 0, 0.04) 55%,
+    rgba(0, 0, 0, 0.45) 100%);
+  pointer-events: none;
+}
+
+#squad-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 96px 12px 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+#squad-topbar > * { pointer-events: auto; }
+
+#squad-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  min-width: 0;
+  margin-left: auto;
+}
+
+#squad-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+
+#squad-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d7dde6;
+  text-shadow: 0 1px 2px #000;
+}
+
+#squad-formations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.formation-btn {
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 7px;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.formation-btn:hover:not(:disabled) { transform: scale(1.06); background: rgba(0, 0, 0, 0.9); }
+
+.formation-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.formation-btn.active {
+  background: #ffd700;
+  color: #111;
+  border-color: #ffd700;
+}
+
+#squad-summary {
+  margin: 0;
+  min-height: 16px;
+  font-size: 12px;
+  color: #e6ebf2;
+  text-align: right;
+  text-shadow: 0 1px 2px #000;
+}
+
+/* pasmo boiska (góra/dół = zewnętrzne linie z team.png) ustawiane w squad.js */
+#squad-pitch {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  --squad-card-scale: 0.48;
+}
+
+.squad-slot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: calc(243px * var(--squad-card-scale));
+  height: calc(353px * var(--squad-card-scale));
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.squad-slot:hover {
+  transform: translate(-50%, -50%) scale(1.07);
+  z-index: 6;
+}
+
+.squad-slot:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 3px;
+}
+
+.slot-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.squad-slot .card,
+.squad-slot .card.show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(var(--squad-card-scale));
+  transform-origin: 0 0;
+  transition: none;
+  animation: none;
+  border-radius: 12px;
+}
+
+.squad-slot.filled:hover .slot-card {
+  box-shadow: 0 0 0 2px #ffd700, 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+.slot-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.squad-slot:hover .slot-placeholder {
+  border-color: #ffd700;
+  color: #ffd700;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.slot-pos {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 0 5px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #e6ebf2;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+/* SQD-03: zielony = ta sama pozycja, żółty = akceptowalna, czerwony = zła */
+.squad-slot .slot-pos { top: -11px; }
+
+.squad-slot.exact .slot-pos {
+  background: rgba(0, 92, 34, 0.92);
+  border-color: #35d46a;
+  color: #8affb0;
+}
+
+.squad-slot.compatible .slot-pos {
+  background: rgba(92, 64, 0, 0.92);
+  border-color: #ffd700;
+  color: #ffe680;
+}
+
+.squad-slot.compatible .slot-card {
+  box-shadow: 0 0 0 1px #ffd700, 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.squad-slot.misplaced .slot-pos {
+  background: rgba(110, 16, 16, 0.92);
+  border-color: #ff6b6b;
+  color: #ffb3b3;
+}
+
+.squad-slot.misplaced .slot-card {
+  box-shadow: 0 0 0 2px #ff6b6b, 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.squad-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: #e6ebf2;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 1px 2px #000;
+}
+
+/* ---------- teams panel (SQD-06) ---------- */
+#squad-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  max-width: 56%;
+  padding: 5px 8px;
+  background: rgba(6, 10, 8, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  box-sizing: border-box;
+  backdrop-filter: blur(3px);
+}
+
+.squad-side-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b8c0cc;
+}
+
+#squad-new {
+  flex: 0 0 auto;
+  padding: 4px 9px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.6);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-transform: none;
+  cursor: pointer;
+}
+
+#squad-new:hover { background: #ffd700; color: #111; }
+
+#squad-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.team-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.team-item:hover { background: rgba(255, 255, 255, 0.14); }
+
+.team-item.active {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.22);
+}
+
+.team-badge {
+  flex: 0 0 12px;
+  width: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffd700;
+}
+
+.team-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.team-name {
+  width: 96px;
+  padding: 1px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.team-name:hover,
+.team-name:focus { border-bottom-color: rgba(255, 215, 0, 0.6); }
+
+.team-stats {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.team-rat { color: #ffd700; }
+.team-chem { color: #53d46a; }
+
+.team-del {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  color: #ffb0b0;
+  font-size: 10px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.team-del:hover {
+  background: rgba(255, 80, 80, 0.25);
+  border-color: #ff6b6b;
+  color: #fff;
+}
+
+/* ---------- player picker (SQD-02) ---------- */
+#squad-picker {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1200;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 24px 12px 90px;
+  box-sizing: border-box;
+}
+
+#squad-picker.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picker-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(760px, 100%);
+  max-height: 100%;
+  padding: 12px;
+  background: rgba(16, 20, 26, 0.98);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  border-radius: 14px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+}
+
+.picker-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#picker-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+#picker-close {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#picker-close:hover { background: rgba(255, 255, 255, 0.14); }
+
+.picker-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+#picker-search {
+  flex: 1 1 170px;
+  min-width: 0;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+}
+
+#picker-search:focus { outline: none; border-color: #ffd700; }
+
+.picker-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #b8c0cc;
+  cursor: pointer;
+}
+
+.picker-check input { accent-color: #ffd700; }
+
+#picker-clear {
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffb0b0;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#picker-clear:hover {
+  background: rgba(255, 80, 80, 0.2);
+  border-color: #ff6b6b;
+  color: #fff;
+}
+
+#picker-grid {
+  flex: 1 1 auto;
+  min-height: 140px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  align-content: start;
+  gap: 8px;
+  padding: 2px;
+  overflow-y: auto;
+}
+
+.picker-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.picker-tile:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.16);
+  border-color: #ffd700;
+  transform: translateY(-2px);
+}
+
+.picker-tile:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.picker-tile.off-position { border-color: rgba(255, 107, 107, 0.7); }
+
+/* the card is 243x353; the picker shows it scaled to 27% (66x96) */
+.picker-card-wrap {
+  position: relative;
+  width: 66px;
+  height: 96px;
+}
+
+.picker-card-wrap .card,
+.picker-card-wrap .card.show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(0.27);
+  transform-origin: 0 0;
+  transition: none;
+  animation: none;
+}
+
+.picker-label {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #ffd700;
+  text-align: center;
+}
+
+.picker-name {
+  max-width: 96px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 11px;
+  color: #c7ceda;
+  text-align: center;
+}
+
+.picker-empty {
+  grid-column: 1 / -1;
+  padding: 24px 8px;
+  color: #8f98a6;
+  font-size: 13px;
+  text-align: center;
+}
+
+#picker-more {
+  display: none;
+  margin: 0 auto;
+  padding: 7px 14px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#picker-more:hover { background: rgba(255, 215, 0, 0.2); border-color: #ffd700; }
+
+@media (max-width: 1200px) {
+  #squad-side { max-width: 46%; }
+}
+
+@media (max-width: 860px) {
+  #squad-topbar {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 80px;
+  }
+  #squad-side { max-width: 100%; }
+  #squad-controls { align-items: flex-start; margin-left: 0; }
+  #squad-toolbar,
+  #squad-formations { justify-content: flex-start; }
+  #squad-toolbar { flex-wrap: nowrap; }
+  #squad-formations {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 2px;
+  }
+  #squad-summary { text-align: left; }
+  .formation-btn { padding: 3px 7px; font-size: 11px; }
+  .squad-slot .slot-pos { top: -9px; font-size: 9px; line-height: 13px; }
+}
+
+@media (max-width: 700px) {
+  .squad-side-head span { display: none; }
+  .team-name { width: 72px; font-size: 12px; }
+  .squad-slot .slot-pos { top: -9px; font-size: 9px; line-height: 13px; }
+  #picker-grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+  .picker-card-wrap { width: 66px; height: 96px; }
+}
