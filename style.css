@@ -1154,21 +1154,23 @@ body {
 
 .picker-tile.off-position { border-color: rgba(255, 107, 107, 0.7); }
 
-/* karta 243x353; wrap = 100% szerokości kafelka, aspect-ratio jak karta */
+/* karta 243x353 (ratio 0.688); wrap = 90% szerokości kafelka, wysokość jak karta.
+   W kafelku zostaje 5% marginesu z każdej strony (karta 10% mniejsza). */
 .picker-card-wrap {
   position: relative;
-  width: 100%;
-  aspect-ratio: 243 / 353;
+  width: 90%;
+  height: calc(100cqw * 0.9 * 353 / 243);
+  flex: 0 0 auto;
 }
 
 /* karta w pickerze: 90% szerokości kafelka (10% mniejsza), wyśrodkowana.
    cqw liczy się od najbliższego przodka-container (.picker-tile ma container-type).
-   left:5% (połowa 10%) + scale 0.9 → karta wyśrodkowana w kafelku. */
+   left:0 (wrap już jest 90% i wyśrodkowany) + scale 0.9 → karta wypełnia wrap. */
 .picker-card-wrap .card,
 .picker-card-wrap .card.show {
   position: absolute;
   top: 0;
-  left: 5%;
+  left: 0;
   opacity: 1;
   width: 243px;
   height: 353px;
