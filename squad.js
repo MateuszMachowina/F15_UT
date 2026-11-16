@@ -129,10 +129,16 @@ const SLOT_COMPAT = {
 //   2 = ten sam klub  LUB  ta sama nacja i liga (strong)
 //   1 = ta sama nacja  LUB  ta sama liga (weak)
 //   0 = nic wspólnego (dead)
+// Legendy (liga "Legends") łamią powyższe zasady: zagranie 1 z każdym,
+// a 2 gdy obie karty mają tę samą nację.
+const LEGENDS_LEAGUE_ID = 8;
 function squadLinkValue(a, b) {
   if (!a || !b) return 0;
-  const sameClub = a.club_id != null && b.club_id != null && a.club_id === b.club_id;
   const sameNation = a.nation_id != null && b.nation_id != null && a.nation_id === b.nation_id;
+  const aLegend = a.league_id != null && String(a.league_id) === String(LEGENDS_LEAGUE_ID);
+  const bLegend = b.league_id != null && String(b.league_id) === String(LEGENDS_LEAGUE_ID);
+  if (aLegend || bLegend) return sameNation ? 2 : 1;
+  const sameClub = a.club_id != null && b.club_id != null && a.club_id === b.club_id;
   const sameLeague = a.league_id != null && b.league_id != null && a.league_id === b.league_id;
   if (sameClub && sameNation) return 3;
   if (sameClub) return 2;
