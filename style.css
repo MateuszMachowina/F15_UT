@@ -477,6 +477,19 @@ body {
 
 #club-search { width: 190px; }
 
+#club-reset {
+  background: #1b1f27;
+  color: #fff;
+  border: 1px solid #3a4150;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#club-reset:hover { background: #262c38; border-color: #4a5365; }
+#club-reset:disabled { opacity: 0.45; cursor: default; }
+
 .club-check {
   display: flex;
   align-items: center;
@@ -737,9 +750,31 @@ body {
   --squad-card-scale: 0.48;
 }
 
+/* linie zgrania między kartami (SQD-13) - pod kartami, nad tłem boiska */
+.squad-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.squad-links line {
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+.squad-links line.link-0 { stroke: #ff5252; opacity: 0.85; }  /* czerwona - brak powiązań */
+.squad-links line.link-1 { stroke: #c9a227; }                 /* brudnożółta / prawie pomarańczowa */
+.squad-links line.link-2,
+.squad-links line.link-3 { stroke: #6fe36f; }                 /* jasna zieleń */
+
 .squad-slot {
   position: absolute;
   transform: translate(-50%, -50%);
+  z-index: 2;
   width: calc(243px * var(--squad-card-scale));
   height: calc(353px * var(--squad-card-scale));
   padding: 0;

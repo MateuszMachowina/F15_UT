@@ -37,14 +37,14 @@ const FORMATIONS = {
   '4-3-2-1': [
     { pos: 'GK', x: 50, y: 100 },
     { pos: 'LB', x: 12, y: 68 }, { pos: 'CB', x: 38, y: 71 }, { pos: 'CB', x: 62, y: 71 }, { pos: 'RB', x: 88, y: 68 },
-    { pos: 'CM', x: 25, y: 46 }, { pos: 'CDM', x: 50, y: 57 }, { pos: 'CM', x: 75, y: 46 },
-    { pos: 'CAM', x: 35, y: 28 }, { pos: 'CAM', x: 65, y: 28 },
+    { pos: 'CM', x: 25, y: 46 }, { pos: 'CM', x: 50, y: 46 }, { pos: 'CM', x: 75, y: 46 },
+    { pos: 'LF', x: 35, y: 28 }, { pos: 'RF', x: 65, y: 28 },
     { pos: 'ST', x: 50, y: 4 }
   ],
-  '4-3-1-2': [
+  '4-1-2-1-2': [
     { pos: 'GK', x: 50, y: 100 },
     { pos: 'LB', x: 12, y: 68 }, { pos: 'CB', x: 38, y: 71 }, { pos: 'CB', x: 62, y: 71 }, { pos: 'RB', x: 88, y: 68 },
-    { pos: 'CM', x: 25, y: 46 }, { pos: 'CDM', x: 50, y: 57 }, { pos: 'CM', x: 75, y: 46 },
+    { pos: 'LM', x: 25, y: 46 }, { pos: 'CDM', x: 50, y: 57 }, { pos: 'RM', x: 75, y: 46 },
     { pos: 'CAM', x: 50, y: 28 },
     { pos: 'ST', x: 34, y: 6 }, { pos: 'ST', x: 66, y: 6 }
   ],
@@ -57,19 +57,19 @@ const FORMATIONS = {
   '4-3-3': [
     { pos: 'GK', x: 50, y: 100 },
     { pos: 'LB', x: 12, y: 68 }, { pos: 'CB', x: 38, y: 71 }, { pos: 'CB', x: 62, y: 71 }, { pos: 'RB', x: 88, y: 68 },
-    { pos: 'CM', x: 27, y: 46 }, { pos: 'CDM', x: 50, y: 56 }, { pos: 'CM', x: 73, y: 46 },
-    { pos: 'LW', x: 17, y: 26 }, { pos: 'ST', x: 50, y: 4 }, { pos: 'RW', x: 83, y: 26 }
+    { pos: 'CM', x: 24, y: 46 }, { pos: 'CM', x: 50, y: 46 }, { pos: 'CM', x: 76, y: 46 },
+    { pos: 'LW', x: 17, y: 20 }, { pos: 'ST', x: 50, y: 4 }, { pos: 'RW', x: 82, y: 20 }
   ],
   '4-5-1': [
     { pos: 'GK', x: 50, y: 100 },
     { pos: 'LB', x: 10, y: 67 }, { pos: 'CB', x: 35, y: 71 }, { pos: 'CB', x: 65, y: 71 }, { pos: 'RB', x: 90, y: 67 },
-    { pos: 'LM', x: 10, y: 37 }, { pos: 'CM', x: 28, y: 43 }, { pos: 'CDM', x: 50, y: 57 }, { pos: 'CM', x: 72, y: 43 }, { pos: 'RM', x: 90, y: 37 },
+    { pos: 'LM', x: 10, y: 37 }, { pos: 'CAM', x: 28, y: 22 }, { pos: 'CM', x: 50, y: 47.5 }, { pos: 'CAM', x: 72, y: 22 }, { pos: 'RM', x: 90, y: 37 },
     { pos: 'ST', x: 50, y: 6 }
   ],
   '3-5-2': [
     { pos: 'GK', x: 50, y: 100 },
     { pos: 'CB', x: 24, y: 67 }, { pos: 'CB', x: 50, y: 71 }, { pos: 'CB', x: 76, y: 67 },
-    { pos: 'LWB', x: 10, y: 34 }, { pos: 'CM', x: 31, y: 40 }, { pos: 'CDM', x: 50, y: 42 }, { pos: 'CM', x: 69, y: 40 }, { pos: 'RWB', x: 90, y: 34 },
+    { pos: 'LWB', x: 10, y: 34 }, { pos: 'CM', x: 31, y: 40 }, { pos: 'CAM', x: 50, y: 28 }, { pos: 'CM', x: 69, y: 40 }, { pos: 'RWB', x: 90, y: 34 },
     { pos: 'ST', x: 38, y: 8 }, { pos: 'ST', x: 62, y: 8 }
   ],
   '3-4-1-2': [
@@ -88,10 +88,13 @@ const FORMATIONS = {
   '5-3-2': [
     { pos: 'GK', x: 50, y: 100 },
     { pos: 'LWB', x: 8, y: 60 }, { pos: 'CB', x: 28, y: 65 }, { pos: 'CB', x: 50, y: 68 }, { pos: 'CB', x: 72, y: 65 }, { pos: 'RWB', x: 92, y: 60 },
-    { pos: 'CM', x: 24, y: 36 }, { pos: 'CDM', x: 50, y: 39 }, { pos: 'CM', x: 76, y: 36 },
+    { pos: 'CM', x: 24, y: 36 }, { pos: 'CM', x: 50, y: 39 }, { pos: 'CM', x: 76, y: 36 },
     { pos: 'ST', x: 38, y: 8 }, { pos: 'ST', x: 62, y: 8 }
   ]
 };
+
+// Kolejność przycisków wyboru formacji (SQD-01).
+const FORMATION_ORDER = ['4-4-2', '4-1-2-1-2', '4-3-2-1', '4-3-3', '4-5-1', '5-4-1', '5-3-2', '3-5-2', '3-4-1-2'];
 
 // Akceptowane pozycje zawodnika na danej pozycji formacji (SQD-03).
 // 1 = dokładnie ta sama pozycja (zielony), 2 = dopuszczalna alternatywa (żółty),
@@ -108,11 +111,134 @@ const SLOT_COMPAT = {
   CAM: ['CM', 'CF'],
   RM: ['RW', 'RB', 'LM', 'RWB'],
   LM: ['LW', 'LB', 'RM', 'LWB'],
-  RW: ['RM', 'LW'],
-  LW: ['LM', 'RW'],
-  CF: ['ST', 'CAM'],
+  RW: ['RM', 'LW', 'RF'],
+  LW: ['LM', 'RW', 'LF'],
+  LF: ['LW', 'LM', 'CF'],
+  RF: ['RW', 'RM', 'CF'],
+  CF: ['ST', 'CAM', 'RF', 'LF'],
   ST: ['CF']
 };
+
+// ---------- linie zgrania (SQD-13) ----------
+
+// Wartość połączenia między dwiema kartami:
+//   3 = ten sam klub i ta sama nacja (hyper)
+//   2 = ten sam klub (strong)
+//   1 = ta sama nacja (weak)  LUB  ta sama liga (bez klubu/nacji)
+//   0 = nic wspólnego (dead)
+function squadLinkValue(a, b) {
+  if (!a || !b) return 0;
+  const sameClub = a.club_id != null && b.club_id != null && a.club_id === b.club_id;
+  const sameNation = a.nation_id != null && b.nation_id != null && a.nation_id === b.nation_id;
+  if (sameClub && sameNation) return 3;
+  if (sameClub) return 2;
+  if (sameNation) return 1;
+  // Liga: players.json ma już league_id (arkusz players), więc wspólna liga
+  // bez wspólnego klubu/nacji daje wartość 1 (żółta linia).
+  const sameLeague = a.league_id != null && b.league_id != null && a.league_id === b.league_id;
+  if (sameLeague) return 1;
+  return 0;
+}
+
+// Połączenia slotów per formacja. Pary [a, b] to indeksy w tablicy formacji.
+// Wzorzec FIFA 15: GK–obrońcy, obrońcy między sobą i z linią pomocy,
+// pomoc między sobą i z atakiem, atak między sobą.
+// Łatwa edycja: dodaj/usuń/zmień parę [a, b] poniżej.
+const FORMATION_LINKS = {
+  '4-3-2-1': [
+    [0, 1], [0, 2], [0, 3], [0, 4],
+    [1, 2], [2, 3], [3, 4],
+    [1, 5], [2, 5], [3, 7], [4, 7],
+    [5, 6], [6, 7],
+    [5, 8], [7, 9], [6, 8], [6, 9],
+    [8, 10], [9, 10]
+  ],
+  '4-1-2-1-2': [
+    [0, 1], [0, 2], [0, 3], [0, 4],
+    [1, 2], [2, 3], [3, 4],
+    [1, 5], [2, 6], [3, 6], [4, 7],
+    [5, 6], [6, 7],
+    [5, 8], [7, 8], [6, 8],
+    [8, 9], [8, 10], [9, 10],
+    [5, 9], [7, 10]
+  ],
+  '4-4-2': [
+    [0, 1], [0, 2], [0, 3], [0, 4],
+    [1, 2], [2, 3], [3, 4],
+    [1, 5], [2, 6], [3, 7], [4, 8],
+    [5, 6], [6, 7], [7, 8],
+    [5, 9], [6, 9], [7, 10], [8, 10],
+    [9, 10]
+  ],
+  '4-3-3': [
+    [0, 1], [0, 2], [0, 3], [0, 4],
+    [1, 2], [2, 3], [3, 4],
+    [1, 5], [2, 6], [3, 6], [4, 7],
+    [5, 6], [6, 7],
+    [5, 8], [7, 10], [6, 9],
+    [8, 9], [9, 10]
+  ],
+  '4-5-1': [
+    [0, 1], [0, 2], [0, 3], [0, 4],
+    [1, 2], [2, 3], [3, 4],
+    [1, 5], [2, 7], [3, 7], [4, 9],
+    [5, 6], [6, 7], [7, 8], [8, 9],
+    [6, 8],
+    [6, 10], [8, 10]
+  ],
+  '3-5-2': [
+    [0, 1], [0, 2], [0, 3],
+    [1, 2], [2, 3],
+    [1, 4], [1, 5], [2, 5], [2, 7], [3, 7], [3, 8],
+    [4, 5], [5, 6], [6, 7], [7, 8],
+    [6, 9], [6, 10],
+    [4, 9], [8, 10],
+    [9, 10]
+  ],
+  '3-4-1-2': [
+    [0, 1], [0, 2], [0, 3],
+    [1, 2], [2, 3],
+    [1, 4], [1, 5], [2, 5], [2, 6], [3, 6], [3, 7],
+    [4, 5], [5, 6], [6, 7],
+    [5, 8], [6, 8],
+    [8, 9], [8, 10], [9, 10],
+    [4, 9], [7, 10]
+  ],
+  '5-4-1': [
+    [0, 2], [0, 3], [0, 4],
+    [1, 2], [2, 3], [3, 4], [4, 5],
+    [1, 6], [2, 7], [3, 7], [3, 8], [4, 8], [5, 9],
+    [6, 7], [7, 8], [8, 9],
+    [6, 10], [7, 10], [8, 10], [9, 10]
+  ],
+  '5-3-2': [
+    [0, 2], [0, 3], [0, 4],
+    [1, 2], [2, 3], [3, 4], [4, 5],
+    [1, 6], [2, 6], [3, 7], [4, 8], [5, 8],
+    [6, 7], [7, 8],
+    [6, 9], [7, 9], [7, 10], [8, 10],
+    [9, 10]
+  ]
+};
+
+// Zabezpieczenie: formacja bez definicji dostaje połączenia z geometrii
+// (najbliżsi sąsiedzi w tej samej i sąsiednich liniach).
+function autoFormationLinks(slots) {
+  const links = [];
+  slots.forEach((a, i) => {
+    slots.forEach((b, j) => {
+      if (j <= i) return;
+      const dy = Math.abs(a.y - b.y);
+      const dx = Math.abs(a.x - b.x);
+      if ((dy <= 9 && dx <= 40) || (dy <= 32 && dx <= 20)) links.push([i, j]);
+    });
+  });
+  return links;
+}
+
+function squadFormationLinks(formation) {
+  return FORMATION_LINKS[formation] || autoFormationLinks(squadSlots(formation));
+}
 
 const pickerState = { squadId: null, index: -1, query: '', onlyFit: true, shown: PICKER_PAGE };
 
@@ -179,7 +305,11 @@ function squadStats(squad) {
 function squadInit() {
   const wrap = document.getElementById('squad-formations');
   if (wrap && !wrap.childElementCount) {
+    const order = FORMATION_ORDER.filter(name => FORMATIONS[name]);
     Object.keys(FORMATIONS).forEach(name => {
+      if (order.indexOf(name) === -1) order.push(name);
+    });
+    order.forEach(name => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'formation-btn';
@@ -425,6 +555,47 @@ function squadLayout() {
   return { left: rect.left, top: top, width: rect.width, height: rect.height };
 }
 
+// SVG z liniami zgrania (SQD-13). Rysowane tylko między wypełnionymi slotami.
+// Kolor zależy od squadLinkValue: 0 = czerwony, 1 = brudnożółty, 2/3 = jasnozielony.
+function squadLinksSvg(formation, squad, centers, rect) {
+  const NS = 'http://www.w3.org/2000/svg';
+  // połowa wysokości karty - do niej przesuwamy punkty linii na dolną krawędź
+  const scale = squadCardScale(rect);
+  const half = (353 * scale) / 2;
+  // dodatkowo podnosimy koniec linii o połowę wysokości czcionki statystyk
+  // (stats: 19px w CSS) w skali zespołu - nad dolną krawędź karty
+  const raise = (19 * scale) / 2;
+  const svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('class', 'squad-links');
+  svg.setAttribute('width', rect.width);
+  svg.setAttribute('height', rect.height);
+  svg.setAttribute('aria-hidden', 'true');
+
+  squadFormationLinks(formation).forEach(pair => {
+    const a = pair[0];
+    const b = pair[1];
+    if (a === b) return;
+    const cardA = squad.slots[a] ? squadCard(squad.slots[a]) : null;
+    const cardB = squad.slots[b] ? squadCard(squad.slots[b]) : null;
+    if (!cardA || !cardB) return;
+    const p1 = centers[a];
+    const p2 = centers[b];
+    if (!p1 || !p2) return;
+
+    // linia nie celuje w centrum karty, tylko w dolną krawędź karty
+    // (podniesioną o połowę wysokości czcionki statystyk, ale 1 px niżej)
+    const line = document.createElementNS(NS, 'line');
+    line.setAttribute('x1', p1.x.toFixed(1));
+    line.setAttribute('y1', (p1.y + half - raise + 1).toFixed(1));
+    line.setAttribute('x2', p2.x.toFixed(1));
+    line.setAttribute('y2', (p2.y + half - raise + 1).toFixed(1));
+    line.setAttribute('class', 'link-' + squadLinkValue(cardA, cardB));
+    svg.appendChild(line);
+  });
+
+  return svg.childElementCount ? svg : null;
+}
+
 function renderSquad() {
   const pitch = document.getElementById('squad-pitch');
   if (!pitch) return;
@@ -467,6 +638,18 @@ function renderSquad() {
   const minCenter = half + margin;
   const maxCenter = rect ? rect.height : 0;
 
+  // centra slotów w pikselach boiska - wspólne dla kart i linii zgrania
+  const centers = slots.map(slot => ({
+    x: (slot.x / 100) * (rect ? rect.width : 0),
+    y: rect ? Math.max(minCenter, Math.min(maxCenter, (slot.y / 100) * rect.height)) : 0
+  }));
+
+  // linie zgrania rysowane pod kartami (SQD-13)
+  if (rect) {
+    const links = squadLinksSvg(formation, squad, centers, rect);
+    if (links) pitch.appendChild(links);
+  }
+
   slots.forEach((slot, i) => {
     const cardId = squad.slots[i];
     const player = cardId ? squadCard(cardId) : null;
@@ -481,7 +664,7 @@ function renderSquad() {
     }
     el.style.left = slot.x + '%';
     el.style.top = rect
-      ? Math.max(minCenter, Math.min(maxCenter, (slot.y / 100) * rect.height)).toFixed(1) + 'px'
+      ? centers[i].y.toFixed(1) + 'px'
       : slot.y + '%';
     el.dataset.index = i;
     el.tabIndex = 0;

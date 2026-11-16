@@ -14,7 +14,8 @@
         "PHY":89,
         "card_id":"20801_TOTY",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":20801,
@@ -31,7 +32,8 @@
         "PHY":88,
         "card_id":"20801_TOTS",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":158023,
@@ -48,7 +50,8 @@
         "PHY":74,
         "card_id":"158023_TOTY",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":20801,
@@ -65,7 +68,8 @@
         "PHY":87,
         "card_id":"20801_POTY",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":20801,
@@ -82,7 +86,8 @@
         "PHY":87,
         "card_id":"20801_RB",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":158023,
@@ -99,7 +104,8 @@
         "PHY":73,
         "card_id":"158023_TOTS",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":158023,
@@ -116,7 +122,8 @@
         "PHY":69,
         "card_id":"158023_IF",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":158023,
@@ -133,7 +140,8 @@
         "PHY":69,
         "card_id":"158023_TIF",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":20801,
@@ -150,7 +158,8 @@
         "PHY":86,
         "card_id":"20801_TIF",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":158023,
@@ -167,7 +176,8 @@
         "PHY":69,
         "card_id":"158023_MOTM",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":41236,
@@ -184,7 +194,8 @@
         "PHY":97,
         "card_id":"41236_TOTS",
         "club_id":73,
-        "nation_id":46
+        "nation_id":46,
+        "league_id":10
     },
     {
         "player_id":176580,
@@ -201,7 +212,8 @@
         "PHY":94,
         "card_id":"176580_TOTS",
         "club_id":241,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":167495,
@@ -218,7 +230,8 @@
         "PHY":96,
         "card_id":"167495_TOTY",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":9014,
@@ -235,7 +248,8 @@
         "PHY":72,
         "card_id":"9014_TOTY",
         "club_id":21,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":190043,
@@ -252,7 +266,8 @@
         "PHY":73,
         "card_id":"190043_Legend",
         "club_id":999,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":8
     },
     {
         "player_id":20801,
@@ -269,7 +284,8 @@
         "PHY":84,
         "card_id":"20801_MOTM",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":158023,
@@ -286,7 +302,8 @@
         "PHY":66,
         "card_id":"158023_RB",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":183277,
@@ -303,7 +320,8 @@
         "PHY":77,
         "card_id":"183277_TOTS",
         "club_id":5,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":9014,
@@ -320,7 +338,8 @@
         "PHY":71,
         "card_id":"9014_TOTS",
         "club_id":21,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":167495,
@@ -337,7 +356,8 @@
         "PHY":94,
         "card_id":"167495_TOTS",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":190871,
@@ -354,7 +374,8 @@
         "PHY":75,
         "card_id":"190871_TOTS",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":121939,
@@ -371,7 +392,8 @@
         "PHY":77,
         "card_id":"121939_TOTY",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":41,
@@ -388,7 +410,8 @@
         "PHY":71,
         "card_id":"41_TOTY",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":20801,
@@ -405,7 +428,8 @@
         "PHY":82,
         "card_id":"20801_SIF",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":153079,
@@ -422,7 +446,8 @@
         "PHY":77,
         "card_id":"153079_TOTS",
         "club_id":10,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":188545,
@@ -439,7 +464,8 @@
         "PHY":87,
         "card_id":"188545_TOTS",
         "club_id":21,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":4
     },
     {
         "player_id":189596,
@@ -456,7 +482,8 @@
         "PHY":83,
         "card_id":"189596_TOTS",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":155862,
@@ -473,7 +500,8 @@
         "PHY":90,
         "card_id":"155862_TOTY",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":183898,
@@ -490,7 +518,8 @@
         "PHY":78,
         "card_id":"183898_TOTY",
         "club_id":11,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":20801,
@@ -507,7 +536,8 @@
         "PHY":80,
         "card_id":"20801_IF",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":176580,
@@ -524,7 +554,8 @@
         "PHY":87,
         "card_id":"176580_SIF",
         "club_id":241,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":9014,
@@ -541,7 +572,8 @@
         "PHY":70,
         "card_id":"9014_TIF",
         "club_id":21,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":168473,
@@ -558,7 +590,8 @@
         "PHY":81,
         "card_id":"168473_Legend",
         "club_id":999,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":8
     },
     {
         "player_id":41236,
@@ -575,7 +608,8 @@
         "PHY":92,
         "card_id":"41236_MOTM",
         "club_id":73,
-        "nation_id":46
+        "nation_id":46,
+        "league_id":10
     },
     {
         "player_id":158023,
@@ -592,7 +626,8 @@
         "PHY":62,
         "card_id":"158023_Normal",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":143001,
@@ -609,7 +644,8 @@
         "PHY":94,
         "card_id":"143001_TOTS",
         "club_id":1877,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":2
     },
     {
         "player_id":179844,
@@ -626,7 +662,8 @@
         "PHY":95,
         "card_id":"179844_TOTS",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":184941,
@@ -643,7 +680,8 @@
         "PHY":80,
         "card_id":"184941_TOTS",
         "club_id":1,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":12
     },
     {
         "player_id":183907,
@@ -660,7 +698,8 @@
         "PHY":92,
         "card_id":"183907_TOTS",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":155862,
@@ -677,7 +716,8 @@
         "PHY":90,
         "card_id":"155862_TOTS",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":164240,
@@ -694,7 +734,8 @@
         "PHY":89,
         "card_id":"164240_TOTY",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":182521,
@@ -711,7 +752,8 @@
         "PHY":78,
         "card_id":"182521_TOTY",
         "club_id":243,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":7
     },
     {
         "player_id":41236,
@@ -728,7 +770,8 @@
         "PHY":90,
         "card_id":"41236_IF",
         "club_id":73,
-        "nation_id":46
+        "nation_id":46,
+        "league_id":10
     },
     {
         "player_id":9014,
@@ -745,7 +788,8 @@
         "PHY":69,
         "card_id":"9014_SIF",
         "club_id":21,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":176580,
@@ -762,7 +806,8 @@
         "PHY":85,
         "card_id":"176580_MOTM",
         "club_id":241,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":1109,
@@ -779,7 +824,8 @@
         "PHY":80,
         "card_id":"1109_Legend",
         "club_id":999,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":8
     },
     {
         "player_id":166906,
@@ -796,7 +842,8 @@
         "PHY":82,
         "card_id":"166906_Legend",
         "club_id":999,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":8
     },
     {
         "player_id":20801,
@@ -813,7 +860,8 @@
         "PHY":79,
         "card_id":"20801_Normal",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":164240,
@@ -830,7 +878,8 @@
         "PHY":88,
         "card_id":"164240_TOTS",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":193080,
@@ -847,7 +896,8 @@
         "PHY":88,
         "card_id":"193080_TOTS",
         "club_id":11,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":192985,
@@ -864,7 +914,8 @@
         "PHY":82,
         "card_id":"192985_TOTS",
         "club_id":175,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":4
     },
     {
         "player_id":198710,
@@ -881,7 +932,8 @@
         "PHY":80,
         "card_id":"198710_TOTS",
         "club_id":243,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":7
     },
     {
         "player_id":182521,
@@ -898,7 +950,8 @@
         "PHY":75,
         "card_id":"182521_TOTS",
         "club_id":243,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":7
     },
     {
         "player_id":9014,
@@ -915,7 +968,8 @@
         "PHY":65,
         "card_id":"9014_IF",
         "club_id":21,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":176580,
@@ -932,7 +986,8 @@
         "PHY":83,
         "card_id":"176580_IF",
         "club_id":241,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":20289,
@@ -949,7 +1004,8 @@
         "PHY":97,
         "card_id":"20289_SIF",
         "club_id":10,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":12
     },
     {
         "player_id":179813,
@@ -966,7 +1022,8 @@
         "PHY":94,
         "card_id":"179813_SIF",
         "club_id":73,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":10
     },
     {
         "player_id":191189,
@@ -983,7 +1040,8 @@
         "PHY":82,
         "card_id":"191189_Legend",
         "club_id":999,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":8
     },
     {
         "player_id":192181,
@@ -1000,7 +1058,8 @@
         "PHY":70,
         "card_id":"192181_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":167495,
@@ -1017,7 +1076,8 @@
         "PHY":92,
         "card_id":"167495_RB",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":54050,
@@ -1034,7 +1094,8 @@
         "PHY":96,
         "card_id":"54050_RB",
         "club_id":11,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":195864,
@@ -1051,7 +1112,8 @@
         "PHY":95,
         "card_id":"195864_TOTS",
         "club_id":45,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":16
     },
     {
         "player_id":194765,
@@ -1068,7 +1130,8 @@
         "PHY":80,
         "card_id":"194765_TOTS",
         "club_id":240,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":179813,
@@ -1085,7 +1148,8 @@
         "PHY":92,
         "card_id":"179813_Futties",
         "club_id":73,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":10
     },
     {
         "player_id":173731,
@@ -1102,7 +1166,8 @@
         "PHY":87,
         "card_id":"173731_Futties",
         "club_id":243,
-        "nation_id":50
+        "nation_id":50,
+        "league_id":7
     },
     {
         "player_id":54050,
@@ -1119,7 +1184,8 @@
         "PHY":93,
         "card_id":"54050_Futties",
         "club_id":11,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":20289,
@@ -1136,7 +1202,8 @@
         "PHY":95,
         "card_id":"20289_Futties",
         "club_id":10,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":12
     },
     {
         "player_id":153079,
@@ -1153,7 +1220,8 @@
         "PHY":75,
         "card_id":"153079_IF",
         "club_id":10,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":164240,
@@ -1170,7 +1238,8 @@
         "PHY":87,
         "card_id":"164240_SIF",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":168542,
@@ -1187,7 +1256,8 @@
         "PHY":61,
         "card_id":"168542_TIF",
         "club_id":10,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":4833,
@@ -1204,7 +1274,8 @@
         "PHY":82,
         "card_id":"4833_Legend",
         "club_id":999,
-        "nation_id":9
+        "nation_id":9,
+        "league_id":8
     },
     {
         "player_id":191695,
@@ -1221,7 +1292,8 @@
         "PHY":65,
         "card_id":"191695_Legend",
         "club_id":999,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":8
     },
     {
         "player_id":5589,
@@ -1238,7 +1310,8 @@
         "PHY":75,
         "card_id":"5589_Legend",
         "club_id":999,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":8
     },
     {
         "player_id":214100,
@@ -1255,7 +1328,8 @@
         "PHY":82,
         "card_id":"214100_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":10264,
@@ -1272,7 +1346,8 @@
         "PHY":76,
         "card_id":"10264_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":4000,
@@ -1289,7 +1364,8 @@
         "PHY":79,
         "card_id":"4000_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":190053,
@@ -1306,7 +1382,8 @@
         "PHY":85,
         "card_id":"190053_Legend",
         "club_id":999,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":8
     },
     {
         "player_id":190871,
@@ -1323,7 +1400,8 @@
         "PHY":67,
         "card_id":"190871_MOTM",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":41236,
@@ -1340,7 +1418,8 @@
         "PHY":86,
         "card_id":"41236_Normal",
         "club_id":73,
-        "nation_id":46
+        "nation_id":46,
+        "league_id":10
     },
     {
         "player_id":9014,
@@ -1357,7 +1436,8 @@
         "PHY":64,
         "card_id":"9014_Normal",
         "club_id":21,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":167495,
@@ -1374,7 +1454,8 @@
         "PHY":90,
         "card_id":"167495_Normal",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":183277,
@@ -1391,7 +1472,8 @@
         "PHY":70,
         "card_id":"183277_POTY",
         "club_id":5,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":163705,
@@ -1408,7 +1490,8 @@
         "PHY":94,
         "card_id":"163705_TOTS",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":193301,
@@ -1425,7 +1508,8 @@
         "PHY":90,
         "card_id":"193301_TOTS",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":138956,
@@ -1442,7 +1526,8 @@
         "PHY":96,
         "card_id":"138956_TOTS",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":1179,
@@ -1459,7 +1544,8 @@
         "PHY":95,
         "card_id":"1179_TOTS",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":170890,
@@ -1476,7 +1562,8 @@
         "PHY":91,
         "card_id":"170890_TOTS",
         "club_id":73,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":146562,
@@ -1493,7 +1580,8 @@
         "PHY":70,
         "card_id":"146562_TOTS",
         "club_id":1,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":162895,
@@ -1510,7 +1598,8 @@
         "PHY":70,
         "card_id":"162895_TOTS",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":13732,
@@ -1527,7 +1616,8 @@
         "PHY":94,
         "card_id":"13732_TOTS",
         "club_id":5,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":174543,
@@ -1544,7 +1634,8 @@
         "PHY":88,
         "card_id":"174543_TOTS",
         "club_id":241,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":7
     },
     {
         "player_id":152729,
@@ -1561,7 +1652,8 @@
         "PHY":85,
         "card_id":"152729_TOTS",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":189362,
@@ -1578,7 +1670,8 @@
         "PHY":96,
         "card_id":"189362_TOTS",
         "club_id":100769,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":14
     },
     {
         "player_id":156616,
@@ -1595,7 +1688,8 @@
         "PHY":64,
         "card_id":"156616_IF",
         "club_id":21,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":4
     },
     {
         "player_id":183277,
@@ -1612,7 +1706,8 @@
         "PHY":67,
         "card_id":"183277_IF",
         "club_id":5,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":164240,
@@ -1629,7 +1724,8 @@
         "PHY":86,
         "card_id":"164240_IF",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":184941,
@@ -1646,7 +1742,8 @@
         "PHY":78,
         "card_id":"184941_IF",
         "club_id":1,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":12
     },
     {
         "player_id":168542,
@@ -1663,7 +1760,8 @@
         "PHY":59,
         "card_id":"168542_SIF",
         "club_id":10,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":190871,
@@ -1680,7 +1778,8 @@
         "PHY":63,
         "card_id":"190871_SIF",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":167664,
@@ -1697,7 +1796,8 @@
         "PHY":82,
         "card_id":"167664_SIF",
         "club_id":48,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":16
     },
     {
         "player_id":188545,
@@ -1714,7 +1814,8 @@
         "PHY":84,
         "card_id":"188545_SIF",
         "club_id":21,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":4
     },
     {
         "player_id":153079,
@@ -1731,7 +1832,8 @@
         "PHY":72,
         "card_id":"153079_TIF",
         "club_id":10,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":189596,
@@ -1748,7 +1850,8 @@
         "PHY":80,
         "card_id":"189596_TIF",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":51,
@@ -1765,7 +1868,8 @@
         "PHY":84,
         "card_id":"51_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":222000,
@@ -1782,7 +1886,8 @@
         "PHY":64,
         "card_id":"222000_Legend",
         "club_id":999,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":8
     },
     {
         "player_id":222481,
@@ -1799,7 +1904,8 @@
         "PHY":84,
         "card_id":"222481_Legend",
         "club_id":999,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":8
     },
     {
         "player_id":6235,
@@ -1816,7 +1922,8 @@
         "PHY":80,
         "card_id":"6235_Legend",
         "club_id":999,
-        "nation_id":12
+        "nation_id":12,
+        "league_id":8
     },
     {
         "player_id":164000,
@@ -1833,7 +1940,8 @@
         "PHY":81,
         "card_id":"164000_Legend",
         "club_id":999,
-        "nation_id":122
+        "nation_id":122,
+        "league_id":8
     },
     {
         "player_id":214267,
@@ -1850,7 +1958,8 @@
         "PHY":75,
         "card_id":"214267_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":166124,
@@ -1867,7 +1976,8 @@
         "PHY":66,
         "card_id":"166124_Legend",
         "club_id":999,
-        "nation_id":39
+        "nation_id":39,
+        "league_id":8
     },
     {
         "player_id":161840,
@@ -1884,7 +1994,8 @@
         "PHY":83,
         "card_id":"161840_Legend",
         "club_id":999,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":8
     },
     {
         "player_id":1116,
@@ -1901,7 +2012,8 @@
         "PHY":88,
         "card_id":"1116_Legend",
         "club_id":999,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":8
     },
     {
         "player_id":1183,
@@ -1918,7 +2030,8 @@
         "PHY":81,
         "card_id":"1183_Legend",
         "club_id":999,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":8
     },
     {
         "player_id":51539,
@@ -1935,7 +2048,8 @@
         "PHY":92,
         "card_id":"51539_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":176580,
@@ -1952,7 +2066,8 @@
         "PHY":79,
         "card_id":"176580_Normal",
         "club_id":241,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":41,
@@ -1969,7 +2084,8 @@
         "PHY":63,
         "card_id":"41_Normal",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":112253,
@@ -1986,7 +2102,8 @@
         "PHY":88,
         "card_id":"112253_TOTS",
         "club_id":69,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":146530,
@@ -2003,7 +2120,8 @@
         "PHY":75,
         "card_id":"146530_TOTS",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":155897,
@@ -2020,7 +2138,8 @@
         "PHY":88,
         "card_id":"155897_TOTS",
         "club_id":111144,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":11
     },
     {
         "player_id":179944,
@@ -2037,7 +2156,8 @@
         "PHY":87,
         "card_id":"179944_TOTY",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":167948,
@@ -2054,7 +2174,8 @@
         "PHY":89,
         "card_id":"167948_Futties",
         "club_id":18,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":190460,
@@ -2071,7 +2192,8 @@
         "PHY":60,
         "card_id":"190460_Futties",
         "club_id":18,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":12
     },
     {
         "player_id":188350,
@@ -2088,7 +2210,8 @@
         "PHY":68,
         "card_id":"188350_Futties",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":190871,
@@ -2105,7 +2228,8 @@
         "PHY":60,
         "card_id":"190871_IF",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":168542,
@@ -2122,7 +2246,8 @@
         "PHY":58,
         "card_id":"168542_IF",
         "club_id":10,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":121939,
@@ -2139,7 +2264,8 @@
         "PHY":69,
         "card_id":"121939_IF",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":173731,
@@ -2156,7 +2282,8 @@
         "PHY":83,
         "card_id":"173731_IF",
         "club_id":243,
-        "nation_id":50
+        "nation_id":50,
+        "league_id":7
     },
     {
         "player_id":183907,
@@ -2173,7 +2300,8 @@
         "PHY":87,
         "card_id":"183907_IF",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":188545,
@@ -2190,7 +2318,8 @@
         "PHY":81,
         "card_id":"188545_IF",
         "club_id":21,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":4
     },
     {
         "player_id":20289,
@@ -2207,7 +2336,8 @@
         "PHY":93,
         "card_id":"20289_IF",
         "club_id":10,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":12
     },
     {
         "player_id":181872,
@@ -2224,7 +2354,8 @@
         "PHY":90,
         "card_id":"181872_IF",
         "club_id":45,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":16
     },
     {
         "player_id":179844,
@@ -2241,7 +2372,8 @@
         "PHY":90,
         "card_id":"179844_SIF",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":189596,
@@ -2258,7 +2390,8 @@
         "PHY":77,
         "card_id":"189596_SIF",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":54050,
@@ -2275,7 +2408,8 @@
         "PHY":90,
         "card_id":"54050_SIF",
         "club_id":11,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":178603,
@@ -2292,7 +2426,8 @@
         "PHY":85,
         "card_id":"178603_SIF",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":198710,
@@ -2309,7 +2444,8 @@
         "PHY":76,
         "card_id":"198710_SIF",
         "club_id":243,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":7
     },
     {
         "player_id":192318,
@@ -2326,7 +2462,8 @@
         "PHY":68,
         "card_id":"192318_SIF",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":192985,
@@ -2343,7 +2480,8 @@
         "PHY":80,
         "card_id":"192985_TIF",
         "club_id":175,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":4
     },
     {
         "player_id":167664,
@@ -2360,7 +2498,8 @@
         "PHY":79,
         "card_id":"167664_MOTM",
         "club_id":48,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":16
     },
     {
         "player_id":222257,
@@ -2377,7 +2516,8 @@
         "PHY":65,
         "card_id":"222257_Legend",
         "club_id":999,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":8
     },
     {
         "player_id":240,
@@ -2394,7 +2534,8 @@
         "PHY":90,
         "card_id":"240_Legend",
         "club_id":999,
-        "nation_id":25
+        "nation_id":25,
+        "league_id":8
     },
     {
         "player_id":190044,
@@ -2411,7 +2552,8 @@
         "PHY":84,
         "card_id":"190044_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":1040,
@@ -2428,7 +2570,8 @@
         "PHY":85,
         "card_id":"1040_Legend",
         "club_id":999,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":8
     },
     {
         "player_id":1605,
@@ -2445,7 +2588,8 @@
         "PHY":62,
         "card_id":"1605_Legend",
         "club_id":999,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":8
     },
     {
         "player_id":1419,
@@ -2462,7 +2606,8 @@
         "PHY":91,
         "card_id":"1419_Legend",
         "club_id":999,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":8
     },
     {
         "player_id":214649,
@@ -2479,7 +2624,8 @@
         "PHY":76,
         "card_id":"214649_Legend",
         "club_id":999,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":8
     },
     {
         "player_id":13128,
@@ -2496,7 +2642,8 @@
         "PHY":73,
         "card_id":"13128_Legend",
         "club_id":999,
-        "nation_id":49
+        "nation_id":49,
+        "league_id":8
     },
     {
         "player_id":1025,
@@ -2513,7 +2660,8 @@
         "PHY":76,
         "card_id":"1025_Legend",
         "club_id":999,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":8
     },
     {
         "player_id":214098,
@@ -2530,7 +2678,8 @@
         "PHY":84,
         "card_id":"214098_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":5419,
@@ -2547,7 +2696,8 @@
         "PHY":64,
         "card_id":"5419_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":5680,
@@ -2564,7 +2714,8 @@
         "PHY":81,
         "card_id":"5680_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":1,
@@ -2581,7 +2732,8 @@
         "PHY":88,
         "card_id":"1_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":805,
@@ -2598,7 +2750,8 @@
         "PHY":88,
         "card_id":"805_Legend",
         "club_id":999,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":8
     },
     {
         "player_id":155862,
@@ -2615,7 +2768,8 @@
         "PHY":85,
         "card_id":"155862_MOTM",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":164240,
@@ -2632,7 +2786,8 @@
         "PHY":84,
         "card_id":"164240_MOTM",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":143001,
@@ -2649,7 +2804,8 @@
         "PHY":89,
         "card_id":"143001_MOTM",
         "club_id":1877,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":2
     },
     {
         "player_id":184941,
@@ -2666,7 +2822,8 @@
         "PHY":75,
         "card_id":"184941_MOTM",
         "club_id":1,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":12
     },
     {
         "player_id":176635,
@@ -2683,7 +2840,8 @@
         "PHY":65,
         "card_id":"176635_MOTM",
         "club_id":1,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":12
     },
     {
         "player_id":179813,
@@ -2700,7 +2858,8 @@
         "PHY":89,
         "card_id":"179813_MOTM",
         "club_id":73,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":10
     },
     {
         "player_id":168651,
@@ -2717,7 +2876,8 @@
         "PHY":80,
         "card_id":"168651_MOTM",
         "club_id":241,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":7
     },
     {
         "player_id":183898,
@@ -2734,7 +2894,8 @@
         "PHY":76,
         "card_id":"183898_MOTM",
         "club_id":11,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":183277,
@@ -2751,7 +2912,8 @@
         "PHY":64,
         "card_id":"183277_Normal",
         "club_id":5,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":156616,
@@ -2768,7 +2930,8 @@
         "PHY":62,
         "card_id":"156616_Normal",
         "club_id":21,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":4
     },
     {
         "player_id":121944,
@@ -2785,7 +2948,8 @@
         "PHY":80,
         "card_id":"121944_Normal",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":167397,
@@ -2802,7 +2966,8 @@
         "PHY":73,
         "card_id":"167397_Normal",
         "club_id":11,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":12
     },
     {
         "player_id":7826,
@@ -2819,7 +2984,8 @@
         "PHY":68,
         "card_id":"7826_Normal",
         "club_id":11,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":12
     },
     {
         "player_id":170481,
@@ -2836,7 +3002,8 @@
         "PHY":85,
         "card_id":"170481_TOTS",
         "club_id":100769,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":14
     },
     {
         "player_id":191202,
@@ -2853,7 +3020,8 @@
         "PHY":92,
         "card_id":"191202_TOTS",
         "club_id":5,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":12
     },
     {
         "player_id":173210,
@@ -2870,7 +3038,8 @@
         "PHY":84,
         "card_id":"173210_TOTS",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":171919,
@@ -2887,7 +3056,8 @@
         "PHY":89,
         "card_id":"171919_TOTS",
         "club_id":175,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":192366,
@@ -2904,7 +3074,8 @@
         "PHY":92,
         "card_id":"192366_TOTS",
         "club_id":461,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":165580,
@@ -2921,7 +3092,8 @@
         "PHY":89,
         "card_id":"165580_TOTS",
         "club_id":461,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":13743,
@@ -2938,7 +3110,8 @@
         "PHY":88,
         "card_id":"13743_TOTS",
         "club_id":697,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":11
     },
     {
         "player_id":179844,
@@ -2955,7 +3128,8 @@
         "PHY":89,
         "card_id":"179844_IF",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":183898,
@@ -2972,7 +3146,8 @@
         "PHY":73,
         "card_id":"183898_IF",
         "club_id":11,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":198710,
@@ -2989,7 +3164,8 @@
         "PHY":73,
         "card_id":"198710_IF",
         "club_id":243,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":7
     },
     {
         "player_id":189596,
@@ -3006,7 +3182,8 @@
         "PHY":75,
         "card_id":"189596_IF",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":178603,
@@ -3023,7 +3200,8 @@
         "PHY":82,
         "card_id":"178603_IF",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":54050,
@@ -3040,7 +3218,8 @@
         "PHY":88,
         "card_id":"54050_IF",
         "club_id":11,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":176635,
@@ -3057,7 +3236,8 @@
         "PHY":60,
         "card_id":"176635_IF",
         "club_id":1,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":12
     },
     {
         "player_id":192318,
@@ -3074,7 +3254,8 @@
         "PHY":65,
         "card_id":"192318_IF",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":179813,
@@ -3091,7 +3272,8 @@
         "PHY":85,
         "card_id":"179813_IF",
         "club_id":73,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":10
     },
     {
         "player_id":143001,
@@ -3108,7 +3290,8 @@
         "PHY":88,
         "card_id":"143001_SIF",
         "club_id":1877,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":2
     },
     {
         "player_id":193080,
@@ -3125,7 +3308,8 @@
         "PHY":84,
         "card_id":"193080_SIF",
         "club_id":11,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":184941,
@@ -3142,7 +3326,8 @@
         "PHY":72,
         "card_id":"184941_SIF",
         "club_id":1,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":12
     },
     {
         "player_id":165153,
@@ -3159,7 +3344,8 @@
         "PHY":79,
         "card_id":"165153_SIF",
         "club_id":243,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":182493,
@@ -3176,7 +3362,8 @@
         "PHY":89,
         "card_id":"182493_TIF",
         "club_id":240,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":139869,
@@ -3193,7 +3380,8 @@
         "PHY":72,
         "card_id":"139869_TIF",
         "club_id":325,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":18
     },
     {
         "player_id":192985,
@@ -3210,7 +3398,8 @@
         "PHY":77,
         "card_id":"192985_MOTM",
         "club_id":175,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":4
     },
     {
         "player_id":166120,
@@ -3227,7 +3416,8 @@
         "PHY":86,
         "card_id":"166120_Legend",
         "club_id":999,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":8
     },
     {
         "player_id":570,
@@ -3244,7 +3434,8 @@
         "PHY":58,
         "card_id":"570_Legend",
         "club_id":999,
-        "nation_id":133
+        "nation_id":133,
+        "league_id":8
     },
     {
         "player_id":1201,
@@ -3261,7 +3452,8 @@
         "PHY":62,
         "card_id":"1201_Legend",
         "club_id":999,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":8
     },
     {
         "player_id":942,
@@ -3278,7 +3470,8 @@
         "PHY":83,
         "card_id":"942_Legend",
         "club_id":999,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":8
     },
     {
         "player_id":52241,
@@ -3295,7 +3488,8 @@
         "PHY":67,
         "card_id":"52241_Legend",
         "club_id":999,
-        "nation_id":46
+        "nation_id":46,
+        "league_id":8
     },
     {
         "player_id":117106,
@@ -3312,7 +3506,8 @@
         "PHY":72,
         "card_id":"117106_Legend",
         "club_id":999,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":8
     },
     {
         "player_id":7512,
@@ -3329,7 +3524,8 @@
         "PHY":69,
         "card_id":"7512_Legend",
         "club_id":999,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":8
     },
     {
         "player_id":214101,
@@ -3346,7 +3542,8 @@
         "PHY":55,
         "card_id":"214101_Legend",
         "club_id":999,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":8
     },
     {
         "player_id":215732,
@@ -3363,7 +3560,8 @@
         "PHY":74,
         "card_id":"215732_Legend",
         "club_id":999,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":8
     },
     {
         "player_id":1198,
@@ -3380,7 +3578,8 @@
         "PHY":55,
         "card_id":"1198_Legend",
         "club_id":999,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":8
     },
     {
         "player_id":192119,
@@ -3397,7 +3596,8 @@
         "PHY":88,
         "card_id":"192119_MOTM",
         "club_id":5,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":20289,
@@ -3414,7 +3614,8 @@
         "PHY":91,
         "card_id":"20289_MOTM",
         "club_id":10,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":12
     },
     {
         "player_id":183907,
@@ -3431,7 +3632,8 @@
         "PHY":84,
         "card_id":"183907_MOTM",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":181872,
@@ -3448,7 +3650,8 @@
         "PHY":87,
         "card_id":"181872_MOTM",
         "club_id":45,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":16
     },
     {
         "player_id":188545,
@@ -3465,7 +3668,8 @@
         "PHY":78,
         "card_id":"188545_Normal",
         "club_id":21,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":4
     },
     {
         "player_id":177003,
@@ -3482,7 +3686,8 @@
         "PHY":70,
         "card_id":"177003_Normal",
         "club_id":243,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":7
     },
     {
         "player_id":168542,
@@ -3499,7 +3704,8 @@
         "PHY":57,
         "card_id":"168542_Normal",
         "club_id":10,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":164240,
@@ -3516,7 +3722,8 @@
         "PHY":80,
         "card_id":"164240_Normal",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":155862,
@@ -3533,7 +3740,8 @@
         "PHY":82,
         "card_id":"155862_Normal",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":173731,
@@ -3550,7 +3758,8 @@
         "PHY":81,
         "card_id":"173731_Normal",
         "club_id":243,
-        "nation_id":50
+        "nation_id":50,
+        "league_id":7
     },
     {
         "player_id":121939,
@@ -3567,7 +3776,8 @@
         "PHY":67,
         "card_id":"121939_Normal",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":190871,
@@ -3584,7 +3794,8 @@
         "PHY":59,
         "card_id":"190871_Normal",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":153079,
@@ -3601,7 +3812,8 @@
         "PHY":68,
         "card_id":"153079_Normal",
         "club_id":10,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":177388,
@@ -3618,7 +3830,8 @@
         "PHY":78,
         "card_id":"177388_TOTS",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":178518,
@@ -3635,7 +3848,8 @@
         "PHY":88,
         "card_id":"178518_TOTS",
         "club_id":52,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":16
     },
     {
         "player_id":191180,
@@ -3652,7 +3866,8 @@
         "PHY":75,
         "card_id":"191180_TOTS",
         "club_id":73,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":10
     },
     {
         "player_id":199556,
@@ -3669,7 +3884,8 @@
         "PHY":74,
         "card_id":"199556_TOTS",
         "club_id":73,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":10
     },
     {
         "player_id":176676,
@@ -3686,7 +3902,8 @@
         "PHY":85,
         "card_id":"176676_TOTS",
         "club_id":243,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":196144,
@@ -3703,7 +3920,8 @@
         "PHY":89,
         "card_id":"196144_TOTS",
         "club_id":236,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":13
     },
     {
         "player_id":167431,
@@ -3720,7 +3938,8 @@
         "PHY":80,
         "card_id":"167431_TOTS",
         "club_id":32,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":193352,
@@ -3737,7 +3956,8 @@
         "PHY":85,
         "card_id":"193352_TOTS",
         "club_id":175,
-        "nation_id":47
+        "nation_id":47,
+        "league_id":4
     },
     {
         "player_id":189513,
@@ -3754,7 +3974,8 @@
         "PHY":78,
         "card_id":"189513_TOTS",
         "club_id":461,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":156142,
@@ -3771,7 +3992,8 @@
         "PHY":85,
         "card_id":"156142_TOTS",
         "club_id":315,
-        "nation_id":17
+        "nation_id":17,
+        "league_id":14
     },
     {
         "player_id":113422,
@@ -3788,7 +4010,8 @@
         "PHY":75,
         "card_id":"113422_TOTS",
         "club_id":112828,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":11
     },
     {
         "player_id":143001,
@@ -3805,7 +4028,8 @@
         "PHY":86,
         "card_id":"143001_IF",
         "club_id":1877,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":2
     },
     {
         "player_id":193080,
@@ -3822,7 +4046,8 @@
         "PHY":82,
         "card_id":"193080_IF",
         "club_id":11,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":165153,
@@ -3839,7 +4064,8 @@
         "PHY":77,
         "card_id":"165153_IF",
         "club_id":243,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":182521,
@@ -3856,7 +4082,8 @@
         "PHY":70,
         "card_id":"182521_IF",
         "club_id":243,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":7
     },
     {
         "player_id":167948,
@@ -3873,7 +4100,8 @@
         "PHY":85,
         "card_id":"167948_IF",
         "club_id":18,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":189511,
@@ -3890,7 +4118,8 @@
         "PHY":82,
         "card_id":"189511_IF",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":178088,
@@ -3907,7 +4136,8 @@
         "PHY":62,
         "card_id":"178088_IF",
         "club_id":11,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":48940,
@@ -3924,7 +4154,8 @@
         "PHY":87,
         "card_id":"48940_IF",
         "club_id":1,
-        "nation_id":12
+        "nation_id":12,
+        "league_id":12
     },
     {
         "player_id":189505,
@@ -3941,7 +4172,8 @@
         "PHY":67,
         "card_id":"189505_IF",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":182493,
@@ -3958,7 +4190,8 @@
         "PHY":86,
         "card_id":"182493_SIF",
         "club_id":240,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":197781,
@@ -3975,7 +4208,8 @@
         "PHY":67,
         "card_id":"197781_SIF",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":146562,
@@ -3992,7 +4226,8 @@
         "PHY":65,
         "card_id":"146562_SIF",
         "club_id":1,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":195864,
@@ -4009,7 +4244,8 @@
         "PHY":91,
         "card_id":"195864_SIF",
         "club_id":45,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":16
     },
     {
         "player_id":139869,
@@ -4026,7 +4262,8 @@
         "PHY":68,
         "card_id":"139869_SIF",
         "club_id":325,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":18
     },
     {
         "player_id":189362,
@@ -4043,7 +4280,8 @@
         "PHY":94,
         "card_id":"189362_SIF",
         "club_id":100769,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":14
     },
     {
         "player_id":194765,
@@ -4060,7 +4298,8 @@
         "PHY":74,
         "card_id":"194765_TIF",
         "club_id":240,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":168651,
@@ -4077,7 +4316,8 @@
         "PHY":75,
         "card_id":"168651_TIF",
         "club_id":241,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":7
     },
     {
         "player_id":170890,
@@ -4094,7 +4334,8 @@
         "PHY":88,
         "card_id":"170890_TIF",
         "club_id":73,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":222680,
@@ -4111,7 +4352,8 @@
         "PHY":48,
         "card_id":"222680_Legend",
         "club_id":999,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":8
     },
     {
         "player_id":177845,
@@ -4128,7 +4370,8 @@
         "PHY":78,
         "card_id":"177845_Legend",
         "club_id":999,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":8
     },
     {
         "player_id":215558,
@@ -4145,7 +4388,8 @@
         "PHY":85,
         "card_id":"215558_Legend",
         "club_id":999,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":8
     },
     {
         "player_id":195,
@@ -4162,7 +4406,8 @@
         "PHY":76,
         "card_id":"195_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":244,
@@ -4179,7 +4424,8 @@
         "PHY":81,
         "card_id":"244_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":6975,
@@ -4196,7 +4442,8 @@
         "PHY":75,
         "card_id":"6975_Legend",
         "club_id":999,
-        "nation_id":46
+        "nation_id":46,
+        "league_id":8
     },
     {
         "player_id":393,
@@ -4213,7 +4460,8 @@
         "PHY":72,
         "card_id":"393_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":388,
@@ -4230,7 +4478,8 @@
         "PHY":86,
         "card_id":"388_Legend",
         "club_id":999,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":8
     },
     {
         "player_id":190460,
@@ -4247,7 +4496,8 @@
         "PHY":58,
         "card_id":"190460_MOTM",
         "club_id":18,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":12
     },
     {
         "player_id":179813,
@@ -4264,7 +4514,8 @@
         "PHY":82,
         "card_id":"179813_Normal",
         "club_id":73,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":10
     },
     {
         "player_id":198710,
@@ -4281,7 +4532,8 @@
         "PHY":72,
         "card_id":"198710_Normal",
         "club_id":243,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":7
     },
     {
         "player_id":178603,
@@ -4298,7 +4550,8 @@
         "PHY":78,
         "card_id":"178603_Normal",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":176635,
@@ -4315,7 +4568,8 @@
         "PHY":58,
         "card_id":"176635_Normal",
         "club_id":1,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":12
     },
     {
         "player_id":189596,
@@ -4332,7 +4586,8 @@
         "PHY":72,
         "card_id":"189596_Normal",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":188350,
@@ -4349,7 +4604,8 @@
         "PHY":65,
         "card_id":"188350_Normal",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":54050,
@@ -4366,7 +4622,8 @@
         "PHY":87,
         "card_id":"54050_Normal",
         "club_id":11,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":20289,
@@ -4383,7 +4640,8 @@
         "PHY":90,
         "card_id":"20289_Normal",
         "club_id":10,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":12
     },
     {
         "player_id":10535,
@@ -4400,7 +4658,8 @@
         "PHY":58,
         "card_id":"10535_Normal",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":139720,
@@ -4417,7 +4676,8 @@
         "PHY":81,
         "card_id":"139720_Normal",
         "club_id":10,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":192119,
@@ -4434,7 +4694,8 @@
         "PHY":86,
         "card_id":"192119_Normal",
         "club_id":5,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":183898,
@@ -4451,7 +4712,8 @@
         "PHY":71,
         "card_id":"183898_Normal",
         "club_id":11,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":179844,
@@ -4468,7 +4730,8 @@
         "PHY":88,
         "card_id":"179844_Normal",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":183907,
@@ -4485,7 +4748,8 @@
         "PHY":82,
         "card_id":"183907_Normal",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":192318,
@@ -4502,7 +4766,8 @@
         "PHY":63,
         "card_id":"192318_Normal",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":13732,
@@ -4519,7 +4784,8 @@
         "PHY":88,
         "card_id":"13732_RB",
         "club_id":5,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":199482,
@@ -4536,7 +4802,8 @@
         "PHY":85,
         "card_id":"199482_TOTS",
         "club_id":66,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":10
     },
     {
         "player_id":184344,
@@ -4553,7 +4820,8 @@
         "PHY":90,
         "card_id":"184344_TOTS",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":190547,
@@ -4570,7 +4838,8 @@
         "PHY":91,
         "card_id":"190547_TOTS",
         "club_id":54,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":16
     },
     {
         "player_id":159147,
@@ -4587,7 +4856,8 @@
         "PHY":86,
         "card_id":"159147_TOTS",
         "club_id":1819,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":188829,
@@ -4604,7 +4874,8 @@
         "PHY":87,
         "card_id":"188829_TOTS",
         "club_id":219,
-        "nation_id":103
+        "nation_id":103,
+        "league_id":10
     },
     {
         "player_id":202126,
@@ -4621,7 +4892,8 @@
         "PHY":85,
         "card_id":"202126_TOTS",
         "club_id":18,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":184432,
@@ -4638,7 +4910,8 @@
         "PHY":83,
         "card_id":"184432_TOTS",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":188567,
@@ -4655,7 +4928,8 @@
         "PHY":80,
         "card_id":"188567_TOTS",
         "club_id":22,
-        "nation_id":115
+        "nation_id":115,
+        "league_id":4
     },
     {
         "player_id":110376,
@@ -4672,7 +4946,8 @@
         "PHY":80,
         "card_id":"110376_TOTS",
         "club_id":191,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":3
     },
     {
         "player_id":176769,
@@ -4689,7 +4964,8 @@
         "PHY":75,
         "card_id":"176769_TOTS",
         "club_id":234,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":13
     },
     {
         "player_id":202556,
@@ -4706,7 +4982,8 @@
         "PHY":84,
         "card_id":"202556_TOTS",
         "club_id":247,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":6
     },
     {
         "player_id":330,
@@ -4723,7 +5000,8 @@
         "PHY":80,
         "card_id":"330_TOTS",
         "club_id":697,
-        "nation_id":25
+        "nation_id":25,
+        "league_id":11
     },
     {
         "player_id":138449,
@@ -4740,7 +5018,8 @@
         "PHY":65,
         "card_id":"138449_TOTS",
         "club_id":112606,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":11
     },
     {
         "player_id":186942,
@@ -4757,7 +5036,8 @@
         "PHY":73,
         "card_id":"186942_Futties",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":171833,
@@ -4774,7 +5054,8 @@
         "PHY":74,
         "card_id":"171833_Futties",
         "club_id":9,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":138956,
@@ -4791,7 +5072,8 @@
         "PHY":89,
         "card_id":"138956_IF",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":182493,
@@ -4808,7 +5090,8 @@
         "PHY":81,
         "card_id":"182493_IF",
         "club_id":240,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":139869,
@@ -4825,7 +5108,8 @@
         "PHY":65,
         "card_id":"139869_IF",
         "club_id":325,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":18
     },
     {
         "player_id":167664,
@@ -4842,7 +5126,8 @@
         "PHY":74,
         "card_id":"167664_IF",
         "club_id":48,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":16
     },
     {
         "player_id":197781,
@@ -4859,7 +5144,8 @@
         "PHY":65,
         "card_id":"197781_IF",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":190460,
@@ -4876,7 +5162,8 @@
         "PHY":57,
         "card_id":"190460_IF",
         "club_id":18,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":12
     },
     {
         "player_id":195864,
@@ -4893,7 +5180,8 @@
         "PHY":90,
         "card_id":"195864_IF",
         "club_id":45,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":16
     },
     {
         "player_id":148803,
@@ -4910,7 +5198,8 @@
         "PHY":76,
         "card_id":"148803_IF",
         "club_id":34,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":177509,
@@ -4927,7 +5216,8 @@
         "PHY":87,
         "card_id":"177509_IF",
         "club_id":21,
-        "nation_id":129
+        "nation_id":129,
+        "league_id":4
     },
     {
         "player_id":146562,
@@ -4944,7 +5234,8 @@
         "PHY":62,
         "card_id":"146562_IF",
         "club_id":1,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":167628,
@@ -4961,7 +5252,8 @@
         "PHY":88,
         "card_id":"167628_IF",
         "club_id":1819,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":188152,
@@ -4978,7 +5270,8 @@
         "PHY":46,
         "card_id":"188152_IF",
         "club_id":5,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":7763,
@@ -4995,7 +5288,8 @@
         "PHY":63,
         "card_id":"7763_IF",
         "club_id":112828,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":11
     },
     {
         "player_id":152729,
@@ -5012,7 +5306,8 @@
         "PHY":80,
         "card_id":"152729_IF",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":162835,
@@ -5029,7 +5324,8 @@
         "PHY":87,
         "card_id":"162835_IF",
         "club_id":44,
-        "nation_id":44
+        "nation_id":44,
+        "league_id":16
     },
     {
         "player_id":13732,
@@ -5046,7 +5342,8 @@
         "PHY":86,
         "card_id":"13732_IF",
         "club_id":5,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":143745,
@@ -5063,7 +5360,8 @@
         "PHY":75,
         "card_id":"143745_IF",
         "club_id":240,
-        "nation_id":48
+        "nation_id":48,
+        "league_id":7
     },
     {
         "player_id":146530,
@@ -5080,7 +5378,8 @@
         "PHY":74,
         "card_id":"146530_IF",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":192366,
@@ -5097,7 +5396,8 @@
         "PHY":90,
         "card_id":"192366_IF",
         "club_id":461,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":194765,
@@ -5114,7 +5414,8 @@
         "PHY":71,
         "card_id":"194765_SIF",
         "club_id":240,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":168651,
@@ -5131,7 +5432,8 @@
         "PHY":72,
         "card_id":"168651_SIF",
         "club_id":241,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":7
     },
     {
         "player_id":192985,
@@ -5148,7 +5450,8 @@
         "PHY":74,
         "card_id":"192985_SIF",
         "club_id":175,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":4
     },
     {
         "player_id":180930,
@@ -5165,7 +5468,8 @@
         "PHY":77,
         "card_id":"180930_SIF",
         "club_id":10,
-        "nation_id":8
+        "nation_id":8,
+        "league_id":12
     },
     {
         "player_id":170890,
@@ -5182,7 +5486,8 @@
         "PHY":86,
         "card_id":"170890_SIF",
         "club_id":73,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":189358,
@@ -5199,7 +5504,8 @@
         "PHY":55,
         "card_id":"189358_SIF",
         "club_id":22,
-        "nation_id":163
+        "nation_id":163,
+        "league_id":4
     },
     {
         "player_id":180206,
@@ -5216,7 +5522,8 @@
         "PHY":72,
         "card_id":"180206_SIF",
         "club_id":52,
-        "nation_id":8
+        "nation_id":8,
+        "league_id":16
     },
     {
         "player_id":171877,
@@ -5233,7 +5540,8 @@
         "PHY":74,
         "card_id":"171877_MOTM",
         "club_id":48,
-        "nation_id":43
+        "nation_id":43,
+        "league_id":16
     },
     {
         "player_id":174543,
@@ -5250,7 +5558,8 @@
         "PHY":87,
         "card_id":"174543_MOTM",
         "club_id":241,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":7
     },
     {
         "player_id":189505,
@@ -5267,7 +5576,8 @@
         "PHY":65,
         "card_id":"189505_MOTM",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":177610,
@@ -5284,7 +5594,8 @@
         "PHY":85,
         "card_id":"177610_Normal",
         "club_id":21,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":4
     },
     {
         "player_id":189511,
@@ -5301,7 +5612,8 @@
         "PHY":80,
         "card_id":"189511_Normal",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":178088,
@@ -5318,7 +5630,8 @@
         "PHY":60,
         "card_id":"178088_Normal",
         "club_id":11,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":165153,
@@ -5335,7 +5648,8 @@
         "PHY":74,
         "card_id":"165153_Normal",
         "club_id":243,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":182521,
@@ -5352,7 +5666,8 @@
         "PHY":69,
         "card_id":"182521_Normal",
         "club_id":243,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":7
     },
     {
         "player_id":167948,
@@ -5369,7 +5684,8 @@
         "PHY":81,
         "card_id":"167948_Normal",
         "club_id":18,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":48940,
@@ -5386,7 +5702,8 @@
         "PHY":83,
         "card_id":"48940_Normal",
         "club_id":1,
-        "nation_id":12
+        "nation_id":12,
+        "league_id":12
     },
     {
         "player_id":184941,
@@ -5403,7 +5720,8 @@
         "PHY":68,
         "card_id":"184941_Normal",
         "club_id":1,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":12
     },
     {
         "player_id":181872,
@@ -5420,7 +5738,8 @@
         "PHY":83,
         "card_id":"181872_Normal",
         "club_id":45,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":16
     },
     {
         "player_id":143001,
@@ -5437,7 +5756,8 @@
         "PHY":84,
         "card_id":"143001_Normal",
         "club_id":1877,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":2
     },
     {
         "player_id":162895,
@@ -5454,7 +5774,8 @@
         "PHY":65,
         "card_id":"162895_Normal",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":193080,
@@ -5471,7 +5792,8 @@
         "PHY":80,
         "card_id":"193080_Normal",
         "club_id":11,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":45197,
@@ -5488,7 +5810,8 @@
         "PHY":72,
         "card_id":"45197_Normal",
         "club_id":21,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":4
     },
     {
         "player_id":163705,
@@ -5505,7 +5828,8 @@
         "PHY":89,
         "card_id":"163705_POTY",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":193301,
@@ -5522,7 +5846,8 @@
         "PHY":84,
         "card_id":"193301_POTY",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":150724,
@@ -5539,7 +5864,8 @@
         "PHY":86,
         "card_id":"150724_POTY",
         "club_id":10,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":189362,
@@ -5556,7 +5882,8 @@
         "PHY":91,
         "card_id":"189362_POTY",
         "club_id":100769,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":14
     },
     {
         "player_id":142780,
@@ -5573,7 +5900,8 @@
         "PHY":85,
         "card_id":"142780_TOTS",
         "club_id":110374,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":16
     },
     {
         "player_id":53405,
@@ -5590,7 +5918,8 @@
         "PHY":80,
         "card_id":"53405_TOTS",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":177134,
@@ -5607,7 +5936,8 @@
         "PHY":84,
         "card_id":"177134_TOTS",
         "club_id":327,
-        "nation_id":136
+        "nation_id":136,
+        "league_id":18
     },
     {
         "player_id":4098,
@@ -5624,7 +5954,8 @@
         "PHY":83,
         "card_id":"4098_TOTS",
         "club_id":240,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":177358,
@@ -5641,7 +5972,8 @@
         "PHY":87,
         "card_id":"177358_TOTS",
         "club_id":17,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":193116,
@@ -5658,7 +5990,8 @@
         "PHY":89,
         "card_id":"193116_TOTS",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":198077,
@@ -5675,7 +6008,8 @@
         "PHY":70,
         "card_id":"198077_TOTS",
         "club_id":23,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":199715,
@@ -5692,7 +6026,8 @@
         "PHY":80,
         "card_id":"199715_TOTS",
         "club_id":481,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":189805,
@@ -5709,7 +6044,8 @@
         "PHY":87,
         "card_id":"189805_TOTS",
         "club_id":247,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":6
     },
     {
         "player_id":188081,
@@ -5726,7 +6062,8 @@
         "PHY":65,
         "card_id":"188081_TOTS",
         "club_id":101059,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":19
     },
     {
         "player_id":181291,
@@ -5743,7 +6080,8 @@
         "PHY":82,
         "card_id":"181291_TOTS",
         "club_id":247,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":6
     },
     {
         "player_id":155887,
@@ -5760,7 +6098,8 @@
         "PHY":90,
         "card_id":"155887_TOTS",
         "club_id":111651,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":11
     },
     {
         "player_id":137494,
@@ -5777,7 +6116,8 @@
         "PHY":77,
         "card_id":"137494_TOTS",
         "club_id":111144,
-        "nation_id":133
+        "nation_id":133,
+        "league_id":11
     },
     {
         "player_id":184431,
@@ -5794,7 +6134,8 @@
         "PHY":63,
         "card_id":"184431_TOTS",
         "club_id":111651,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":11
     },
     {
         "player_id":5471,
@@ -5811,7 +6152,8 @@
         "PHY":80,
         "card_id":"5471_TOTS",
         "club_id":112828,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":11
     },
     {
         "player_id":188428,
@@ -5828,7 +6170,8 @@
         "PHY":75,
         "card_id":"188428_Futties",
         "club_id":52,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":16
     },
     {
         "player_id":20775,
@@ -5845,7 +6188,8 @@
         "PHY":70,
         "card_id":"20775_Futties",
         "club_id":236,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":13
     },
     {
         "player_id":168609,
@@ -5862,7 +6206,8 @@
         "PHY":82,
         "card_id":"168609_IF",
         "club_id":240,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":168651,
@@ -5879,7 +6224,8 @@
         "PHY":70,
         "card_id":"168651_IF",
         "club_id":241,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":7
     },
     {
         "player_id":180930,
@@ -5896,7 +6242,8 @@
         "PHY":74,
         "card_id":"180930_IF",
         "club_id":10,
-        "nation_id":8
+        "nation_id":8,
+        "league_id":12
     },
     {
         "player_id":171877,
@@ -5913,7 +6260,8 @@
         "PHY":72,
         "card_id":"171877_IF",
         "club_id":48,
-        "nation_id":43
+        "nation_id":43,
+        "league_id":16
     },
     {
         "player_id":192985,
@@ -5930,7 +6278,8 @@
         "PHY":71,
         "card_id":"192985_IF",
         "club_id":175,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":4
     },
     {
         "player_id":170890,
@@ -5947,7 +6296,8 @@
         "PHY":84,
         "card_id":"170890_IF",
         "club_id":73,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":194765,
@@ -5964,7 +6314,8 @@
         "PHY":70,
         "card_id":"194765_IF",
         "club_id":240,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":180206,
@@ -5981,7 +6332,8 @@
         "PHY":69,
         "card_id":"180206_IF",
         "club_id":52,
-        "nation_id":8
+        "nation_id":8,
+        "league_id":16
     },
     {
         "player_id":155897,
@@ -5998,7 +6350,8 @@
         "PHY":83,
         "card_id":"155897_MOTM",
         "club_id":111144,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":11
     },
     {
         "player_id":169416,
@@ -6015,7 +6368,8 @@
         "PHY":69,
         "card_id":"169416_IF",
         "club_id":457,
-        "nation_id":83
+        "nation_id":83,
+        "league_id":7
     },
     {
         "player_id":146748,
@@ -6032,7 +6386,8 @@
         "PHY":85,
         "card_id":"146748_IF",
         "club_id":47,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":16
     },
     {
         "player_id":150418,
@@ -6049,7 +6404,8 @@
         "PHY":83,
         "card_id":"150418_MOTM",
         "club_id":110374,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":16
     },
     {
         "player_id":13732,
@@ -6066,7 +6422,8 @@
         "PHY":83,
         "card_id":"13732_MOTM",
         "club_id":5,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":150724,
@@ -6083,7 +6440,8 @@
         "PHY":83,
         "card_id":"150724_MOTM",
         "club_id":10,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":175943,
@@ -6100,7 +6458,8 @@
         "PHY":58,
         "card_id":"175943_MOTM",
         "club_id":48,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":16
     },
     {
         "player_id":140601,
@@ -6117,7 +6476,8 @@
         "PHY":86,
         "card_id":"140601_IF",
         "club_id":44,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":16
     },
     {
         "player_id":173221,
@@ -6134,7 +6494,8 @@
         "PHY":76,
         "card_id":"173221_IF",
         "club_id":46,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":112253,
@@ -6151,7 +6512,8 @@
         "PHY":85,
         "card_id":"112253_IF",
         "club_id":69,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":186561,
@@ -6168,7 +6530,8 @@
         "PHY":79,
         "card_id":"186561_IF",
         "club_id":1,
-        "nation_id":50
+        "nation_id":50,
+        "league_id":12
     },
     {
         "player_id":162347,
@@ -6185,7 +6548,8 @@
         "PHY":74,
         "card_id":"162347_IF",
         "club_id":69,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":10
     },
     {
         "player_id":138956,
@@ -6202,7 +6566,8 @@
         "PHY":86,
         "card_id":"138956_Normal",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":7763,
@@ -6219,7 +6584,8 @@
         "PHY":59,
         "card_id":"7763_Normal",
         "club_id":112828,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":11
     },
     {
         "player_id":152729,
@@ -6236,7 +6602,8 @@
         "PHY":76,
         "card_id":"152729_Normal",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":179846,
@@ -6253,7 +6620,8 @@
         "PHY":86,
         "card_id":"179846_Normal",
         "club_id":243,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":7
     },
     {
         "player_id":182493,
@@ -6270,7 +6638,8 @@
         "PHY":78,
         "card_id":"182493_Normal",
         "club_id":240,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":7
     },
     {
         "player_id":177509,
@@ -6287,7 +6656,8 @@
         "PHY":84,
         "card_id":"177509_Normal",
         "club_id":21,
-        "nation_id":129
+        "nation_id":129,
+        "league_id":4
     },
     {
         "player_id":146562,
@@ -6304,7 +6674,8 @@
         "PHY":61,
         "card_id":"146562_Normal",
         "club_id":1,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":165239,
@@ -6321,7 +6692,8 @@
         "PHY":60,
         "card_id":"165239_Normal",
         "club_id":10,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":188152,
@@ -6338,7 +6710,8 @@
         "PHY":44,
         "card_id":"188152_Normal",
         "club_id":5,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":139869,
@@ -6355,7 +6728,8 @@
         "PHY":63,
         "card_id":"139869_Normal",
         "club_id":325,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":18
     },
     {
         "player_id":53302,
@@ -6372,7 +6746,8 @@
         "PHY":84,
         "card_id":"53302_Normal",
         "club_id":52,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":148803,
@@ -6389,7 +6764,8 @@
         "PHY":73,
         "card_id":"148803_Normal",
         "club_id":34,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":4
     },
     {
         "player_id":167664,
@@ -6406,7 +6782,8 @@
         "PHY":71,
         "card_id":"167664_Normal",
         "club_id":48,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":16
     },
     {
         "player_id":168435,
@@ -6423,7 +6800,8 @@
         "PHY":84,
         "card_id":"168435_Normal",
         "club_id":73,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":10
     },
     {
         "player_id":143745,
@@ -6440,7 +6818,8 @@
         "PHY":72,
         "card_id":"143745_Normal",
         "club_id":240,
-        "nation_id":48
+        "nation_id":48,
+        "league_id":7
     },
     {
         "player_id":190460,
@@ -6457,7 +6836,8 @@
         "PHY":56,
         "card_id":"190460_Normal",
         "club_id":18,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":12
     },
     {
         "player_id":5479,
@@ -6474,7 +6854,8 @@
         "PHY":79,
         "card_id":"5479_Normal",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":197781,
@@ -6491,7 +6872,8 @@
         "PHY":63,
         "card_id":"197781_Normal",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":195864,
@@ -6508,7 +6890,8 @@
         "PHY":88,
         "card_id":"195864_Normal",
         "club_id":45,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":16
     },
     {
         "player_id":162835,
@@ -6525,7 +6908,8 @@
         "PHY":84,
         "card_id":"162835_Normal",
         "club_id":44,
-        "nation_id":44
+        "nation_id":44,
+        "league_id":16
     },
     {
         "player_id":167628,
@@ -6542,7 +6926,8 @@
         "PHY":84,
         "card_id":"167628_Normal",
         "club_id":1819,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":189362,
@@ -6559,7 +6944,8 @@
         "PHY":88,
         "card_id":"189362_IF",
         "club_id":100769,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":14
     },
     {
         "player_id":174543,
@@ -6576,7 +6962,8 @@
         "PHY":82,
         "card_id":"174543_IF",
         "club_id":241,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":7
     },
     {
         "player_id":142754,
@@ -6593,7 +6980,8 @@
         "PHY":84,
         "card_id":"142754_IF",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":148119,
@@ -6610,7 +6998,8 @@
         "PHY":82,
         "card_id":"148119_IF",
         "club_id":315,
-        "nation_id":40
+        "nation_id":40,
+        "league_id":14
     },
     {
         "player_id":189358,
@@ -6627,7 +7016,8 @@
         "PHY":52,
         "card_id":"189358_IF",
         "club_id":22,
-        "nation_id":163
+        "nation_id":163,
+        "league_id":4
     },
     {
         "player_id":193301,
@@ -6644,7 +7034,8 @@
         "PHY":79,
         "card_id":"193301_SIF",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":163705,
@@ -6661,7 +7052,8 @@
         "PHY":86,
         "card_id":"163705_SIF",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":192366,
@@ -6678,7 +7070,8 @@
         "PHY":87,
         "card_id":"192366_TIF",
         "club_id":461,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":198009,
@@ -6695,7 +7088,8 @@
         "PHY":82,
         "card_id":"198009_TOTS",
         "club_id":110556,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":203551,
@@ -6712,7 +7106,8 @@
         "PHY":80,
         "card_id":"203551_TOTS",
         "club_id":52,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":201399,
@@ -6729,7 +7124,8 @@
         "PHY":82,
         "card_id":"201399_TOTS",
         "club_id":44,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":16
     },
     {
         "player_id":183711,
@@ -6746,7 +7142,8 @@
         "PHY":83,
         "card_id":"183711_TOTS",
         "club_id":9,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":199561,
@@ -6763,7 +7160,8 @@
         "PHY":72,
         "card_id":"199561_TOTS",
         "club_id":450,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":189157,
@@ -6780,7 +7178,8 @@
         "PHY":89,
         "card_id":"189157_TOTS",
         "club_id":1799,
-        "nation_id":110
+        "nation_id":110,
+        "league_id":12
     },
     {
         "player_id":179783,
@@ -6797,7 +7196,8 @@
         "PHY":85,
         "card_id":"179783_TOTS",
         "club_id":34,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":197242,
@@ -6814,7 +7214,8 @@
         "PHY":92,
         "card_id":"197242_TOTS",
         "club_id":481,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":7
     },
     {
         "player_id":199987,
@@ -6831,7 +7232,8 @@
         "PHY":87,
         "card_id":"199987_TOTS",
         "club_id":245,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":6
     },
     {
         "player_id":183284,
@@ -6848,7 +7250,8 @@
         "PHY":88,
         "card_id":"183284_TOTS",
         "club_id":325,
-        "nation_id":103
+        "nation_id":103,
+        "league_id":18
     },
     {
         "player_id":180206,
@@ -6865,7 +7268,8 @@
         "PHY":66,
         "card_id":"180206_Normal",
         "club_id":52,
-        "nation_id":8
+        "nation_id":8,
+        "league_id":16
     },
     {
         "player_id":193082,
@@ -6882,7 +7286,8 @@
         "PHY":71,
         "card_id":"193082_Normal",
         "club_id":5,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":12
     },
     {
         "player_id":120533,
@@ -6899,7 +7304,8 @@
         "PHY":83,
         "card_id":"120533_Normal",
         "club_id":243,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":112253,
@@ -6916,7 +7322,8 @@
         "PHY":82,
         "card_id":"112253_Normal",
         "club_id":69,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":142754,
@@ -6933,7 +7340,8 @@
         "PHY":80,
         "card_id":"142754_Normal",
         "club_id":241,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":146530,
@@ -6950,7 +7358,8 @@
         "PHY":68,
         "card_id":"146530_Normal",
         "club_id":241,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":162347,
@@ -6967,7 +7376,8 @@
         "PHY":72,
         "card_id":"162347_Normal",
         "club_id":69,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":10
     },
     {
         "player_id":170481,
@@ -6984,7 +7394,8 @@
         "PHY":78,
         "card_id":"170481_Normal",
         "club_id":100769,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":14
     },
     {
         "player_id":168609,
@@ -7001,7 +7412,8 @@
         "PHY":79,
         "card_id":"168609_Normal",
         "club_id":240,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":170890,
@@ -7018,7 +7430,8 @@
         "PHY":82,
         "card_id":"170890_Normal",
         "club_id":73,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":168651,
@@ -7035,7 +7448,8 @@
         "PHY":67,
         "card_id":"168651_Normal",
         "club_id":241,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":7
     },
     {
         "player_id":181783,
@@ -7052,7 +7466,8 @@
         "PHY":87,
         "card_id":"181783_Normal",
         "club_id":240,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":7
     },
     {
         "player_id":189505,
@@ -7069,7 +7484,8 @@
         "PHY":60,
         "card_id":"189505_Normal",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":186561,
@@ -7086,7 +7502,8 @@
         "PHY":77,
         "card_id":"186561_Normal",
         "club_id":1,
-        "nation_id":50
+        "nation_id":50,
+        "league_id":12
     },
     {
         "player_id":186942,
@@ -7103,7 +7520,8 @@
         "PHY":70,
         "card_id":"186942_Normal",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":146536,
@@ -7120,7 +7538,8 @@
         "PHY":53,
         "card_id":"146536_Normal",
         "club_id":10,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":180930,
@@ -7137,7 +7556,8 @@
         "PHY":71,
         "card_id":"180930_Normal",
         "club_id":10,
-        "nation_id":8
+        "nation_id":8,
+        "league_id":12
     },
     {
         "player_id":171833,
@@ -7154,7 +7574,8 @@
         "PHY":70,
         "card_id":"171833_Normal",
         "club_id":9,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":158133,
@@ -7171,7 +7592,8 @@
         "PHY":76,
         "card_id":"158133_Normal",
         "club_id":34,
-        "nation_id":59
+        "nation_id":59,
+        "league_id":4
     },
     {
         "player_id":146439,
@@ -7188,7 +7610,8 @@
         "PHY":82,
         "card_id":"146439_Normal",
         "club_id":461,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":13732,
@@ -7205,7 +7628,8 @@
         "PHY":80,
         "card_id":"13732_Normal",
         "club_id":5,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":53612,
@@ -7222,7 +7646,8 @@
         "PHY":76,
         "card_id":"53612_Normal",
         "club_id":1,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":12
     },
     {
         "player_id":189362,
@@ -7239,7 +7664,8 @@
         "PHY":86,
         "card_id":"189362_Normal",
         "club_id":100769,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":14
     },
     {
         "player_id":140601,
@@ -7256,7 +7682,8 @@
         "PHY":83,
         "card_id":"140601_Normal",
         "club_id":44,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":16
     },
     {
         "player_id":137186,
@@ -7273,7 +7700,8 @@
         "PHY":79,
         "card_id":"137186_Normal",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":171877,
@@ -7290,7 +7718,8 @@
         "PHY":71,
         "card_id":"171877_Normal",
         "club_id":48,
-        "nation_id":43
+        "nation_id":43,
+        "league_id":16
     },
     {
         "player_id":173210,
@@ -7307,7 +7736,8 @@
         "PHY":79,
         "card_id":"173210_Normal",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":173221,
@@ -7324,7 +7754,8 @@
         "PHY":74,
         "card_id":"173221_Normal",
         "club_id":46,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":2196,
@@ -7341,7 +7772,8 @@
         "PHY":85,
         "card_id":"2196_Normal",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":174543,
@@ -7358,7 +7790,8 @@
         "PHY":78,
         "card_id":"174543_Normal",
         "club_id":241,
-        "nation_id":55
+        "nation_id":55,
+        "league_id":7
     },
     {
         "player_id":146748,
@@ -7375,7 +7808,8 @@
         "PHY":82,
         "card_id":"146748_Normal",
         "club_id":47,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":16
     },
     {
         "player_id":148119,
@@ -7392,7 +7826,8 @@
         "PHY":78,
         "card_id":"148119_Normal",
         "club_id":315,
-        "nation_id":40
+        "nation_id":40,
+        "league_id":14
     },
     {
         "player_id":194765,
@@ -7409,7 +7844,8 @@
         "PHY":69,
         "card_id":"194765_Normal",
         "club_id":240,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":169416,
@@ -7426,7 +7862,8 @@
         "PHY":66,
         "card_id":"169416_Normal",
         "club_id":457,
-        "nation_id":83
+        "nation_id":83,
+        "league_id":7
     },
     {
         "player_id":1179,
@@ -7443,7 +7880,8 @@
         "PHY":90,
         "card_id":"1179_Normal",
         "club_id":45,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":150724,
@@ -7460,7 +7898,8 @@
         "PHY":80,
         "card_id":"150724_Normal",
         "club_id":10,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":192985,
@@ -7477,7 +7916,8 @@
         "PHY":70,
         "card_id":"192985_Normal",
         "club_id":175,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":4
     },
     {
         "player_id":200949,
@@ -7494,7 +7934,8 @@
         "PHY":65,
         "card_id":"200949_Normal",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":191202,
@@ -7511,7 +7952,8 @@
         "PHY":87,
         "card_id":"191202_Normal",
         "club_id":5,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":12
     },
     {
         "player_id":142784,
@@ -7528,7 +7970,8 @@
         "PHY":83,
         "card_id":"142784_Normal",
         "club_id":10,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":193301,
@@ -7545,7 +7988,8 @@
         "PHY":77,
         "card_id":"193301_IF",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":173771,
@@ -7562,7 +8006,8 @@
         "PHY":84,
         "card_id":"173771_IF",
         "club_id":22,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":4
     },
     {
         "player_id":199434,
@@ -7579,7 +8024,8 @@
         "PHY":69,
         "card_id":"199434_IF",
         "club_id":17,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":12
     },
     {
         "player_id":163631,
@@ -7596,7 +8042,8 @@
         "PHY":76,
         "card_id":"163631_IF",
         "club_id":7,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":163705,
@@ -7613,7 +8060,8 @@
         "PHY":83,
         "card_id":"163705_IF",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":184144,
@@ -7630,7 +8078,8 @@
         "PHY":60,
         "card_id":"184144_IF",
         "club_id":234,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":13
     },
     {
         "player_id":175943,
@@ -7647,7 +8096,8 @@
         "PHY":55,
         "card_id":"175943_IF",
         "club_id":48,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":16
     },
     {
         "player_id":189242,
@@ -7664,7 +8114,8 @@
         "PHY":54,
         "card_id":"189242_IF",
         "club_id":9,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":197445,
@@ -7681,7 +8132,8 @@
         "PHY":75,
         "card_id":"197445_IF",
         "club_id":21,
-        "nation_id":4
+        "nation_id":4,
+        "league_id":4
     },
     {
         "player_id":179944,
@@ -7698,7 +8150,8 @@
         "PHY":81,
         "card_id":"179944_IF",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":159065,
@@ -7715,7 +8168,8 @@
         "PHY":75,
         "card_id":"159065_IF",
         "club_id":73,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":10
     },
     {
         "player_id":180432,
@@ -7732,7 +8186,8 @@
         "PHY":75,
         "card_id":"180432_IF",
         "club_id":44,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":16
     },
     {
         "player_id":136138,
@@ -7749,7 +8204,8 @@
         "PHY":66,
         "card_id":"136138_IF",
         "club_id":326,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":18
     },
     {
         "player_id":183556,
@@ -7766,7 +8222,8 @@
         "PHY":82,
         "card_id":"183556_IF",
         "club_id":22,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":4
     },
     {
         "player_id":121933,
@@ -7783,7 +8240,8 @@
         "PHY":84,
         "card_id":"121933_IF",
         "club_id":28,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":1
     },
     {
         "player_id":13743,
@@ -7800,7 +8258,8 @@
         "PHY":83,
         "card_id":"13743_IF",
         "club_id":697,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":11
     },
     {
         "player_id":135507,
@@ -7817,7 +8276,8 @@
         "PHY":77,
         "card_id":"135507_IF",
         "club_id":10,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":139068,
@@ -7834,7 +8294,8 @@
         "PHY":67,
         "card_id":"139068_IF",
         "club_id":237,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":13
     },
     {
         "player_id":16254,
@@ -7851,7 +8312,8 @@
         "PHY":65,
         "card_id":"16254_IF",
         "club_id":7,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":12
     },
     {
         "player_id":171919,
@@ -7868,7 +8330,8 @@
         "PHY":83,
         "card_id":"171919_SIF",
         "club_id":175,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":189250,
@@ -7885,7 +8348,8 @@
         "PHY":86,
         "card_id":"189250_SIF",
         "club_id":100769,
-        "nation_id":61
+        "nation_id":61,
+        "league_id":14
     },
     {
         "player_id":165580,
@@ -7902,7 +8366,8 @@
         "PHY":82,
         "card_id":"165580_SIF",
         "club_id":461,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":193130,
@@ -7919,7 +8384,8 @@
         "PHY":71,
         "card_id":"193130_SIF",
         "club_id":175,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":189461,
@@ -7936,7 +8402,8 @@
         "PHY":81,
         "card_id":"189461_SIF",
         "club_id":1,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":193352,
@@ -7953,7 +8420,8 @@
         "PHY":83,
         "card_id":"193352_TIF",
         "club_id":175,
-        "nation_id":47
+        "nation_id":47,
+        "league_id":4
     },
     {
         "player_id":216594,
@@ -7970,7 +8438,8 @@
         "PHY":80,
         "card_id":"216594_TOTS",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":183666,
@@ -7987,7 +8456,8 @@
         "PHY":83,
         "card_id":"183666_TOTS",
         "club_id":280,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":17
     },
     {
         "player_id":121170,
@@ -8004,7 +8474,8 @@
         "PHY":81,
         "card_id":"121170_TOTS",
         "club_id":1824,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":202857,
@@ -8021,7 +8492,8 @@
         "PHY":68,
         "card_id":"202857_TOTS",
         "club_id":32,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":198176,
@@ -8038,7 +8510,8 @@
         "PHY":82,
         "card_id":"198176_TOTS",
         "club_id":46,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":16
     },
     {
         "player_id":194911,
@@ -8055,7 +8528,8 @@
         "PHY":85,
         "card_id":"194911_TOTS",
         "club_id":19,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":185000,
@@ -8072,7 +8546,8 @@
         "PHY":70,
         "card_id":"185000_TOTS",
         "club_id":605,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":15
     },
     {
         "player_id":138810,
@@ -8089,7 +8564,8 @@
         "PHY":70,
         "card_id":"138810_TOTS",
         "club_id":280,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":17
     },
     {
         "player_id":28130,
@@ -8106,7 +8582,8 @@
         "PHY":64,
         "card_id":"28130_Futties",
         "club_id":110150,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":9
     },
     {
         "player_id":189963,
@@ -8123,7 +8600,8 @@
         "PHY":88,
         "card_id":"189963_MOTM",
         "club_id":10,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":12
     },
     {
         "player_id":189242,
@@ -8140,7 +8618,8 @@
         "PHY":51,
         "card_id":"189242_MOTM",
         "club_id":9,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":189250,
@@ -8157,7 +8636,8 @@
         "PHY":84,
         "card_id":"189250_MOTM",
         "club_id":100769,
-        "nation_id":61
+        "nation_id":61,
+        "league_id":14
     },
     {
         "player_id":20775,
@@ -8174,7 +8654,8 @@
         "PHY":68,
         "card_id":"20775_MOTM",
         "club_id":236,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":13
     },
     {
         "player_id":189509,
@@ -8191,7 +8672,8 @@
         "PHY":68,
         "card_id":"189509_MOTM",
         "club_id":21,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":4
     },
     {
         "player_id":178224,
@@ -8208,7 +8690,8 @@
         "PHY":66,
         "card_id":"178224_MOTM",
         "club_id":243,
-        "nation_id":83
+        "nation_id":83,
+        "league_id":7
     },
     {
         "player_id":207664,
@@ -8225,7 +8708,8 @@
         "PHY":73,
         "card_id":"207664_MOTM",
         "club_id":481,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":7
     },
     {
         "player_id":179944,
@@ -8242,7 +8726,8 @@
         "PHY":78,
         "card_id":"179944_Normal",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":49370,
@@ -8259,7 +8744,8 @@
         "PHY":84,
         "card_id":"49370_Normal",
         "club_id":73,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":10
     },
     {
         "player_id":159065,
@@ -8276,7 +8762,8 @@
         "PHY":73,
         "card_id":"159065_Normal",
         "club_id":73,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":10
     },
     {
         "player_id":136130,
@@ -8293,7 +8780,8 @@
         "PHY":83,
         "card_id":"136130_Normal",
         "club_id":47,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":16
     },
     {
         "player_id":13743,
@@ -8310,7 +8798,8 @@
         "PHY":81,
         "card_id":"13743_Normal",
         "club_id":697,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":11
     },
     {
         "player_id":180432,
@@ -8327,7 +8816,8 @@
         "PHY":73,
         "card_id":"180432_Normal",
         "club_id":44,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":16
     },
     {
         "player_id":161956,
@@ -8344,7 +8834,8 @@
         "PHY":67,
         "card_id":"161956_Normal",
         "club_id":110374,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":16
     },
     {
         "player_id":20800,
@@ -8361,7 +8852,8 @@
         "PHY":56,
         "card_id":"20800_Normal",
         "club_id":100769,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":14
     },
     {
         "player_id":173771,
@@ -8378,7 +8870,8 @@
         "PHY":82,
         "card_id":"173771_Normal",
         "club_id":22,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":4
     },
     {
         "player_id":188428,
@@ -8395,7 +8888,8 @@
         "PHY":73,
         "card_id":"188428_Normal",
         "club_id":52,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":16
     },
     {
         "player_id":184144,
@@ -8412,7 +8906,8 @@
         "PHY":57,
         "card_id":"184144_Normal",
         "club_id":234,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":13
     },
     {
         "player_id":152999,
@@ -8429,7 +8924,8 @@
         "PHY":60,
         "card_id":"152999_Normal",
         "club_id":44,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":16
     },
     {
         "player_id":162409,
@@ -8446,7 +8942,8 @@
         "PHY":52,
         "card_id":"162409_Normal",
         "club_id":110374,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":176676,
@@ -8463,7 +8960,8 @@
         "PHY":79,
         "card_id":"176676_Normal",
         "club_id":243,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":135507,
@@ -8480,7 +8978,8 @@
         "PHY":75,
         "card_id":"135507_Normal",
         "club_id":10,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":193747,
@@ -8497,7 +8996,8 @@
         "PHY":73,
         "card_id":"193747_Normal",
         "club_id":240,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":158625,
@@ -8514,7 +9014,8 @@
         "PHY":76,
         "card_id":"158625_Normal",
         "club_id":21,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":172879,
@@ -8531,7 +9032,8 @@
         "PHY":82,
         "card_id":"172879_Normal",
         "club_id":22,
-        "nation_id":22
+        "nation_id":22,
+        "league_id":4
     },
     {
         "player_id":183556,
@@ -8548,7 +9050,8 @@
         "PHY":79,
         "card_id":"183556_Normal",
         "club_id":22,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":4
     },
     {
         "player_id":179784,
@@ -8565,7 +9068,8 @@
         "PHY":78,
         "card_id":"179784_Normal",
         "club_id":34,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":175943,
@@ -8582,7 +9086,8 @@
         "PHY":53,
         "card_id":"175943_Normal",
         "club_id":48,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":16
     },
     {
         "player_id":180403,
@@ -8599,7 +9104,8 @@
         "PHY":63,
         "card_id":"180403_Normal",
         "club_id":5,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":185221,
@@ -8616,7 +9122,8 @@
         "PHY":82,
         "card_id":"185221_Normal",
         "club_id":175,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":146954,
@@ -8633,7 +9140,8 @@
         "PHY":73,
         "card_id":"146954_Normal",
         "club_id":240,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":186627,
@@ -8650,7 +9158,8 @@
         "PHY":79,
         "card_id":"186627_Normal",
         "club_id":9,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":12
     },
     {
         "player_id":164994,
@@ -8667,7 +9176,8 @@
         "PHY":72,
         "card_id":"164994_Normal",
         "club_id":22,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":4
     },
     {
         "player_id":172871,
@@ -8684,7 +9194,8 @@
         "PHY":81,
         "card_id":"172871_Normal",
         "club_id":18,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":136138,
@@ -8701,7 +9212,8 @@
         "PHY":64,
         "card_id":"136138_Normal",
         "club_id":326,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":18
     },
     {
         "player_id":197445,
@@ -8718,7 +9230,8 @@
         "PHY":72,
         "card_id":"197445_Normal",
         "club_id":21,
-        "nation_id":4
+        "nation_id":4,
+        "league_id":4
     },
     {
         "player_id":163631,
@@ -8735,7 +9248,8 @@
         "PHY":74,
         "card_id":"163631_Normal",
         "club_id":7,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":163705,
@@ -8752,7 +9266,8 @@
         "PHY":80,
         "card_id":"163705_Normal",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":121933,
@@ -8769,7 +9284,8 @@
         "PHY":80,
         "card_id":"121933_Normal",
         "club_id":28,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":1
     },
     {
         "player_id":192563,
@@ -8786,7 +9302,8 @@
         "PHY":83,
         "card_id":"192563_Normal",
         "club_id":32,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":192448,
@@ -8803,7 +9320,8 @@
         "PHY":78,
         "card_id":"192448_Normal",
         "club_id":241,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":7
     },
     {
         "player_id":182494,
@@ -8820,7 +9338,8 @@
         "PHY":80,
         "card_id":"182494_Normal",
         "club_id":325,
-        "nation_id":60
+        "nation_id":60,
+        "league_id":18
     },
     {
         "player_id":48717,
@@ -8837,7 +9356,8 @@
         "PHY":82,
         "card_id":"48717_Normal",
         "club_id":234,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":13
     },
     {
         "player_id":16254,
@@ -8854,7 +9374,8 @@
         "PHY":82,
         "card_id":"16254_Normal",
         "club_id":7,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":12
     },
     {
         "player_id":173426,
@@ -8871,7 +9392,8 @@
         "PHY":80,
         "card_id":"173426_Normal",
         "club_id":9,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":193301,
@@ -8888,7 +9410,8 @@
         "PHY":75,
         "card_id":"193301_Normal",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":172723,
@@ -8905,7 +9428,8 @@
         "PHY":80,
         "card_id":"172723_Normal",
         "club_id":5,
-        "nation_id":8
+        "nation_id":8,
+        "league_id":12
     },
     {
         "player_id":199434,
@@ -8922,7 +9446,8 @@
         "PHY":67,
         "card_id":"199434_Normal",
         "club_id":17,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":12
     },
     {
         "player_id":164169,
@@ -8939,7 +9464,8 @@
         "PHY":77,
         "card_id":"164169_Normal",
         "club_id":5,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":196144,
@@ -8956,7 +9482,8 @@
         "PHY":85,
         "card_id":"196144_Normal",
         "club_id":236,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":13
     },
     {
         "player_id":165229,
@@ -8973,7 +9500,8 @@
         "PHY":77,
         "card_id":"165229_Normal",
         "club_id":1,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":150418,
@@ -8990,7 +9518,8 @@
         "PHY":79,
         "card_id":"150418_Normal",
         "club_id":110374,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":16
     },
     {
         "player_id":139068,
@@ -9007,7 +9536,8 @@
         "PHY":65,
         "card_id":"139068_Normal",
         "club_id":237,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":13
     },
     {
         "player_id":192366,
@@ -9024,7 +9554,8 @@
         "PHY":81,
         "card_id":"192366_Normal",
         "club_id":461,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":181820,
@@ -9041,7 +9572,8 @@
         "PHY":72,
         "card_id":"181820_Normal",
         "club_id":44,
-        "nation_id":15
+        "nation_id":15,
+        "league_id":16
     },
     {
         "player_id":156142,
@@ -9058,7 +9590,8 @@
         "PHY":80,
         "card_id":"156142_POTY",
         "club_id":315,
-        "nation_id":17
+        "nation_id":17,
+        "league_id":14
     },
     {
         "player_id":115909,
@@ -9075,7 +9608,8 @@
         "PHY":70,
         "card_id":"115909_POTY",
         "club_id":449,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":178372,
@@ -9092,7 +9626,8 @@
         "PHY":85,
         "card_id":"178372_IF",
         "club_id":5,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":12
     },
     {
         "player_id":171919,
@@ -9109,7 +9644,8 @@
         "PHY":79,
         "card_id":"171919_IF",
         "club_id":175,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":189461,
@@ -9126,7 +9662,8 @@
         "PHY":78,
         "card_id":"189461_IF",
         "club_id":1,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":9676,
@@ -9143,7 +9680,8 @@
         "PHY":75,
         "card_id":"9676_IF",
         "club_id":1837,
-        "nation_id":103
+        "nation_id":103,
+        "league_id":16
     },
     {
         "player_id":184881,
@@ -9160,7 +9698,8 @@
         "PHY":65,
         "card_id":"184881_IF",
         "club_id":461,
-        "nation_id":97
+        "nation_id":97,
+        "league_id":7
     },
     {
         "player_id":178518,
@@ -9177,7 +9716,8 @@
         "PHY":82,
         "card_id":"178518_IF",
         "club_id":52,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":16
     },
     {
         "player_id":135475,
@@ -9194,7 +9734,8 @@
         "PHY":87,
         "card_id":"135475_IF",
         "club_id":325,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":18
     },
     {
         "player_id":189513,
@@ -9211,7 +9752,8 @@
         "PHY":72,
         "card_id":"189513_IF",
         "club_id":461,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":11141,
@@ -9228,7 +9770,8 @@
         "PHY":67,
         "card_id":"11141_IF",
         "club_id":46,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":16
     },
     {
         "player_id":165580,
@@ -9245,7 +9788,8 @@
         "PHY":78,
         "card_id":"165580_IF",
         "club_id":461,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":193130,
@@ -9262,7 +9806,8 @@
         "PHY":68,
         "card_id":"193130_IF",
         "club_id":175,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":166706,
@@ -9279,7 +9824,8 @@
         "PHY":86,
         "card_id":"166706_IF",
         "club_id":9,
-        "nation_id":43
+        "nation_id":43,
+        "league_id":12
     },
     {
         "player_id":155897,
@@ -9296,7 +9842,8 @@
         "PHY":77,
         "card_id":"155897_IF",
         "club_id":111144,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":11
     },
     {
         "player_id":164859,
@@ -9313,7 +9860,8 @@
         "PHY":67,
         "card_id":"164859_IF",
         "club_id":1,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":177326,
@@ -9330,7 +9878,8 @@
         "PHY":51,
         "card_id":"177326_IF",
         "club_id":312,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":14
     },
     {
         "player_id":192883,
@@ -9347,7 +9896,8 @@
         "PHY":75,
         "card_id":"192883_IF",
         "club_id":22,
-        "nation_id":3
+        "nation_id":3,
+        "league_id":4
     },
     {
         "player_id":192505,
@@ -9364,7 +9914,8 @@
         "PHY":86,
         "card_id":"192505_IF",
         "club_id":7,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":330,
@@ -9381,7 +9932,8 @@
         "PHY":77,
         "card_id":"330_IF",
         "club_id":697,
-        "nation_id":25
+        "nation_id":25,
+        "league_id":11
     },
     {
         "player_id":146758,
@@ -9398,7 +9950,8 @@
         "PHY":77,
         "card_id":"146758_IF",
         "club_id":18,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":189332,
@@ -9415,7 +9968,8 @@
         "PHY":80,
         "card_id":"189332_IF",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":31432,
@@ -9432,7 +9986,8 @@
         "PHY":80,
         "card_id":"31432_IF",
         "club_id":111139,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":11
     },
     {
         "player_id":152554,
@@ -9449,7 +10004,8 @@
         "PHY":71,
         "card_id":"152554_SIF",
         "club_id":10,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":186146,
@@ -9466,7 +10022,8 @@
         "PHY":83,
         "card_id":"186146_SIF",
         "club_id":1,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":193348,
@@ -9483,7 +10040,8 @@
         "PHY":77,
         "card_id":"193348_SIF",
         "club_id":44,
-        "nation_id":47
+        "nation_id":47,
+        "league_id":16
     },
     {
         "player_id":53914,
@@ -9500,7 +10058,8 @@
         "PHY":86,
         "card_id":"53914_SIF",
         "club_id":7,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":193352,
@@ -9517,7 +10076,8 @@
         "PHY":80,
         "card_id":"193352_SIF",
         "club_id":175,
-        "nation_id":47
+        "nation_id":47,
+        "league_id":4
     },
     {
         "player_id":184111,
@@ -9534,7 +10094,8 @@
         "PHY":90,
         "card_id":"184111_SIF",
         "club_id":2,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":185020,
@@ -9551,7 +10112,8 @@
         "PHY":67,
         "card_id":"185020_SIF",
         "club_id":48,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":16
     },
     {
         "player_id":144622,
@@ -9568,7 +10130,8 @@
         "PHY":72,
         "card_id":"144622_SIF",
         "club_id":23,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":113422,
@@ -9585,7 +10148,8 @@
         "PHY":70,
         "card_id":"113422_SIF",
         "club_id":112828,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":11
     },
     {
         "player_id":139968,
@@ -9602,7 +10166,8 @@
         "PHY":86,
         "card_id":"139968_SIF",
         "club_id":65,
-        "nation_id":133
+        "nation_id":133,
+        "league_id":10
     },
     {
         "player_id":153244,
@@ -9619,7 +10184,8 @@
         "PHY":80,
         "card_id":"153244_SIF",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":177388,
@@ -9636,7 +10202,8 @@
         "PHY":71,
         "card_id":"177388_TIF",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":176571,
@@ -9653,7 +10220,8 @@
         "PHY":85,
         "card_id":"176571_TIF",
         "club_id":219,
-        "nation_id":117
+        "nation_id":117,
+        "league_id":10
     },
     {
         "player_id":163824,
@@ -9670,7 +10238,8 @@
         "PHY":90,
         "card_id":"163824_TIF",
         "club_id":1960,
-        "nation_id":50
+        "nation_id":50,
+        "league_id":12
     },
     {
         "player_id":207865,
@@ -9687,7 +10256,8 @@
         "PHY":75,
         "card_id":"207865_TOTS",
         "club_id":73,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":10
     },
     {
         "player_id":171875,
@@ -9704,7 +10274,8 @@
         "PHY":82,
         "card_id":"171875_TOTS",
         "club_id":326,
-        "nation_id":48
+        "nation_id":48,
+        "league_id":18
     },
     {
         "player_id":173474,
@@ -9721,7 +10292,8 @@
         "PHY":80,
         "card_id":"173474_TOTS",
         "club_id":38,
-        "nation_id":4
+        "nation_id":4,
+        "league_id":4
     },
     {
         "player_id":162280,
@@ -9738,7 +10310,8 @@
         "PHY":75,
         "card_id":"162280_TOTS",
         "club_id":112139,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":15
     },
     {
         "player_id":171897,
@@ -9755,7 +10328,8 @@
         "PHY":75,
         "card_id":"171897_TOTS",
         "club_id":247,
-        "nation_id":83
+        "nation_id":83,
+        "league_id":6
     },
     {
         "player_id":172610,
@@ -9772,7 +10346,8 @@
         "PHY":81,
         "card_id":"172610_Normal",
         "club_id":52,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":16
     },
     {
         "player_id":184943,
@@ -9789,7 +10364,8 @@
         "PHY":73,
         "card_id":"184943_Normal",
         "club_id":5,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":170733,
@@ -9806,7 +10382,8 @@
         "PHY":64,
         "card_id":"170733_Normal",
         "club_id":52,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":16
     },
     {
         "player_id":155897,
@@ -9823,7 +10400,8 @@
         "PHY":75,
         "card_id":"155897_Normal",
         "club_id":111144,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":11
     },
     {
         "player_id":164435,
@@ -9840,7 +10418,8 @@
         "PHY":54,
         "card_id":"164435_Normal",
         "club_id":100765,
-        "nation_id":129
+        "nation_id":129,
+        "league_id":14
     },
     {
         "player_id":162131,
@@ -9857,7 +10436,8 @@
         "PHY":85,
         "card_id":"162131_Normal",
         "club_id":45,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":16
     },
     {
         "player_id":11141,
@@ -9874,7 +10454,8 @@
         "PHY":64,
         "card_id":"11141_Normal",
         "club_id":46,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":16
     },
     {
         "player_id":189461,
@@ -9891,7 +10472,8 @@
         "PHY":77,
         "card_id":"189461_Normal",
         "club_id":1,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":189358,
@@ -9908,7 +10490,8 @@
         "PHY":49,
         "card_id":"189358_Normal",
         "club_id":22,
-        "nation_id":163
+        "nation_id":163,
+        "league_id":4
     },
     {
         "player_id":189332,
@@ -9925,7 +10508,8 @@
         "PHY":76,
         "card_id":"189332_Normal",
         "club_id":241,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":201535,
@@ -9942,7 +10526,8 @@
         "PHY":76,
         "card_id":"201535_Normal",
         "club_id":243,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":212218,
@@ -9959,7 +10544,8 @@
         "PHY":80,
         "card_id":"212218_Normal",
         "club_id":448,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":193130,
@@ -9976,7 +10562,8 @@
         "PHY":67,
         "card_id":"193130_Normal",
         "club_id":175,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":159287,
@@ -9993,7 +10580,8 @@
         "PHY":74,
         "card_id":"159287_Normal",
         "club_id":47,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":170797,
@@ -10010,7 +10598,8 @@
         "PHY":59,
         "card_id":"170797_Normal",
         "club_id":22,
-        "nation_id":48
+        "nation_id":48,
+        "league_id":4
     },
     {
         "player_id":189509,
@@ -10027,7 +10616,8 @@
         "PHY":64,
         "card_id":"189509_Normal",
         "club_id":21,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":4
     },
     {
         "player_id":34079,
@@ -10044,7 +10634,8 @@
         "PHY":75,
         "card_id":"34079_Normal",
         "club_id":52,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":16
     },
     {
         "player_id":164859,
@@ -10061,7 +10652,8 @@
         "PHY":64,
         "card_id":"164859_Normal",
         "club_id":1,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":177457,
@@ -10078,7 +10670,8 @@
         "PHY":81,
         "card_id":"177457_Normal",
         "club_id":32,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":53578,
@@ -10095,7 +10688,8 @@
         "PHY":82,
         "card_id":"53578_Normal",
         "club_id":47,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":16
     },
     {
         "player_id":177458,
@@ -10112,7 +10706,8 @@
         "PHY":82,
         "card_id":"177458_Normal",
         "club_id":22,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":49369,
@@ -10129,7 +10724,8 @@
         "PHY":70,
         "card_id":"49369_Normal",
         "club_id":240,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":189242,
@@ -10146,7 +10742,8 @@
         "PHY":50,
         "card_id":"189242_Normal",
         "club_id":9,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":12
     },
     {
         "player_id":189963,
@@ -10163,7 +10760,8 @@
         "PHY":85,
         "card_id":"189963_Normal",
         "club_id":10,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":12
     },
     {
         "player_id":192883,
@@ -10180,7 +10778,8 @@
         "PHY":71,
         "card_id":"192883_Normal",
         "club_id":22,
-        "nation_id":3
+        "nation_id":3,
+        "league_id":4
     },
     {
         "player_id":201942,
@@ -10197,7 +10796,8 @@
         "PHY":67,
         "card_id":"201942_Normal",
         "club_id":10029,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":178224,
@@ -10214,7 +10814,8 @@
         "PHY":63,
         "card_id":"178224_Normal",
         "club_id":243,
-        "nation_id":83
+        "nation_id":83,
+        "league_id":7
     },
     {
         "player_id":45574,
@@ -10231,7 +10832,8 @@
         "PHY":63,
         "card_id":"45574_Normal",
         "club_id":28,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":1
     },
     {
         "player_id":9676,
@@ -10248,7 +10850,8 @@
         "PHY":72,
         "card_id":"9676_Normal",
         "club_id":1837,
-        "nation_id":103
+        "nation_id":103,
+        "league_id":16
     },
     {
         "player_id":31432,
@@ -10265,7 +10868,8 @@
         "PHY":78,
         "card_id":"31432_Normal",
         "club_id":111139,
-        "nation_id":108
+        "nation_id":108,
+        "league_id":11
     },
     {
         "player_id":135475,
@@ -10282,7 +10886,8 @@
         "PHY":86,
         "card_id":"135475_Normal",
         "club_id":325,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":18
     },
     {
         "player_id":146758,
@@ -10299,7 +10904,8 @@
         "PHY":75,
         "card_id":"146758_Normal",
         "club_id":18,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":184881,
@@ -10316,7 +10922,8 @@
         "PHY":63,
         "card_id":"184881_Normal",
         "club_id":461,
-        "nation_id":97
+        "nation_id":97,
+        "league_id":7
     },
     {
         "player_id":148711,
@@ -10333,7 +10940,8 @@
         "PHY":75,
         "card_id":"148711_Normal",
         "club_id":234,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":13
     },
     {
         "player_id":164468,
@@ -10350,7 +10958,8 @@
         "PHY":76,
         "card_id":"164468_Normal",
         "club_id":5,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":166706,
@@ -10367,7 +10976,8 @@
         "PHY":82,
         "card_id":"166706_Normal",
         "club_id":9,
-        "nation_id":43
+        "nation_id":43,
+        "league_id":12
     },
     {
         "player_id":183285,
@@ -10384,7 +10994,8 @@
         "PHY":83,
         "card_id":"183285_Normal",
         "club_id":9,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":137262,
@@ -10401,7 +11012,8 @@
         "PHY":80,
         "card_id":"137262_Normal",
         "club_id":32,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":152039,
@@ -10418,7 +11030,8 @@
         "PHY":77,
         "card_id":"152039_Normal",
         "club_id":269,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":5
     },
     {
         "player_id":178372,
@@ -10435,7 +11048,8 @@
         "PHY":83,
         "card_id":"178372_Normal",
         "club_id":5,
-        "nation_id":51
+        "nation_id":51,
+        "league_id":12
     },
     {
         "player_id":189712,
@@ -10452,7 +11066,8 @@
         "PHY":83,
         "card_id":"189712_Normal",
         "club_id":52,
-        "nation_id":34
+        "nation_id":34,
+        "league_id":16
     },
     {
         "player_id":30110,
@@ -10469,7 +11084,8 @@
         "PHY":62,
         "card_id":"30110_Normal",
         "club_id":69,
-        "nation_id":9
+        "nation_id":9,
+        "league_id":10
     },
     {
         "player_id":150656,
@@ -10486,7 +11102,8 @@
         "PHY":78,
         "card_id":"150656_Normal",
         "club_id":65,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":143306,
@@ -10503,7 +11120,8 @@
         "PHY":83,
         "card_id":"143306_Normal",
         "club_id":327,
-        "nation_id":48
+        "nation_id":48,
+        "league_id":18
     },
     {
         "player_id":165580,
@@ -10520,7 +11138,8 @@
         "PHY":74,
         "card_id":"165580_Normal",
         "club_id":461,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":7
     },
     {
         "player_id":182629,
@@ -10537,7 +11156,8 @@
         "PHY":79,
         "card_id":"182629_Normal",
         "club_id":481,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":116494,
@@ -10554,7 +11174,8 @@
         "PHY":81,
         "card_id":"116494_Normal",
         "club_id":59,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":138449,
@@ -10571,7 +11192,8 @@
         "PHY":60,
         "card_id":"138449_Normal",
         "club_id":112606,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":11
     },
     {
         "player_id":184432,
@@ -10588,7 +11210,8 @@
         "PHY":77,
         "card_id":"184432_Normal",
         "club_id":5,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":178518,
@@ -10605,7 +11228,8 @@
         "PHY":81,
         "card_id":"178518_Normal",
         "club_id":52,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":16
     },
     {
         "player_id":207664,
@@ -10622,7 +11246,8 @@
         "PHY":69,
         "card_id":"207664_Normal",
         "club_id":481,
-        "nation_id":56
+        "nation_id":56,
+        "league_id":7
     },
     {
         "player_id":196432,
@@ -10639,7 +11264,8 @@
         "PHY":82,
         "card_id":"196432_Normal",
         "club_id":461,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":170369,
@@ -10656,7 +11282,8 @@
         "PHY":55,
         "card_id":"170369_Normal",
         "club_id":697,
-        "nation_id":83
+        "nation_id":83,
+        "league_id":11
     },
     {
         "player_id":24630,
@@ -10673,7 +11300,8 @@
         "PHY":80,
         "card_id":"24630_Normal",
         "club_id":21,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":4
     },
     {
         "player_id":199556,
@@ -10690,7 +11318,8 @@
         "PHY":69,
         "card_id":"199556_Normal",
         "club_id":73,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":10
     },
     {
         "player_id":177326,
@@ -10707,7 +11336,8 @@
         "PHY":49,
         "card_id":"177326_Normal",
         "club_id":312,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":14
     },
     {
         "player_id":171919,
@@ -10724,7 +11354,8 @@
         "PHY":75,
         "card_id":"171919_Normal",
         "club_id":175,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":189513,
@@ -10741,7 +11372,8 @@
         "PHY":70,
         "card_id":"189513_Normal",
         "club_id":461,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":167943,
@@ -10758,7 +11390,8 @@
         "PHY":73,
         "card_id":"167943_Normal",
         "club_id":73,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":205600,
@@ -10775,7 +11408,8 @@
         "PHY":85,
         "card_id":"205600_TOTS",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":28130,
@@ -10792,7 +11426,8 @@
         "PHY":61,
         "card_id":"28130_Normal",
         "club_id":110150,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":9
     },
     {
         "player_id":185020,
@@ -10809,7 +11444,8 @@
         "PHY":62,
         "card_id":"185020_Normal",
         "club_id":48,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":16
     },
     {
         "player_id":52091,
@@ -10826,7 +11462,8 @@
         "PHY":78,
         "card_id":"52091_Normal",
         "club_id":45,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":16
     },
     {
         "player_id":155887,
@@ -10843,7 +11480,8 @@
         "PHY":83,
         "card_id":"155887_Normal",
         "club_id":111651,
-        "nation_id":95
+        "nation_id":95,
+        "league_id":11
     },
     {
         "player_id":45119,
@@ -10860,7 +11498,8 @@
         "PHY":66,
         "card_id":"45119_Normal",
         "club_id":1,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":12
     },
     {
         "player_id":187607,
@@ -10877,7 +11516,8 @@
         "PHY":84,
         "card_id":"187607_Normal",
         "club_id":110231,
-        "nation_id":40
+        "nation_id":40,
+        "league_id":14
     },
     {
         "player_id":177413,
@@ -10894,7 +11534,8 @@
         "PHY":80,
         "card_id":"177413_Normal",
         "club_id":100769,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":14
     },
     {
         "player_id":147782,
@@ -10911,7 +11552,8 @@
         "PHY":75,
         "card_id":"147782_Normal",
         "club_id":312,
-        "nation_id":40
+        "nation_id":40,
+        "league_id":14
     },
     {
         "player_id":199835,
@@ -10928,7 +11570,8 @@
         "PHY":83,
         "card_id":"199835_Normal",
         "club_id":326,
-        "nation_id":133
+        "nation_id":133,
+        "league_id":18
     },
     {
         "player_id":5471,
@@ -10945,7 +11588,8 @@
         "PHY":72,
         "card_id":"5471_Normal",
         "club_id":112828,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":11
     },
     {
         "player_id":162240,
@@ -10962,7 +11606,8 @@
         "PHY":83,
         "card_id":"162240_Normal",
         "club_id":18,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":192615,
@@ -10979,7 +11624,8 @@
         "PHY":78,
         "card_id":"192615_Normal",
         "club_id":65,
-        "nation_id":15
+        "nation_id":15,
+        "league_id":10
     },
     {
         "player_id":112316,
@@ -10996,7 +11642,8 @@
         "PHY":81,
         "card_id":"112316_Normal",
         "club_id":241,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":7
     },
     {
         "player_id":193116,
@@ -11013,7 +11660,8 @@
         "PHY":83,
         "card_id":"193116_Normal",
         "club_id":66,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":198076,
@@ -11030,7 +11678,8 @@
         "PHY":86,
         "card_id":"198076_Normal",
         "club_id":69,
-        "nation_id":145
+        "nation_id":145,
+        "league_id":10
     },
     {
         "player_id":177600,
@@ -11047,7 +11696,8 @@
         "PHY":74,
         "card_id":"177600_Normal",
         "club_id":448,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":205525,
@@ -11064,7 +11714,8 @@
         "PHY":39,
         "card_id":"205525_Normal",
         "club_id":101059,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":19
     },
     {
         "player_id":173909,
@@ -11081,7 +11732,8 @@
         "PHY":84,
         "card_id":"173909_Normal",
         "club_id":34,
-        "nation_id":117
+        "nation_id":117,
+        "league_id":4
     },
     {
         "player_id":189575,
@@ -11098,7 +11750,8 @@
         "PHY":63,
         "card_id":"189575_Normal",
         "club_id":448,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":198329,
@@ -11115,7 +11768,8 @@
         "PHY":71,
         "card_id":"198329_Normal",
         "club_id":461,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":167905,
@@ -11132,7 +11786,8 @@
         "PHY":75,
         "card_id":"167905_Normal",
         "club_id":11,
-        "nation_id":57
+        "nation_id":57,
+        "league_id":12
     },
     {
         "player_id":6826,
@@ -11149,7 +11804,8 @@
         "PHY":78,
         "card_id":"6826_Normal",
         "club_id":7,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":172175,
@@ -11166,7 +11822,8 @@
         "PHY":63,
         "card_id":"172175_Normal",
         "club_id":7,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":167431,
@@ -11183,7 +11840,8 @@
         "PHY":68,
         "card_id":"167431_Normal",
         "club_id":32,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":179645,
@@ -11200,7 +11858,8 @@
         "PHY":78,
         "card_id":"179645_Normal",
         "club_id":65,
-        "nation_id":13
+        "nation_id":13,
+        "league_id":10
     },
     {
         "player_id":188791,
@@ -11217,7 +11876,8 @@
         "PHY":74,
         "card_id":"188791_Normal",
         "club_id":100767,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":14
     },
     {
         "player_id":1238,
@@ -11234,7 +11894,8 @@
         "PHY":69,
         "card_id":"1238_Normal",
         "club_id":52,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":8473,
@@ -11251,7 +11912,8 @@
         "PHY":67,
         "card_id":"8473_Normal",
         "club_id":1,
-        "nation_id":12
+        "nation_id":12,
+        "league_id":12
     },
     {
         "player_id":190531,
@@ -11268,7 +11930,8 @@
         "PHY":85,
         "card_id":"190531_Normal",
         "club_id":10,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":53914,
@@ -11285,7 +11948,8 @@
         "PHY":81,
         "card_id":"53914_Normal",
         "club_id":7,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":192505,
@@ -11302,7 +11966,8 @@
         "PHY":81,
         "card_id":"192505_Normal",
         "club_id":7,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":178393,
@@ -11319,7 +11984,8 @@
         "PHY":74,
         "card_id":"178393_Normal",
         "club_id":47,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":179527,
@@ -11336,7 +12002,8 @@
         "PHY":71,
         "card_id":"179527_Normal",
         "club_id":5,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":202166,
@@ -11353,7 +12020,8 @@
         "PHY":61,
         "card_id":"202166_Normal",
         "club_id":34,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":113422,
@@ -11370,7 +12038,8 @@
         "PHY":64,
         "card_id":"113422_Normal",
         "club_id":112828,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":11
     },
     {
         "player_id":189574,
@@ -11387,7 +12056,8 @@
         "PHY":77,
         "card_id":"189574_Normal",
         "club_id":448,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":4098,
@@ -11404,7 +12074,8 @@
         "PHY":77,
         "card_id":"4098_Normal",
         "club_id":240,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":7
     },
     {
         "player_id":106231,
@@ -11421,7 +12092,8 @@
         "PHY":78,
         "card_id":"106231_Normal",
         "club_id":448,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":204525,
@@ -11438,7 +12110,8 @@
         "PHY":80,
         "card_id":"204525_Normal",
         "club_id":457,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":178562,
@@ -11455,7 +12128,8 @@
         "PHY":70,
         "card_id":"178562_Normal",
         "club_id":481,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":186547,
@@ -11472,7 +12146,8 @@
         "PHY":77,
         "card_id":"186547_Normal",
         "club_id":483,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":189354,
@@ -11489,7 +12164,8 @@
         "PHY":68,
         "card_id":"189354_Normal",
         "club_id":448,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":157481,
@@ -11506,7 +12182,8 @@
         "PHY":76,
         "card_id":"157481_Normal",
         "club_id":48,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":16
     },
     {
         "player_id":192620,
@@ -11523,7 +12200,8 @@
         "PHY":74,
         "card_id":"192620_Normal",
         "club_id":21,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":177934,
@@ -11540,7 +12218,8 @@
         "PHY":63,
         "card_id":"177934_Normal",
         "club_id":34,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":193352,
@@ -11557,7 +12236,8 @@
         "PHY":76,
         "card_id":"193352_Normal",
         "club_id":175,
-        "nation_id":47
+        "nation_id":47,
+        "league_id":4
     },
     {
         "player_id":179847,
@@ -11574,7 +12254,8 @@
         "PHY":81,
         "card_id":"179847_Normal",
         "club_id":18,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":12
     },
     {
         "player_id":163419,
@@ -11591,7 +12272,8 @@
         "PHY":78,
         "card_id":"163419_Normal",
         "club_id":10,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":53050,
@@ -11608,7 +12290,8 @@
         "PHY":77,
         "card_id":"53050_Normal",
         "club_id":18,
-        "nation_id":144
+        "nation_id":144,
+        "league_id":12
     },
     {
         "player_id":138110,
@@ -11625,7 +12308,8 @@
         "PHY":84,
         "card_id":"138110_Normal",
         "club_id":326,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":18
     },
     {
         "player_id":50542,
@@ -11642,7 +12326,8 @@
         "PHY":65,
         "card_id":"50542_Normal",
         "club_id":106,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":158626,
@@ -11659,7 +12344,8 @@
         "PHY":78,
         "card_id":"158626_Normal",
         "club_id":1,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":177134,
@@ -11676,7 +12362,8 @@
         "PHY":79,
         "card_id":"177134_Normal",
         "club_id":327,
-        "nation_id":136
+        "nation_id":136,
+        "league_id":18
     },
     {
         "player_id":144622,
@@ -11693,7 +12380,8 @@
         "PHY":68,
         "card_id":"144622_Normal",
         "club_id":23,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":4
     },
     {
         "player_id":159147,
@@ -11710,7 +12398,8 @@
         "PHY":76,
         "card_id":"159147_Normal",
         "club_id":1819,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":152554,
@@ -11727,7 +12416,8 @@
         "PHY":68,
         "card_id":"152554_Normal",
         "club_id":10,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":115533,
@@ -11744,7 +12434,8 @@
         "PHY":76,
         "card_id":"115533_Normal",
         "club_id":175,
-        "nation_id":47
+        "nation_id":47,
+        "league_id":4
     },
     {
         "player_id":140233,
@@ -11761,7 +12452,8 @@
         "PHY":78,
         "card_id":"140233_Normal",
         "club_id":573,
-        "nation_id":83
+        "nation_id":83,
+        "league_id":7
     },
     {
         "player_id":178005,
@@ -11778,7 +12470,8 @@
         "PHY":78,
         "card_id":"178005_Normal",
         "club_id":237,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":13
     },
     {
         "player_id":186953,
@@ -11795,7 +12488,8 @@
         "PHY":78,
         "card_id":"186953_Normal",
         "club_id":436,
-        "nation_id":48
+        "nation_id":48,
+        "league_id":18
     },
     {
         "player_id":139968,
@@ -11812,7 +12506,8 @@
         "PHY":79,
         "card_id":"139968_Normal",
         "club_id":65,
-        "nation_id":133
+        "nation_id":133,
+        "league_id":10
     },
     {
         "player_id":180216,
@@ -11829,7 +12524,8 @@
         "PHY":78,
         "card_id":"180216_Normal",
         "club_id":7,
-        "nation_id":25
+        "nation_id":25,
+        "league_id":12
     },
     {
         "player_id":188253,
@@ -11846,7 +12542,8 @@
         "PHY":81,
         "card_id":"188253_Normal",
         "club_id":7,
-        "nation_id":25
+        "nation_id":25,
+        "league_id":12
     },
     {
         "player_id":188829,
@@ -11863,7 +12560,8 @@
         "PHY":77,
         "card_id":"188829_Normal",
         "club_id":219,
-        "nation_id":103
+        "nation_id":103,
+        "league_id":10
     },
     {
         "player_id":195086,
@@ -11880,7 +12578,8 @@
         "PHY":83,
         "card_id":"195086_Normal",
         "club_id":9,
-        "nation_id":10
+        "nation_id":10,
+        "league_id":12
     },
     {
         "player_id":177388,
@@ -11897,7 +12596,8 @@
         "PHY":66,
         "card_id":"177388_Normal",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":110677,
@@ -11914,7 +12614,8 @@
         "PHY":80,
         "card_id":"110677_Normal",
         "club_id":240,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":183899,
@@ -11931,7 +12632,8 @@
         "PHY":53,
         "card_id":"183899_Normal",
         "club_id":461,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":7
     },
     {
         "player_id":188005,
@@ -11948,7 +12650,8 @@
         "PHY":83,
         "card_id":"188005_Normal",
         "club_id":573,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":180819,
@@ -11965,7 +12668,8 @@
         "PHY":67,
         "card_id":"180819_Normal",
         "club_id":9,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":204963,
@@ -11982,7 +12686,8 @@
         "PHY":82,
         "card_id":"204963_Normal",
         "club_id":243,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":191180,
@@ -11999,7 +12704,8 @@
         "PHY":67,
         "card_id":"191180_Normal",
         "club_id":73,
-        "nation_id":52
+        "nation_id":52,
+        "league_id":10
     },
     {
         "player_id":153244,
@@ -12016,7 +12722,8 @@
         "PHY":74,
         "card_id":"153244_Normal",
         "club_id":219,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":10
     },
     {
         "player_id":177644,
@@ -12033,7 +12740,8 @@
         "PHY":80,
         "card_id":"177644_Normal",
         "club_id":452,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":7
     },
     {
         "player_id":184111,
@@ -12050,7 +12758,8 @@
         "PHY":85,
         "card_id":"184111_Normal",
         "club_id":2,
-        "nation_id":7
+        "nation_id":7,
+        "league_id":12
     },
     {
         "player_id":192387,
@@ -12067,7 +12776,8 @@
         "PHY":78,
         "card_id":"192387_Normal",
         "club_id":22,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":4
     },
     {
         "player_id":190483,
@@ -12084,7 +12794,8 @@
         "PHY":62,
         "card_id":"190483_Normal",
         "club_id":101059,
-        "nation_id":54
+        "nation_id":54,
+        "league_id":19
     },
     {
         "player_id":106213,
@@ -12101,7 +12812,8 @@
         "PHY":79,
         "card_id":"106213_Normal",
         "club_id":112828,
-        "nation_id":45
+        "nation_id":45,
+        "league_id":11
     },
     {
         "player_id":188943,
@@ -12118,7 +12830,8 @@
         "PHY":79,
         "card_id":"188943_Normal",
         "club_id":1824,
-        "nation_id":21
+        "nation_id":21,
+        "league_id":4
     },
     {
         "player_id":177358,
@@ -12135,7 +12848,8 @@
         "PHY":81,
         "card_id":"177358_Normal",
         "club_id":17,
-        "nation_id":18
+        "nation_id":18,
+        "league_id":12
     },
     {
         "player_id":202652,
@@ -12152,7 +12866,8 @@
         "PHY":62,
         "card_id":"202652_Normal",
         "club_id":9,
-        "nation_id":14
+        "nation_id":14,
+        "league_id":12
     },
     {
         "player_id":20775,
@@ -12169,7 +12884,8 @@
         "PHY":64,
         "card_id":"20775_Normal",
         "club_id":236,
-        "nation_id":38
+        "nation_id":38,
+        "league_id":13
     },
     {
         "player_id":189250,
@@ -12186,7 +12902,8 @@
         "PHY":80,
         "card_id":"189250_Normal",
         "club_id":100769,
-        "nation_id":61
+        "nation_id":61,
+        "league_id":14
     },
     {
         "player_id":190813,
@@ -12203,7 +12920,8 @@
         "PHY":60,
         "card_id":"190813_Normal",
         "club_id":47,
-        "nation_id":27
+        "nation_id":27,
+        "league_id":16
     },
     {
         "player_id":186153,
@@ -12220,7 +12938,8 @@
         "PHY":76,
         "card_id":"186153_Normal",
         "club_id":1,
-        "nation_id":37
+        "nation_id":37,
+        "league_id":12
     },
     {
         "player_id":193348,
@@ -12237,6 +12956,7 @@
         "PHY":74,
         "card_id":"193348_Normal",
         "club_id":44,
-        "nation_id":47
+        "nation_id":47,
+        "league_id":16
     }
 ]

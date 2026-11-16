@@ -6,6 +6,8 @@
   const SAVE_VERSION = 1;
   const START_COINS = 50000;
   const DEFAULT_FORMATION = "4-3-3";
+  // Zmiany nazw formacji: stare zapisy tłumaczymy na nowe przy wczytywaniu.
+  const FORMATION_RENAMES = { '4-3-1-2': '4-1-2-1-2' };
   const SQUAD_SLOTS = 11;
   const SQUAD_NAME_MAX = 24;
 
@@ -29,7 +31,7 @@
       s && typeof s.id === 'string' && s.id ? s.id : undefined
     );
     if (!s || typeof s !== 'object') return squad;
-    if (typeof s.formation === 'string' && s.formation) squad.formation = s.formation;
+    if (typeof s.formation === 'string' && s.formation) squad.formation = FORMATION_RENAMES[s.formation] || s.formation;
     if (Array.isArray(s.slots)) {
       squad.slots = squad.slots.map((_, i) => {
         const id = s.slots[i];
