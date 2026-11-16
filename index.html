@@ -15,7 +15,7 @@
   <!-- Main menu -->
   <div id="menu">
     <img id="pack-img" src="assets/ui/pack.png" alt="Pack" onclick="openPack()">
-    <div id="pack-price">10,000 coins</div>
+    <div id="pack-price">50,000 coins</div>
   </div>
 
   <!-- Pack container with cards and action buttons -->
@@ -97,6 +97,9 @@
       </div>
       <div class="picker-tools">
         <input id="picker-search" type="search" placeholder="Search name..." autocomplete="off" aria-label="Search player">
+        <select id="picker-league" aria-label="League"></select>
+        <select id="picker-club" aria-label="Club"></select>
+        <select id="picker-nation" aria-label="Nation"></select>
         <label class="picker-check"><input type="checkbox" id="picker-only-fit" checked> Only compatible</label>
         <button id="picker-clear" type="button">Clear position</button>
       </div>
@@ -120,6 +123,7 @@
     <div class="hud-item" title="Coins"><span class="hud-icon">💰</span><span id="hud-coins">0</span></div>
     <div class="hud-item" title="Club: unique cards"><span class="hud-icon">🃏</span><span id="hud-club">0</span></div>
     <div id="hud-warn" title="Browser is blocking localStorage. Club will not be saved.">⚠ save unavailable</div>
+    <button id="reset-save" type="button">Reset save</button>
   </div>
 
   <!-- Save/storage logic (must load before script.js) -->

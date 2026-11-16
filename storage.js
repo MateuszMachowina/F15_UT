@@ -4,7 +4,7 @@
 (function (root) {
   const SAVE_KEY = 'pf15_save';
   const SAVE_VERSION = 1;
-  const START_COINS = 50000;
+  const START_COINS = 200000;
   const DEFAULT_FORMATION = "4-3-3";
   // Zmiany nazw formacji: stare zapisy tłumaczymy na nowe przy wczytywaniu.
   const FORMATION_RENAMES = { '4-3-1-2': '4-1-2-1-2' };

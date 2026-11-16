@@ -96,6 +96,9 @@ const FORMATIONS = {
 // Kolejność przycisków wyboru formacji (SQD-01).
 const FORMATION_ORDER = ['4-4-2', '4-1-2-1-2', '4-3-2-1', '4-3-3', '4-5-1', '5-4-1', '5-3-2', '3-5-2', '3-4-1-2'];
 
+// Formacje ukryte w selektorze — definicje pozostają w FORMATIONS/FORMATION_LINKS (SQD-01).
+const HIDDEN_FORMATIONS = ['3-4-1-2'];
+
 // Akceptowane pozycje zawodnika na danej pozycji formacji (SQD-03).
 // 1 = dokładnie ta sama pozycja (zielony), 2 = dopuszczalna alternatywa (żółty),
 // brak = niedopuszczalne (czerwony).
@@ -121,22 +124,20 @@ const SLOT_COMPAT = {
 
 // ---------- linie zgrania (SQD-13) ----------
 
-// Wartość połączenia między dwiema kartami:
+// Wartość połączenia między dwiema kartami (jak w FIFA 14-18):
 //   3 = ten sam klub i ta sama nacja (hyper)
-//   2 = ten sam klub (strong)
-//   1 = ta sama nacja (weak)  LUB  ta sama liga (bez klubu/nacji)
+//   2 = ten sam klub  LUB  ta sama nacja i liga (strong)
+//   1 = ta sama nacja  LUB  ta sama liga (weak)
 //   0 = nic wspólnego (dead)
 function squadLinkValue(a, b) {
   if (!a || !b) return 0;
   const sameClub = a.club_id != null && b.club_id != null && a.club_id === b.club_id;
   const sameNation = a.nation_id != null && b.nation_id != null && a.nation_id === b.nation_id;
+  const sameLeague = a.league_id != null && b.league_id != null && a.league_id === b.league_id;
   if (sameClub && sameNation) return 3;
   if (sameClub) return 2;
-  if (sameNation) return 1;
-  // Liga: players.json ma już league_id (arkusz players), więc wspólna liga
-  // bez wspólnego klubu/nacji daje wartość 1 (żółta linia).
-  const sameLeague = a.league_id != null && b.league_id != null && a.league_id === b.league_id;
-  if (sameLeague) return 1;
+  if (sameNation && sameLeague) return 2;
+  if (sameNation || sameLeague) return 1;
   return 0;
 }
 
@@ -240,7 +241,7 @@ function squadFormationLinks(formation) {
   return FORMATION_LINKS[formation] || autoFormationLinks(squadSlots(formation));
 }
 
-const pickerState = { squadId: null, index: -1, query: '', onlyFit: true, shown: PICKER_PAGE };
+const pickerState = { squadId: null, index: -1, query: '', onlyFit: true, shown: PICKER_PAGE, league: '', club: '', nation: '' };
 
 // Współrzędne z FORMATIONS są już w 0-100 pasma boiska (0 = górna linia, 100 = dolna).
 function squadSlots(formation) {
@@ -273,14 +274,45 @@ function squadCard(cardId) {
   return typeof cardsById !== 'undefined' && cardsById[cardId] ? cardsById[cardId] : null;
 }
 
-// Rating = średnia RAT wypełnionych slotów; Chemistry = 100 - 3*alt - 8*bad.
+// Chemistry w stylu FIFA 14-18 (uproszczony):
+// - indywidualna chemia gracza (0-10) = pułap pozycji (exact 10 / alt 6 / bad 3) × osiągnięcie z linii.
+// - osiągnięcie: baza 0.7 (same żółte), +0.15 za zieloną (liczą się do 2), -0.15 za czerwoną;
+//   >=2 zielone i brak czerwonych => 1.0 (maks. z danego zakresu). Tylko czerwone obniżają.
+// - chemia drużyny = średnia indywidualnych (0-10) × 10, czyli maksimum 100.
+function squadLinkCounts(squad, index) {
+  const counts = { green: 0, yellow: 0, red: 0 };
+  const self = squad.slots[index] ? squadCard(squad.slots[index]) : null;
+  if (!self) return counts;
+  squadFormationLinks(squadFormation(squad)).forEach(pair => {
+    let other = -1;
+    if (pair[0] === index) other = pair[1];
+    else if (pair[1] === index) other = pair[0];
+    if (other < 0) return;
+    const mate = squad.slots[other] ? squadCard(squad.slots[other]) : null;
+    if (!mate) return;
+    const value = squadLinkValue(self, mate);
+    if (value >= 2) counts.green++;
+    else if (value === 1) counts.yellow++;
+    else counts.red++;
+  });
+  return counts;
+}
+
+function squadLinkAchievement(green, yellow, red) {
+  if (green + yellow + red === 0) return 1;
+  if (green >= 2 && red === 0) return 1;
+  return Math.max(0, Math.min(1, 0.7 + 0.15 * Math.min(green, 2) - 0.15 * red));
+}
+
+// Rating = średnia RAT wypełnionych slotów.
 function squadStats(squad) {
-  if (!squad) return { rating: 0, chemistry: 100, filled: 0, alt: 0, bad: 0 };
+  if (!squad) return { rating: 0, chemistry: 0, filled: 0, alt: 0, bad: 0 };
   const slots = squadSlots(squadFormation(squad));
   let sum = 0;
   let filled = 0;
   let alt = 0;
   let bad = 0;
+  let chemSum = 0;
   squad.slots.forEach((cardId, i) => {
     const player = cardId ? squadCard(cardId) : null;
     const slot = slots[i];
@@ -290,10 +322,13 @@ function squadStats(squad) {
     else if (match === 'bad') bad++;
     sum += Number(player.RAT) || 0;
     filled++;
+    const ceiling = match === 'exact' ? 10 : match === 'alt' ? 6 : 3;
+    const links = squadLinkCounts(squad, i);
+    chemSum += ceiling * squadLinkAchievement(links.green, links.yellow, links.red);
   });
   return {
     rating: filled ? Math.round(sum / filled) : 0,
-    chemistry: Math.max(0, 100 - alt * 3 - bad * 8),
+    chemistry: Math.max(0, Math.min(100, Math.round((chemSum / (slots.length || 11)) * 10))),
     filled,
     alt,
     bad
@@ -305,9 +340,9 @@ function squadStats(squad) {
 function squadInit() {
   const wrap = document.getElementById('squad-formations');
   if (wrap && !wrap.childElementCount) {
-    const order = FORMATION_ORDER.filter(name => FORMATIONS[name]);
+    const order = FORMATION_ORDER.filter(name => FORMATIONS[name] && HIDDEN_FORMATIONS.indexOf(name) === -1);
     Object.keys(FORMATIONS).forEach(name => {
-      if (order.indexOf(name) === -1) order.push(name);
+      if (order.indexOf(name) === -1 && HIDDEN_FORMATIONS.indexOf(name) === -1) order.push(name);
     });
     order.forEach(name => {
       const button = document.createElement('button');
@@ -349,6 +384,17 @@ function squadInit() {
       renderPicker();
     });
   }
+
+  PICKER_FILTER_DIMS.forEach(dim => {
+    const el = document.getElementById(dim.id);
+    if (!el) return;
+    el.addEventListener('change', () => {
+      pickerState[dim.filter] = el.value;
+      pickerState.shown = PICKER_PAGE;
+      pickerRebuildFilters(dim.filter);
+      renderPicker();
+    });
+  });
 
   const more = document.getElementById('picker-more');
   if (more) {
@@ -413,8 +459,9 @@ function nextTeamName() {
 }
 
 function createTeam() {
-  ensureTeam();
+  pickerRemember();
   Save.createSquad(nextTeamName());
+  pickerRestore();
   renderTeams();
   renderSquad();
 }
@@ -423,8 +470,10 @@ function deleteTeam(squad) {
   const assigned = squad.slots.filter(Boolean).length;
   const extra = assigned ? ` ${assigned} assigned cards will return to the club.` : '';
   if (!window.confirm(`Delete team "${squad.name}"?${extra}`)) return;
+  pickerRemember();
   Save.deleteSquad(squad.id);
   ensureTeam();
+  pickerRestore();
   renderTeams();
   renderSquad();
 }
@@ -492,7 +541,9 @@ function teamRow(squad, isActive) {
 
   if (!isActive) {
     row.addEventListener('click', () => {
+      pickerRemember();
       Save.setActiveSquad(squad.id);
+      pickerRestore();
       renderTeams();
       renderSquad();
     });
@@ -704,6 +755,7 @@ function renderSquad() {
 
 function openSquad() {
   showView('squad');
+  pickerRestore();
   renderTeams();
   renderSquad();
   requestAnimationFrame(() => {
@@ -714,25 +766,181 @@ function openSquad() {
 
 /* ---------- wybór zawodnika ---------- */
 
+const PICKER_FILTER_DIMS = [
+  { id: 'picker-league', filter: 'league', field: 'league_id', label: 'Any league', nameMap: LEAGUE_NAMES },
+  { id: 'picker-club', filter: 'club', field: 'club_id', label: 'Any club', nameMap: CLUB_NAMES },
+  { id: 'picker-nation', filter: 'nation', field: 'nation_id', label: 'Any nation', nameMap: NATION_NAMES }
+];
+
+function pickerOwnedCards() {
+  const cards = [];
+  Object.keys(Save.get().club).forEach(cardId => {
+    const card = squadCard(cardId);
+    if (card) cards.push(card);
+  });
+  return cards;
+}
+
+function pickerCatValue(card, field) {
+  return String(card[field]);
+}
+
+function pickerCatMatch(card, filters, ignore) {
+  for (const dim of PICKER_FILTER_DIMS) {
+    if (dim.filter === ignore) continue;
+    const selected = filters[dim.filter];
+    if (selected && pickerCatValue(card, dim.field) !== selected) return false;
+  }
+  return true;
+}
+
+function pickerReadFilters() {
+  const filters = {};
+  PICKER_FILTER_DIMS.forEach(dim => { filters[dim.filter] = pickerState[dim.filter] || ''; });
+  return filters;
+}
+
+function pickerDimHasSupport(filter, filters) {
+  const selected = filters[filter];
+  if (!selected) return true;
+  const dim = PICKER_FILTER_DIMS.find(d => d.filter === filter);
+  return pickerOwnedCards().some(card =>
+    pickerCatMatch(card, filters, filter)
+    && pickerCatValue(card, dim.field) === selected
+  );
+}
+
+function pickerNormalize(anchor) {
+  const filters = pickerReadFilters();
+  let changed = true;
+  while (changed) {
+    changed = false;
+    PICKER_FILTER_DIMS.forEach(dim => {
+      if (dim.filter === anchor) return;
+      if (filters[dim.filter] && !pickerDimHasSupport(dim.filter, filters)) {
+        filters[dim.filter] = '';
+        pickerState[dim.filter] = '';
+        changed = true;
+      }
+    });
+  }
+}
+
+function pickerRebuildFilters(anchor) {
+  pickerNormalize(anchor);
+  const filters = pickerReadFilters();
+  PICKER_FILTER_DIMS.forEach(dim => pickerFillSelect(dim, filters));
+}
+
+function pickerFillSelect(dim, filters) {
+  const select = document.getElementById(dim.id);
+  if (!select) return;
+  const current = pickerState[dim.filter] || '';
+  const display = value => (dim.nameMap && dim.nameMap[value]) ? dim.nameMap[value] : value;
+
+  const values = new Set();
+  pickerOwnedCards().forEach(card => {
+    if (!pickerCatMatch(card, filters, dim.filter)) return;
+    const value = pickerCatValue(card, dim.field);
+    if (dim.nameMap && !dim.nameMap[value]) return;
+    values.add(value);
+  });
+
+  const sorted = [...values].sort((a, b) => display(a).localeCompare(display(b), 'pl'));
+
+  select.innerHTML = '';
+  const all = document.createElement('option');
+  all.value = '';
+  all.textContent = dim.label;
+  select.appendChild(all);
+  sorted.forEach(value => {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = display(value);
+    select.appendChild(option);
+  });
+
+  const next = sorted.includes(current) ? current : '';
+  pickerState[dim.filter] = next;
+  select.value = next;
+}
+
+function pickerApplyState() {
+  const search = document.getElementById('picker-search');
+  if (search) search.value = pickerState.query;
+  const onlyFit = document.getElementById('picker-only-fit');
+  if (onlyFit) onlyFit.checked = pickerState.onlyFit;
+}
+
+function pickerResetFilters() {
+  pickerState.query = '';
+  pickerState.onlyFit = true;
+  pickerState.league = '';
+  pickerState.club = '';
+  pickerState.nation = '';
+  pickerState.shown = PICKER_PAGE;
+  pickerApplyState();
+  pickerRebuildFilters(null);
+}
+
+// Pamięć filtrów pickera per drużyna: po zmianie drużyny filtry wracają do
+// stanu wybranego wcześniej dla tej drużyny (domyślnie puste).
+const pickerFilterMemory = {};
+
+function pickerActiveId() {
+  return (typeof Save !== 'undefined' && Save.getActiveSquadId) ? Save.getActiveSquadId() : null;
+}
+
+function pickerSnapshot() {
+  return {
+    query: pickerState.query,
+    onlyFit: pickerState.onlyFit,
+    league: pickerState.league,
+    club: pickerState.club,
+    nation: pickerState.nation
+  };
+}
+
+function pickerApplySnapshot(snap) {
+  pickerState.query = snap ? snap.query : '';
+  pickerState.onlyFit = snap ? snap.onlyFit : true;
+  pickerState.league = snap ? snap.league : '';
+  pickerState.club = snap ? snap.club : '';
+  pickerState.nation = snap ? snap.nation : '';
+  pickerState.shown = PICKER_PAGE;
+}
+
+function pickerRemember() {
+  const id = pickerActiveId();
+  if (id) pickerFilterMemory[id] = pickerSnapshot();
+}
+
+function pickerRestore() {
+  const id = pickerActiveId();
+  pickerApplySnapshot(id ? pickerFilterMemory[id] : null);
+  pickerApplyState();
+  pickerRebuildFilters(null);
+}
+
+function pickerClearMemory() {
+  Object.keys(pickerFilterMemory).forEach(k => { delete pickerFilterMemory[k]; });
+  pickerResetFilters();
+}
+
 function openPicker(index) {
   const squad = Save.getActiveSquad();
   if (!squad) return;
 
   pickerState.squadId = squad.id;
   pickerState.index = index;
-  pickerState.query = '';
-  pickerState.onlyFit = true;
   pickerState.shown = PICKER_PAGE;
 
   const slot = squadSlots(squadFormation(squad))[index];
   const title = document.getElementById('picker-title');
   if (title) title.textContent = `${slot.pos} · ${squad.name}`;
 
-  const search = document.getElementById('picker-search');
-  if (search) search.value = '';
-
-  const onlyFit = document.getElementById('picker-only-fit');
-  if (onlyFit) onlyFit.checked = true;
+  pickerApplyState();
+  pickerRebuildFilters(null);
 
   const clear = document.getElementById('picker-clear');
   if (clear) clear.style.display = squad.slots[index] ? 'inline-block' : 'none';
@@ -749,14 +957,17 @@ function closePicker() {
 }
 
 function pickerPool(slot, squad) {
-  const usedHere = {};
   const usedElsewhere = {};
+  const usedPlayerIds = {};
 
   Save.getSquads().forEach(s => {
     s.slots.forEach((cardId, i) => {
       if (!cardId) return;
       if (s.id === squad.id) {
-        if (i !== pickerState.index) usedHere[cardId] = true;
+        if (i !== pickerState.index) {
+          const card = squadCard(cardId);
+          if (card) usedPlayerIds[card.player_id] = true;
+        }
       } else {
         usedElsewhere[cardId] = true;
       }
@@ -769,11 +980,14 @@ function pickerPool(slot, squad) {
   Object.keys(Save.get().club).forEach(cardId => {
     const card = squadCard(cardId);
     if (!card) return;
-    if (usedHere[cardId] || usedElsewhere[cardId]) return;
+    if (usedElsewhere[cardId] || usedPlayerIds[card.player_id]) return;
     if (query) {
       const surname = String(card.Surname).toLowerCase('pl');
       if (surname.indexOf(query) === -1 && cardId.toLowerCase().indexOf(query) === -1) return;
     }
+    if (pickerState.league && String(card.league_id) !== pickerState.league) return;
+    if (pickerState.club && String(card.club_id) !== pickerState.club) return;
+    if (pickerState.nation && String(card.nation_id) !== pickerState.nation) return;
     if (pickerState.onlyFit && !fitsSlot(slot.pos, card.POS)) return;
 
     entries.push({ card, cardId });

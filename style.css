@@ -390,6 +390,20 @@ body {
   font-size: 13px;
 }
 
+#reset-save {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#reset-save:hover { background: rgba(150, 30, 30, 0.85); border-color: #ff6b6b; }
+#reset-save.armed { background: rgba(179, 38, 30, 0.95); border-color: #ff8a80; }
+
 @media (max-width: 1200px) {
   #hud { top: 12px; left: 12px; font-size: 15px; }
 }
@@ -1121,6 +1135,22 @@ body {
 }
 
 #picker-search:focus { outline: none; border-color: #ffd700; }
+
+.picker-tools select {
+  max-width: 180px;
+  padding: calc(6px * var(--picker-scale)) calc(8px * var(--picker-scale));
+  background: #1b1f27;
+  border: 1px solid #3a4150;
+  border-radius: 8px;
+  color: #fff;
+  font: inherit;
+  font-size: calc(12px * var(--picker-scale));
+  cursor: pointer;
+}
+
+.picker-tools select:focus { outline: none; border-color: #ffd700; }
+
+.picker-tools select option { background: #1b1f27; color: #fff; }
 
 .picker-check {
   display: inline-flex;

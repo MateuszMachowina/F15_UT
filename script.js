@@ -1,7 +1,7 @@
 let players = [];        // load player data from JSON
 let cardsById = {};      // card_id -> card (TECH-02)
 
-const PACK_PRICE = 10000; // koszt otwarcia jednej paczki
+const PACK_PRICE = 50000; // koszt otwarcia jednej paczki
 
 // TECH-02: price as a number ("1133,333333" -> 1133), used by selling/market
 function parsePrice(value) {
@@ -67,6 +67,17 @@ function showView(view) {
   document.getElementById('nav-menu').classList.toggle('active', view === 'menu');
   document.getElementById('nav-club').classList.toggle('active', view === 'club');
   document.getElementById('nav-squad').classList.toggle('active', view === 'squad');
+
+  // Leaving the squad tab: remember the current picker filters so they can be
+  // restored when the user returns to that squad.
+  if (view !== 'squad' && typeof pickerRemember === 'function') {
+    pickerRemember();
+  }
+
+  // Reset-save button lives only on the Packs tab (menu view).
+  const resetBtn = document.getElementById('reset-save');
+  if (resetBtn) resetBtn.style.display = view === 'menu' ? 'inline-block' : 'none';
+  if (view !== 'menu' && typeof disarmReset === 'function') disarmReset();
 }
 
 // function to pick a single player with rating-based weighting and rarity adjustment
@@ -160,3 +171,51 @@ function resetPack() {
   document.getElementById('cards').innerHTML = '';
   showView('menu');
 }
+
+// --- reset całego zapisu (TECH-05) z podwójnym potwierdzeniem ---
+let resetArmed = false;
+let resetTimer = null;
+
+function disarmReset() {
+  resetArmed = false;
+  clearTimeout(resetTimer);
+  const btn = document.getElementById('reset-save');
+  if (btn) {
+    btn.textContent = 'Reset save';
+    btn.classList.remove('armed');
+  }
+}
+
+function refreshAfterReset() {
+  updateHud();
+  if (typeof pickerClearMemory === 'function') pickerClearMemory();
+  if (typeof clubOnDataLoaded === 'function') clubOnDataLoaded();
+  if (typeof renderTeams === 'function') renderTeams();
+  if (typeof renderSquad === 'function') renderSquad();
+  resetPack();
+}
+
+function handleResetClick() {
+  const btn = document.getElementById('reset-save');
+  if (!btn || typeof Save === 'undefined') return;
+
+  if (!resetArmed) {
+    resetArmed = true;
+    btn.textContent = 'Confirm reset?';
+    btn.classList.add('armed');
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(disarmReset, 4000);
+    return;
+  }
+
+  disarmReset();
+  Save.reset();
+  refreshAfterReset();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('reset-save');
+  if (!btn) return;
+  btn.title = 'Reset the whole save (coins, club, squads)';
+  btn.addEventListener('click', handleResetClick);
+});
