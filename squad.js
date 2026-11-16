@@ -110,14 +110,14 @@ const SLOT_COMPAT = {
   RWB: ['RB', 'RM'],
   LWB: ['LB', 'LM'],
   CDM: ['CM', 'CB'],
-  CM: ['CDM', 'CAM'],
+  CM: ['CDM', 'CAM', 'RM', 'LM'],
   CAM: ['CM', 'CF'],
-  RM: ['RW', 'RB', 'LM', 'RWB'],
-  LM: ['LW', 'LB', 'RM', 'LWB'],
+  RM: ['RW', 'RB', 'LM', 'RWB', 'CM'],
+  LM: ['LW', 'LB', 'RM', 'LWB', 'CM'],
   RW: ['RM', 'LW', 'RF'],
   LW: ['LM', 'RW', 'LF'],
-  LF: ['LW', 'LM', 'CF'],
-  RF: ['RW', 'RM', 'CF'],
+  LF: ['LW', 'CF', 'RF'],
+  RF: ['RW', 'CF', 'LF'],
   CF: ['ST', 'CAM', 'RF', 'LF'],
   ST: ['CF']
 };
@@ -129,14 +129,16 @@ const SLOT_COMPAT = {
 //   2 = ten sam klub  LUB  ta sama nacja i liga (strong)
 //   1 = ta sama nacja  LUB  ta sama liga (weak)
 //   0 = nic wspólnego (dead)
-// Legendy (liga "Legends") łamią powyższe zasady: zagranie 1 z każdym,
-// a 2 gdy obie karty mają tę samą nację.
+// Legendy (liga "Legends") łamią powyższe zasady:
+//   - dwie karty z klubu Legends: 2, a przy tej samej nacji 3
+//   - legenda z dowolną inną kartą: minimum 1, a przy tej samej nacji 2
 const LEGENDS_LEAGUE_ID = 8;
 function squadLinkValue(a, b) {
   if (!a || !b) return 0;
   const sameNation = a.nation_id != null && b.nation_id != null && a.nation_id === b.nation_id;
   const aLegend = a.league_id != null && String(a.league_id) === String(LEGENDS_LEAGUE_ID);
   const bLegend = b.league_id != null && String(b.league_id) === String(LEGENDS_LEAGUE_ID);
+  if (aLegend && bLegend) return sameNation ? 3 : 2;
   if (aLegend || bLegend) return sameNation ? 2 : 1;
   const sameClub = a.club_id != null && b.club_id != null && a.club_id === b.club_id;
   const sameLeague = a.league_id != null && b.league_id != null && a.league_id === b.league_id;
