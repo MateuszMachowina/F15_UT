@@ -247,7 +247,7 @@ function squadFormationLinks(formation) {
   return FORMATION_LINKS[formation] || autoFormationLinks(squadSlots(formation));
 }
 
-const pickerState = { squadId: null, index: -1, query: '', onlyFit: true, shown: PICKER_PAGE, league: '', club: '', nation: '' };
+const pickerState = { squadId: null, index: -1, query: '', onlyFit: true, shown: PICKER_PAGE, position: '', league: '', club: '', nation: '' };
 
 // Współrzędne z FORMATIONS są już w 0-100 pasma boiska (0 = górna linia, 100 = dolna).
 function squadSlots(formation) {
@@ -773,6 +773,7 @@ function openSquad() {
 /* ---------- wybór zawodnika ---------- */
 
 const PICKER_FILTER_DIMS = [
+  { id: 'picker-position', filter: 'position', field: 'POS', label: 'Any position' },
   { id: 'picker-league', filter: 'league', field: 'league_id', label: 'Any league', nameMap: LEAGUE_NAMES },
   { id: 'picker-club', filter: 'club', field: 'club_id', label: 'Any club', nameMap: CLUB_NAMES },
   { id: 'picker-nation', filter: 'nation', field: 'nation_id', label: 'Any nation', nameMap: NATION_NAMES }
@@ -838,21 +839,48 @@ function pickerRebuildFilters(anchor) {
   PICKER_FILTER_DIMS.forEach(dim => pickerFillSelect(dim, filters));
 }
 
+// Dozwolone pozycje w filtrze pickera: główna pozycja slotu + pozycje
+// kompatybilne (SLOT_COMPAT). Zwraca null, gdy slot nie jest znany.
+function pickerSlotPositions() {
+  const squad = Save.getSquad(pickerState.squadId);
+  if (!squad) return null;
+  const slot = squadSlots(squadFormation(squad))[pickerState.index];
+  if (!slot) return null;
+  const list = [slot.pos];
+  (SLOT_COMPAT[slot.pos] || []).forEach(p => {
+    if (list.indexOf(p) === -1) list.push(p);
+  });
+  return list;
+}
+
 function pickerFillSelect(dim, filters) {
   const select = document.getElementById(dim.id);
   if (!select) return;
   const current = pickerState[dim.filter] || '';
   const display = value => (dim.nameMap && dim.nameMap[value]) ? dim.nameMap[value] : value;
 
+  const allowed = dim.filter === 'position' ? pickerSlotPositions() : null;
+
   const values = new Set();
   pickerOwnedCards().forEach(card => {
     if (!pickerCatMatch(card, filters, dim.filter)) return;
     const value = pickerCatValue(card, dim.field);
     if (dim.nameMap && !dim.nameMap[value]) return;
+    if (allowed && allowed.indexOf(value) === -1) return;
     values.add(value);
   });
 
-  const sorted = [...values].sort((a, b) => display(a).localeCompare(display(b), 'pl'));
+  let sorted = [...values].sort((a, b) => display(a).localeCompare(display(b), 'pl'));
+
+  // Pozycja główna slotu zawsze na początku listy (np. LW, potem LM i RW).
+  if (dim.filter === 'position' && allowed && allowed.length) {
+    const main = allowed[0];
+    const at = sorted.indexOf(main);
+    if (at > 0) {
+      sorted.splice(at, 1);
+      sorted.unshift(main);
+    }
+  }
 
   select.innerHTML = '';
   const all = document.createElement('option');
@@ -881,6 +909,7 @@ function pickerApplyState() {
 function pickerResetFilters() {
   pickerState.query = '';
   pickerState.onlyFit = true;
+  pickerState.position = '';
   pickerState.league = '';
   pickerState.club = '';
   pickerState.nation = '';
@@ -924,6 +953,8 @@ function pickerRemember() {
 function pickerRestore() {
   const id = pickerActiveId();
   pickerApplySnapshot(id ? pickerFilterMemory[id] : null);
+  // Pozycja nie jest częścią zapamiętanego stanu.
+  pickerState.position = '';
   pickerApplyState();
   pickerRebuildFilters(null);
 }
@@ -940,6 +971,8 @@ function openPicker(index) {
   pickerState.squadId = squad.id;
   pickerState.index = index;
   pickerState.shown = PICKER_PAGE;
+  // Filtr pozycji nie jest zapamiętywany - każdy slot otwiera się bez niego.
+  pickerState.position = '';
 
   const slot = squadSlots(squadFormation(squad))[index];
   const title = document.getElementById('picker-title');
@@ -991,6 +1024,7 @@ function pickerPool(slot, squad) {
       const surname = String(card.Surname).toLowerCase('pl');
       if (surname.indexOf(query) === -1 && cardId.toLowerCase().indexOf(query) === -1) return;
     }
+    if (pickerState.position && String(card.POS) !== pickerState.position) return;
     if (pickerState.league && String(card.league_id) !== pickerState.league) return;
     if (pickerState.club && String(card.club_id) !== pickerState.club) return;
     if (pickerState.nation && String(card.nation_id) !== pickerState.nation) return;
