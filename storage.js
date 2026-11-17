@@ -1,12 +1,12 @@
-// storage.js: zapis gry w localStorage (CLB-01, ECO-01, TECH-05)
-// Zapisujemy tylko card_id + ilość, bez danych kart i obrazków, więc save jest bardzo mały.
+// storage.js: game persistence in localStorage (CLB-01, ECO-01, TECH-05)
+// Only card_id + quantity are stored (no card data or images), keeping the save very small.
 
 (function (root) {
   const SAVE_KEY = 'pf15_save';
   const SAVE_VERSION = 1;
   const START_COINS = 200000;
   const DEFAULT_FORMATION = "4-3-3";
-  // Zmiany nazw formacji: stare zapisy tłumaczymy na nowe przy wczytywaniu.
+  // Formation renames: map legacy formation names to the current ones on load.
   const FORMATION_RENAMES = { '4-3-1-2': '4-1-2-1-2' };
   const SQUAD_SLOTS = 11;
   const SQUAD_NAME_MAX = 24;
@@ -15,7 +15,7 @@
     return 'sq_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
   }
 
-  // squad: { id, name, formation, slots: [card_id|null x11] }
+  // squad shape: { id, name, formation, slots: [card_id|null x11] }
   function defaultSquad(name, id) {
     return {
       id: id || newSquadId(),
@@ -41,7 +41,7 @@
     return squad;
   }
 
-  // Zapis z jednym składem (stara wersja) -> lista drużyn.
+  // Convert a legacy single-squad save into a list of squads.
   function normalizeSquads(rawSquads, legacySquad) {
     if (Array.isArray(rawSquads) && rawSquads.length) return rawSquads.map(normalizeSquad);
     if (legacySquad && typeof legacySquad === 'object') {
@@ -54,16 +54,16 @@
     return {
       version: SAVE_VERSION,
       coins: START_COINS,
-      club: {},               // { card_id: ilość }
+      club: {},               // { card_id: quantity }
       squads: [],             // [{ id, name, formation, slots }]
-      activeSquadId: null,    // aktualnie wybrana drużyna
+      activeSquadId: null,    // currently selected squad
       stats: { packsOpened: 0 },
-      lastDaily: null         // miejsce na ECO-04
+      lastDaily: null         // reserved for ECO-04
     };
   }
 
-  // Migracja starych zapisów do aktualnej wersji (TECH-05).
-  // Dziś tylko uzupełnia brakujące pola; kolejne wersje dopiszemy tutaj.
+  // Migrate legacy saves to the current version (TECH-05).
+  // For now this only fills in missing fields; add future migrations here.
   function migrate(d) {
     const base = defaultSave();
     if (!d || typeof d !== 'object') return base;
@@ -92,7 +92,7 @@
     return out;
   }
 
-  // storage: obiekt z getItem/setItem/removeItem (localStorage lub atrapa w testach)
+  // storage: a getItem/setItem/removeItem object (localStorage, or a stub in tests)
   function createSave(storage) {
     let available = true;
     let data;
@@ -108,7 +108,7 @@
       try {
         return migrate(JSON.parse(raw));
       } catch (e) {
-        // Uszkodzony zapis: zachowaj kopię, żeby nie zniknął bezpowrotnie
+        // Corrupted save: keep a copy so it is not lost permanently
         try { storage.setItem(SAVE_KEY + '_corrupt', raw); } catch (_) {}
         return defaultSave();
       }
@@ -119,7 +119,7 @@
         storage.setItem(SAVE_KEY, JSON.stringify(data));
         available = true;
       } catch (e) {
-        available = false; // pełny storage, tryb prywatny itp.
+        available = false; // storage full, private mode, etc.
       }
       listeners.forEach(fn => { try { fn(data); } catch (_) {} });
       return available;
@@ -132,21 +132,21 @@
     data = load();
 
     return {
-      // --- odczyt ---
+      // --- reads ---
       DEFAULT_FORMATION,
       get: () => data,
       isAvailable: () => available,
       getCoins: () => data.coins,
       getCount: id => data.club[id] || 0,
       owns: id => (data.club[id] || 0) > 0,
-      // unique = ile różnych kart, total = suma wszystkich egzemplarzy
+      // unique = number of distinct cards, total = number of copies
       clubSize() {
         let unique = 0, total = 0;
         for (const id of Object.keys(data.club)) { unique++; total += data.club[id]; }
         return { unique, total };
       },
 
-      // --- drużyny (SQD-01, SQD-06) ---
+      // --- squads (SQD-01, SQD-06) ---
       getSquads: () => data.squads,
       getActiveSquadId: () => data.activeSquadId,
       getActiveSquad() {
@@ -168,7 +168,7 @@
         persist();
         return true;
       },
-      // Usunięcie drużyny nie usuwa kart z klubu - wracają do puli.
+      // Deleting a squad does not remove cards from the club; they return to the pool.
       deleteSquad(id) {
         const index = data.squads.findIndex(s => s.id === id);
         if (index < 0) return false;
@@ -185,7 +185,7 @@
         persist();
         return true;
       },
-      // Zmiana formacji: przypisani zawodnicy zostają i są układani od nowa (slot 0..10).
+      // Formation change: assigned players stay and are re-laid out from slot 0..10.
       setSquadFormation(id, formation) {
         const squad = findSquad(id);
         if (!squad || typeof formation !== 'string' || !formation) return squad ? squad.formation : null;
@@ -205,10 +205,25 @@
         persist();
         return true;
       },
+      // Like assignSlot, but if the same card is already in another slot of this squad,
+      // it is removed from the old slot and moved to the selected one.
+      assignSlotMoving(id, index, cardId) {
+        const squad = findSquad(id);
+        if (!squad || !Number.isInteger(index) || index < 0 || index >= SQUAD_SLOTS) return false;
+        const value = cardId ? String(cardId) : null;
+        if (value) {
+          for (let i = 0; i < SQUAD_SLOTS; i++) {
+            if (i !== index && squad.slots[i] === value) squad.slots[i] = null;
+          }
+        }
+        squad.slots[index] = value;
+        persist();
+        return true;
+      },
 
-      // --- zapis ---
-      // Dodaje karty do klubu. Zwraca [{ id, isNew }] w tej samej kolejności.
-      // isNew liczone względem stanu klubu sprzed paczki (PCK-02).
+      // --- writes ---
+      // Add cards to the club. Returns [{ id, isNew }] in the same order.
+      // isNew is computed against the club state before the pack (PCK-02).
       addCards(ids) {
         const before = Object.assign({}, data.club);
         const result = ids.map(id => ({ id, isNew: !before[id] }));
@@ -221,9 +236,9 @@
         persist();
         return data.coins;
       },
-      // Sprzedaż: items = { card_id: ilość }, coins = suma do wypłaty.
-      // Wszystko albo nic: gdy któregoś egzemplarza brakuje, nic się nie zmienia (zwraca false).
-      // Karty i coins zapisują się jednym zapisem, więc nie da się ich rozjechać.
+      // Sale: items = { card_id: quantity }, coins = total payout.
+      // All-or-nothing: if any copy is missing, nothing changes (returns false).
+      // Cards and coins are persisted in a single write so they cannot diverge.
       sellCards(items, coins) {
         if (!items || !Number.isFinite(coins) || coins < 0) return false;
         const ids = Object.keys(items);
@@ -254,7 +269,7 @@
         persist();
       },
 
-      // --- zmiany stanu (HUD itp.) ---
+      // --- state changes (HUD, etc.) ---
       onChange(fn) { listeners.push(fn); }
     };
   }
@@ -265,18 +280,18 @@
   };
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = api;               // testy w node
+    module.exports = api;               // exported for Node tests
   } else {
-    // w przeglądarce: globalny obiekt Save gotowy do użycia
+    // In the browser: expose a ready-to-use global Save object
     let ls = null;
     try { ls = root.localStorage; } catch (e) { ls = null; }
-    const memory = {};                  // awaryjnie, gdy localStorage jest zablokowany
+    const memory = {};                  // fallback when localStorage is unavailable
     const fallback = {
       getItem: k => (k in memory ? memory[k] : null),
       setItem: (k, v) => { memory[k] = String(v); },
       removeItem: k => { delete memory[k]; }
     };
     root.Save = createSave(ls || fallback);
-    if (!ls) root.Save.isAvailable = () => false; // gra działa, ale bez trwałego zapisu
+    if (!ls) root.Save.isAvailable = () => false; // the game works, but without persistent storage
   }
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -1,7 +1,7 @@
 let players = [];        // load player data from JSON
 let cardsById = {};      // card_id -> card (TECH-02)
 
-const PACK_PRICE = 50000; // koszt otwarcia jednej paczki
+const PACK_PRICE = 50000; // cost of opening one pack
 
 // TECH-02: price as a number ("1133,333333" -> 1133), used by selling/market
 function parsePrice(value) {
@@ -85,7 +85,7 @@ function weightedRandomPlayer(playersArray) {
   const weighted = [];
 
   playersArray.forEach(player => {
-    // basic weight based on rating
+    // Base weight from rating (higher rating = lower weight)
     let weight = Math.max(1, 101 - player.RAT);
 
     // rarity multiplier to make some versions rarer
@@ -98,7 +98,7 @@ function weightedRandomPlayer(playersArray) {
 
     weight = Math.max(1, Math.floor(weight * rarityMultiplier));
 
-    // push the player multiple times according to weight for probability
+    // Push the player into the pool once per weight unit to shape the odds
     for (let i = 0; i < weight; i++) {
       weighted.push(player);
     }
@@ -149,7 +149,7 @@ function openPack() {
   const cardsDiv = document.getElementById('cards');
   cardsDiv.innerHTML = '';
 
-  const drawnPlayers = drawUniquePlayers(6); // draw 6 unique players per pack - here you can modify amt of players per pack
+  const drawnPlayers = drawUniquePlayers(6); // draw 6 unique players per pack (change this number to adjust pack size)
 
   // PCK-01: add the drawn cards to the club (saved in localStorage)
   // PCK-02: isNew = card was not in the club before this pack
@@ -166,13 +166,13 @@ function openPack() {
   });
 }
 
-// function to reset pack view back to menu
+// Reset the pack view back to the menu
 function resetPack() {
   document.getElementById('cards').innerHTML = '';
   showView('menu');
 }
 
-// --- reset całego zapisu (TECH-05) z podwójnym potwierdzeniem ---
+// --- full save reset (TECH-05) with double confirmation ---
 let resetArmed = false;
 let resetTimer = null;
 

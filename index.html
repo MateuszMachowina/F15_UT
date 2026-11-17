@@ -7,7 +7,6 @@
 </head>
 <body>
 
-  <!-- Logo instead of title -->
   <div id="main-logo" style="text-align: center; margin: 60px 0;">
     <img src="assets/ui/main_logo.png" alt="Pack Simulator">
   </div>
@@ -22,10 +21,8 @@
   <div id="pack-container">
     <div id="cards" class="cards"></div>
 
-    <!-- Back button -->
     <img id="back-btn" src="assets/ui/back.png" alt="Back" onclick="resetPack()">
 
-    <!-- Save button as image -->
     <img id="save-btn" src="assets/ui/save.png" alt="Save pack">
   </div>
 
@@ -133,7 +130,6 @@
   <!-- Shared card rendering (packs + club) -->
   <script src="cards.js"></script>
 
-  <!-- Main JavaScript -->
   <script src="script.js"></script>
 
   <!-- Club screen and quick sell -->
@@ -142,7 +138,6 @@
   <!-- Squad screen: formations and pitch (SQD-01) -->
   <script src="squad.js"></script>
   
-  <!-- Share on X button -->
   <a id="share-btn" 
     href="https://twitter.com/intent/tweet?text=Check%20out%20%23MyFIFA15Pack!" 
     target="_blank" 
@@ -159,17 +154,14 @@
     const shareHashtag = document.getElementById('share-btn');
     
     saveBtn.addEventListener('click', () => {
-      /*shareHashtag.style.opacity = '0';*/
-
       // Take screenshot of entire body to capture background, logo, and opened pack
       html2canvas(document.body).then(canvas => {
         const link = document.createElement('a');
-        link.download = 'my_pack.png';  // default download filename
+        link.download = 'my_pack.png';
         link.href = canvas.toDataURL();
         link.click();
 
         // Ensure save button remains visible after screenshot
-        /*shareHashtag.style.opacity = '1';*/
         saveBtn.style.display = 'block';
       });
     });
@@ -184,7 +176,6 @@
   
       // Hide logo only on iPads (7th–11th gen) based on Safari viewport dimensions
       if (/iPad/.test(ua) || (navigator.platform === 'MacIntel' && 'ontouchend' in document)) {
-          // iPad w Safari
           logo.style.opacity = "0";
         } else {
           logo.style.opacity = "1";
@@ -202,7 +193,6 @@
   <!-- Author signature linking to GitHub -->
   <a href="https://github.com/MateuszMachowina" target="_blank" id="author-sign">© 2026 MateuszMachowina</a>
 
-  <!-- Spotify button in top-right corner -->
   <a href="https://open.spotify.com/playlist/00i82lDzMDdiHWNjrIGAyw" target="_blank" 
     id="spotify-btn">
     <img src="assets/ui/spotify.png" alt="Spotify Playlist">

@@ -1,4 +1,4 @@
-// cards.js: wspólne renderowanie karty (paczka + klub)
+// cards.js: shared card rendering (packs + club)
 
 const versionColors = {
   "Futties": "#d859d4ff",
@@ -50,7 +50,7 @@ function buildCardStats(player) {
   return stats;
 }
 
-// renderCard(player, { isNew }) -> DOM element karty
+// renderCard(player, { isNew }) -> card DOM element
 function renderCard(player, options) {
   const opts = options || {};
   const card = document.createElement('div');

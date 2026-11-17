@@ -1,16 +1,16 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body {
-  height: 100%;          /* set full viewport height */
-  margin: 0;             /* remove default margins */
-  overflow: hidden;      /* prevent scrolling */
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   background: #222 url('assets/ui/background.png') no-repeat center center fixed;
-  background-size: cover; /* cover entire viewport */
+  background-size: cover;
   color: white;
 }
 
@@ -18,12 +18,12 @@ body {
   width: 400px;           
   max-width: 90%;
   transition: transform 0.3s ease, filter 0.3s ease;
-  animation: pulse-logo 3s infinite alternate; /* subtle logo glow animation */
+  animation: pulse-logo 3s infinite alternate;
 }
 
 @media (max-width: 1200px) {
   #main-logo {
-    margin-top: 100px; /* for smaller screens */
+    margin-top: 100px;
   }
 }
 
@@ -36,9 +36,9 @@ body {
 #menu {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
-  height: 100vh;           /* fill viewport height */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #pack-price {
@@ -55,29 +55,29 @@ body {
 #pack-img {
   width: 243px;           
   height: 353px;          
-  object-fit: cover;       /* maintain aspect ratio, crop if needed */
+  object-fit: cover;
   cursor: pointer;
   display: block;
-  margin: -350px auto 0 auto; /* adjust vertical positioning */
+  margin: -350px auto 0 auto;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 #pack-img:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 5px gold); /* subtle hover glow */
+  filter: drop-shadow(0 0 5px gold);
 }
 
 /* Back and Save buttons - fixed position on all screens */
 #back-btn, #save-btn {
-  position: fixed;          /* always fixed */
-  bottom: 20px;             /* distance from bottom of viewport */
+  position: fixed;
+  bottom: 20px;
   width: 100px;
   cursor: pointer;
-  z-index: 1200;            /* above pack container */
+  z-index: 1200;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-#back-btn { right: 20px; }   /* Back button on the right */
+#back-btn { right: 20px; }
 #save-btn { right: 180px; display: none; }
 
 #back-btn:hover, #save-btn:hover {
@@ -85,34 +85,34 @@ body {
   filter: drop-shadow(0 0 5px #131313) brightness(1.2);
 }
 
-/* Smaller screens adjustments */
+/* Smaller screens */
 @media (max-width: 1200px) {
   #back-btn, #save-btn {
-    bottom: calc(env(safe-area-inset-bottom, 40px) + 20px); /* lift buttons for mobiles/tablets */
-    width: 120px; /* optional smaller width */
+    bottom: calc(env(safe-area-inset-bottom, 40px) + 20px); /* lift buttons for mobile/tablet browsers */
+    width: 120px;
   }
   #back-btn { right: 20px; }
   #save-btn { right: 160px; }
 }
 
 #pack-container {
-  display: none;          /* hidden by default */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  justify-content: center; /* center content horizontally */
-  align-items: center;     /* center content vertically */
-  background: rgba(0,0,0,0.1); /* semi-transparent overlay */
-  z-index: 1000;           /* on top of other elements */
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;               /* spacing between cards */
+  gap: 20px;
 }
 
 .card {
@@ -121,8 +121,8 @@ body {
   height: 353px;
   background-size: cover;
   border-radius: 12px;
-  overflow: visible;       /* allow shadow to overflow */
-  animation: pulse-shadow 3s infinite alternate; /* subtle card glow animation */
+  overflow: visible;       /* allow the glow to overflow */
+  animation: pulse-shadow 3s infinite alternate;
   filter: drop-shadow(0 0 3px var(--card-color));
 }
 
@@ -266,28 +266,28 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
-  z-index: 2000;  /* always on top */
+  z-index: 2000;
 }
 
 #author-sign:hover {
-  transform: scale(1.05); /* subtle hover effect */
+  transform: scale(1.05);
 }
 
 #spotify-btn {
   position: fixed;
-  top: 20px;        /* distance from top */
-  right: 20px;      /* distance from right */
-  width: 50px;      /* fixed width */
-  height: 50px;     /* fixed height */
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  z-index: 1100;    /* above other elements */
+  z-index: 1100;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 #spotify-btn img {
   width: 100%;
-  height: 100%;     /* fill the container exactly */
-  object-fit: contain; /* keep aspect ratio inside box */
+  height: 100%;
+  object-fit: contain;
 }
 
 #spotify-btn:hover {
@@ -295,7 +295,7 @@ body {
   filter: drop-shadow(0 0 4px #000f05) brightness(1.1);
 }
 
-/* optional: adjust for smaller screens if needed */
+/* Smaller screens */
 @media (max-width: 1200px) {
   #spotify-btn {
     width: 40px;
@@ -321,13 +321,13 @@ body {
   border-radius: 12px;
 }
 
-/* Hover efekt */
+/* Hover effect */
 #share-btn:hover {
   transform: scale(1.1);
   filter: drop-shadow(0 0 5px #000) brightness(1.2);
 }
 
-/* CTA tooltip */
+/* Share tooltip */
 #share-btn::after {
   content: "Share on X! #MyFIFA15Pack";
   position: absolute;
@@ -345,7 +345,7 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Pokazanie CTA przy hover */
+/* Show tooltip on hover */
 #share-btn:hover::after {
   opacity: 1;
   transform: translateY(-50%) translateX(-5px);
@@ -631,7 +631,6 @@ body {
 }
 
 /* NEW badge on cards that were not in the club before the pack */
-/* NEW badge on cards that were not in the club before the pack */
 .card .new-badge {
   position: absolute;
   top: 6px;
@@ -659,7 +658,7 @@ body {
   overflow: hidden;
 }
 
-/* przyciemnienie stadionu, żeby interfejs pozostał czytelny */
+/* darken the stadium so the UI stays readable */
 #squad-container::before {
   content: "";
   position: absolute;
@@ -753,7 +752,7 @@ body {
   text-shadow: 0 1px 2px #000;
 }
 
-/* pasmo boiska (góra/dół = zewnętrzne linie z team.png) ustawiane w squad.js */
+/* pitch band (top/bottom = outer lines from team.png); positioned in squad.js */
 #squad-pitch {
   position: absolute;
   left: 0;
@@ -764,7 +763,7 @@ body {
   --squad-card-scale: 0.48;
 }
 
-/* linie zgrania między kartami (SQD-13) - pod kartami, nad tłem boiska */
+/* chemistry lines between cards (SQD-13) - under the cards, above the pitch background */
 .squad-links {
   position: absolute;
   top: 0;
@@ -780,10 +779,10 @@ body {
   opacity: 0.9;
 }
 
-.squad-links line.link-0 { stroke: #ff5252; opacity: 0.85; }  /* czerwona - brak powiązań */
-.squad-links line.link-1 { stroke: #c9a227; }                 /* brudnożółta / prawie pomarańczowa */
+.squad-links line.link-0 { stroke: #ff5252; opacity: 0.85; }  /* red - no links */
+.squad-links line.link-1 { stroke: #c9a227; }                 /* dirty yellow / almost orange */
 .squad-links line.link-2,
-.squad-links line.link-3 { stroke: #6fe36f; }                 /* jasna zieleń */
+.squad-links line.link-3 { stroke: #6fe36f; }                 /* light green */
 
 .squad-slot {
   position: absolute;
@@ -871,7 +870,7 @@ body {
   white-space: nowrap;
 }
 
-/* SQD-03: zielony = ta sama pozycja, żółty = akceptowalna, czerwony = zła */
+/* SQD-03: green = exact position, yellow = acceptable, red = wrong */
 .squad-slot .slot-pos { top: -11px; }
 
 .squad-slot.exact .slot-pos {
@@ -1180,7 +1179,7 @@ body {
   color: #fff;
 }
 
-/* 4 karty w rzędzie: kolumny są równe, a karta wypełnia szerokość kafelka */
+/* 4 cards per row: equal columns, each card fills the tile width */
 #picker-grid {
   flex: 1 1 auto;
   min-height: calc(140px * var(--picker-scale));
@@ -1219,8 +1218,18 @@ body {
 
 .picker-tile.off-position { border-color: rgba(255, 107, 107, 0.7); }
 
-/* karta 243x353 (ratio 0.688); wrap = 90% szerokości kafelka, wysokość jak karta.
-   W kafelku zostaje 5% marginesu z każdej strony (karta 10% mniejsza). */
+.picker-tile.in-squad { border-color: rgba(120, 200, 255, 0.75); }
+
+.picker-in-squad {
+  font-size: calc(9px * var(--picker-scale));
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #78c8ff;
+  text-align: center;
+}
+
+/* card 243x353 (ratio 0.688); wrap = 90% of the tile width, height matching the card.
+   This leaves a 5% margin on each side (the card is 10% smaller). */
 .picker-card-wrap {
   position: relative;
   width: 90%;
@@ -1228,9 +1237,9 @@ body {
   flex: 0 0 auto;
 }
 
-/* karta w pickerze: 90% szerokości kafelka (10% mniejsza), wyśrodkowana.
-   cqw liczy się od najbliższego przodka-container (.picker-tile ma container-type).
-   left:0 (wrap już jest 90% i wyśrodkowany) + scale 0.9 → karta wypełnia wrap. */
+/* picker card: 90% of the tile width (10% smaller), centered.
+   cqw is relative to the nearest container ancestor (.picker-tile sets container-type).
+   left:0 (the wrap is already 90% and centered) + scale 0.9 -> the card fills the wrap. */
 .picker-card-wrap .card,
 .picker-card-wrap .card.show {
   position: absolute;

@@ -1,4 +1,4 @@
-// club.js: ekran klubu (CLB-02..06), szybka sprzedaż (ECO-02, ECO-03)
+// club.js: club screen (CLB-02..06) and quick selling (ECO-02, ECO-03)
 
 const CLUB_PAGE_SIZE = 60;
 

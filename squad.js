@@ -1,23 +1,23 @@
-// squad.js: ekran zespołu (SQD-01, SQD-02, SQD-06)
-// Wiele drużyn, każda z własną formacją i składem; klik na pozycję otwiera wybór zawodnika.
+// squad.js: squad screen (SQD-01, SQD-02, SQD-06)
+// Multiple squads, each with its own formation and lineup; clicking a slot opens the player picker.
 
 const SQUAD_DEFAULT_FORMATION = (typeof Save !== 'undefined' && Save.DEFAULT_FORMATION) || '4-3-3';
 const PICKER_PAGE = 60;
 
-// team.png: 1672x941, zewnętrzne linie boiska na y=238 (górna) i y=754 (dolna)
+// team.png: 1672x941, pitch outer lines at y=238 (top) and y=754 (bottom)
 const SQUAD_BG = { width: 1672, height: 941, top: 238, bottom: 754 };
-// karty w zespole 20% mniejsze niż w klubie (w klubie: transform: scale(0.6))
+// Squad cards are 20% smaller than in the club (club uses transform: scale(0.6))
 const SQUAD_CARD_SCALE = 0.48;
-// Na niskich ekranach pasmo boiska jest za krótkie na karty 0.48 - wtedy zmniejszamy je
-// tak, by między tą samą kolumną (np. GK/CB) został prześwit. Na 1080p limit nie obowiązuje.
+// On short screens the pitch band is too short for 0.48 cards, so they are scaled down
+// to keep a gap within the same column (e.g. GK/CB). The limit does not apply at 1080p.
 const SQUAD_CARD_FIT = 0.29;
 function squadCardScale(rect) {
   return Math.min(SQUAD_CARD_SCALE, (rect.height * SQUAD_CARD_FIT) / 353);
 }
 
-// Na krótkich ekranach dolna karta (GK) może wejść pod przyciski #nav.
-// Przesuwamy wtedy całe pasmo boiska (razem z tłem) w górę o nadmiar,
-// zostawiając 4 px kontrolowanego nachodzenia.
+// On short screens the bottom card (GK) may overlap the #nav buttons.
+// Shift the whole pitch band (with its background) up by the overflow,
+// leaving 4 px of controlled overlap.
 const SQUAD_NAV_OVERLAP = 4;
 function squadNavShift(rect) {
   const nav = document.getElementById('nav');
@@ -26,13 +26,13 @@ function squadNavShift(rect) {
   const half = (353 * squadCardScale(rect)) / 2;
   const bottom = rect.top + rect.height + half;
   const shift = Math.max(0, (bottom - navTop) - SQUAD_NAV_OVERLAP);
-  // nie wypychaj górnej linii nad ekran
+  // do not push the top line off-screen
   return Math.min(shift, Math.max(0, rect.top - 8));
 }
 
-// x: 0-100 w poziomie, y: 0-100 pasma boiska (0 = górna zewnętrzna linia, 100 = dolna).
-// y=100 to dolna linia boiska - środek karty GK leży dokładnie na niej.
-// 1 "cm" = 1% szerokości boiska (x) / 1% pasma boiska (y).
+// x: 0-100 horizontally, y: 0-100 of the pitch band (0 = top outer line, 100 = bottom).
+// y=100 is the bottom pitch line - the GK card center sits exactly on it.
+// 1 "cm" = 1% of pitch width (x) / 1% of pitch band (y).
 const FORMATIONS = {
   '4-3-2-1': [
     { pos: 'GK', x: 50, y: 100 },
@@ -93,15 +93,15 @@ const FORMATIONS = {
   ]
 };
 
-// Kolejność przycisków wyboru formacji (SQD-01).
+// Formation picker button order (SQD-01).
 const FORMATION_ORDER = ['4-4-2', '4-1-2-1-2', '4-3-2-1', '4-3-3', '4-5-1', '5-4-1', '5-3-2', '3-5-2', '3-4-1-2'];
 
-// Formacje ukryte w selektorze — definicje pozostają w FORMATIONS/FORMATION_LINKS (SQD-01).
+// Formations hidden from the picker — definitions remain in FORMATIONS/FORMATION_LINKS (SQD-01).
 const HIDDEN_FORMATIONS = ['3-4-1-2'];
 
-// Akceptowane pozycje zawodnika na danej pozycji formacji (SQD-03).
-// 1 = dokładnie ta sama pozycja (zielony), 2 = dopuszczalna alternatywa (żółty),
-// brak = niedopuszczalne (czerwony).
+// Accepted player positions for a formation slot (SQD-03).
+// exact = same position (green), alt = acceptable alternative (yellow),
+// missing = not allowed (red).
 const SLOT_COMPAT = {
   GK: [],
   RB: ['RWB', 'RM', 'CB'],
@@ -122,16 +122,16 @@ const SLOT_COMPAT = {
   ST: ['CF']
 };
 
-// ---------- linie zgrania (SQD-13) ----------
+// ---------- chemistry links (SQD-13) ----------
 
-// Wartość połączenia między dwiema kartami (jak w FIFA 14-18):
-//   3 = ten sam klub i ta sama nacja (hyper)
-//   2 = ten sam klub  LUB  ta sama nacja i liga (strong)
-//   1 = ta sama nacja  LUB  ta sama liga (weak)
-//   0 = nic wspólnego (dead)
-// Legendy (liga "Legends") łamią powyższe zasady:
-//   - dwie karty z klubu Legends: 2, a przy tej samej nacji 3
-//   - legenda z dowolną inną kartą: minimum 1, a przy tej samej nacji 2
+// Link value between two cards (as in FIFA 14-18):
+//   3 = same club and same nation (hyper)
+//   2 = same club OR (same nation and league) (strong)
+//   1 = same nation OR same league (weak)
+//   0 = nothing in common (dead)
+// Legends (the "Legends" league) override these rules:
+//   - two Legends cards: 2, or 3 with the same nation
+//   - a Legend with any other card: at least 1, or 2 with the same nation
 const LEGENDS_LEAGUE_ID = 8;
 function squadLinkValue(a, b) {
   if (!a || !b) return 0;
@@ -149,10 +149,10 @@ function squadLinkValue(a, b) {
   return 0;
 }
 
-// Połączenia slotów per formacja. Pary [a, b] to indeksy w tablicy formacji.
-// Wzorzec FIFA 15: GK–obrońcy, obrońcy między sobą i z linią pomocy,
-// pomoc między sobą i z atakiem, atak między sobą.
-// Łatwa edycja: dodaj/usuń/zmień parę [a, b] poniżej.
+// Slot links per formation. Pairs [a, b] are indices in the formation array.
+// FIFA 15 pattern: GK–defenders, defenders among themselves and with midfield,
+// midfield among themselves and with the attack, attackers among themselves.
+// Easy to edit: add/remove/change a [a, b] pair below.
 const FORMATION_LINKS = {
   '4-3-2-1': [
     [0, 1], [0, 2], [0, 3], [0, 4],
@@ -230,8 +230,8 @@ const FORMATION_LINKS = {
   ]
 };
 
-// Zabezpieczenie: formacja bez definicji dostaje połączenia z geometrii
-// (najbliżsi sąsiedzi w tej samej i sąsiednich liniach).
+// Fallback: a formation without a definition gets links from geometry
+// (nearest neighbours in the same and adjacent lines).
 function autoFormationLinks(slots) {
   const links = [];
   slots.forEach((a, i) => {
@@ -251,7 +251,7 @@ function squadFormationLinks(formation) {
 
 const pickerState = { squadId: null, index: -1, query: '', onlyFit: true, shown: PICKER_PAGE, position: '', league: '', club: '', nation: '' };
 
-// Współrzędne z FORMATIONS są już w 0-100 pasma boiska (0 = górna linia, 100 = dolna).
+// FORMATIONS coordinates are already 0-100 of the pitch band (0 = top, 100 = bottom).
 function squadSlots(formation) {
   const list = FORMATIONS[formation] || FORMATIONS[SQUAD_DEFAULT_FORMATION];
   return list.map(slot => ({
@@ -261,13 +261,13 @@ function squadSlots(formation) {
   }));
 }
 
-// Nieznana formacja w zapisie nie może rozjechać podsumowania z boiskiem.
+// An unknown formation in the save must not desync the summary from the pitch.
 function squadFormation(squad) {
   if (!squad) return SQUAD_DEFAULT_FORMATION;
   return FORMATIONS[squad.formation] ? squad.formation : SQUAD_DEFAULT_FORMATION;
 }
 
-// 'exact' = ta sama pozycja (zielony), 'alt' = akceptowalna (żółty), 'bad' = zła (czerwony)
+// 'exact' = same position (green), 'alt' = acceptable (yellow), 'bad' = wrong (red)
 function slotMatch(slotPos, playerPos) {
   if (slotPos === playerPos) return 'exact';
   const list = SLOT_COMPAT[slotPos];
@@ -282,11 +282,11 @@ function squadCard(cardId) {
   return typeof cardsById !== 'undefined' && cardsById[cardId] ? cardsById[cardId] : null;
 }
 
-// Chemistry w stylu FIFA 14-18 (uproszczony):
-// - indywidualna chemia gracza (0-10) = pułap pozycji (exact 10 / alt 6 / bad 3) × osiągnięcie z linii.
-// - osiągnięcie: baza 0.7 (same żółte), +0.15 za zieloną (liczą się do 2), -0.15 za czerwoną;
-//   >=2 zielone i brak czerwonych => 1.0 (maks. z danego zakresu). Tylko czerwone obniżają.
-// - chemia drużyny = średnia indywidualnych (0-10) × 10, czyli maksimum 100.
+// Chemistry in the style of FIFA 14-18 (simplified):
+// - Individual player chemistry (0-10) = position ceiling (exact 10 / alt 6 / bad 3) × link achievement.
+// - Achievement: base 0.7 (all yellow), +0.15 per green (up to 2), -0.15 per red;
+//   >=2 green and no red => 1.0 (max for the given range). Only red lowers it.
+// - Team chemistry = average individual (0-10) × 10, i.e. a maximum of 100.
 function squadLinkCounts(squad, index) {
   const counts = { green: 0, yellow: 0, red: 0 };
   const self = squad.slots[index] ? squadCard(squad.slots[index]) : null;
@@ -312,7 +312,7 @@ function squadLinkAchievement(green, yellow, red) {
   return Math.max(0, Math.min(1, 0.7 + 0.15 * Math.min(green, 2) - 0.15 * red));
 }
 
-// Rating = średnia RAT wypełnionych slotów.
+// Rating = average RAT of filled slots.
 function squadStats(squad) {
   if (!squad) return { rating: 0, chemistry: 0, filled: 0, alt: 0, bad: 0 };
   const slots = squadSlots(squadFormation(squad));
@@ -424,7 +424,7 @@ function squadInit() {
     });
   }
 
-  // Escape i klik w tło zamykają wybór zawodnika
+  // Escape and a backdrop click close the player picker
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closePicker();
   });
@@ -451,7 +451,7 @@ function squadInit() {
   renderSquad();
 }
 
-/* ---------- drużyny ---------- */
+/* ---------- teams ---------- */
 
 function ensureTeam() {
   if (Save.getSquads().length) return;
@@ -569,11 +569,11 @@ function renderTeams() {
   Save.getSquads().forEach(squad => list.appendChild(teamRow(squad, squad.id === activeId)));
 }
 
-/* ---------- boisko ---------- */
+/* ---------- pitch ---------- */
 
-// team.png rysowany jest w formacie "cover" (wyśrodkowany), więc pasmo boiska
-// między zewnętrznymi liniami liczymy z naturalnych wymiarów obrazka.
-// Na wąskich ekranach obraz jest szerszy niż ekran - wtedy skład mieścimy w widocznej części.
+// team.png is drawn in "cover" mode (centered), so the pitch band between the
+// outer lines is computed from the image's natural dimensions.
+// On narrow screens the image is wider than the viewport, so the lineup fits the visible area.
 function squadPitchRect() {
   const box = document.getElementById('squad-container');
   const vw = box && box.clientHeight ? box.clientWidth : window.innerWidth;
@@ -589,7 +589,7 @@ function squadPitchRect() {
   };
 }
 
-// Ustawia boisko dokładnie na narysowanych liniach i ustala rozmiar kart.
+// Aligns the pitch exactly to the drawn lines and sets the card size.
 function squadLayout() {
   const pitch = document.getElementById('squad-pitch');
   if (!pitch) return null;
@@ -603,7 +603,7 @@ function squadLayout() {
   pitch.style.height = rect.height + 'px';
   pitch.style.setProperty('--squad-card-scale', squadCardScale(rect));
 
-  // tło team.png musi być przesunięte razem z pasmem boiska
+  // the team.png background must shift together with the pitch band
   const container = document.getElementById('squad-container');
   if (container) {
     const bgScale = rect.height / (SQUAD_BG.bottom - SQUAD_BG.top);
@@ -614,15 +614,15 @@ function squadLayout() {
   return { left: rect.left, top: top, width: rect.width, height: rect.height };
 }
 
-// SVG z liniami zgrania (SQD-13). Rysowane tylko między wypełnionymi slotami.
-// Kolor zależy od squadLinkValue: 0 = czerwony, 1 = brudnożółty, 2/3 = jasnozielony.
+// Chemistry link SVG (SQD-13). Drawn only between filled slots.
+// Color depends on squadLinkValue: 0 = red, 1 = dirty yellow, 2/3 = light green.
 function squadLinksSvg(formation, squad, centers, rect) {
   const NS = 'http://www.w3.org/2000/svg';
-  // połowa wysokości karty - do niej przesuwamy punkty linii na dolną krawędź
+  // half the card height - line endpoints are shifted to the card's bottom edge
   const scale = squadCardScale(rect);
   const half = (353 * scale) / 2;
-  // dodatkowo podnosimy koniec linii o połowę wysokości czcionki statystyk
-  // (stats: 19px w CSS) w skali zespołu - nad dolną krawędź karty
+  // also raise the line endpoint by half the stats font height
+  // (stats: 19px in CSS) in squad scale - above the card's bottom edge
   const raise = (19 * scale) / 2;
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('class', 'squad-links');
@@ -641,8 +641,8 @@ function squadLinksSvg(formation, squad, centers, rect) {
     const p2 = centers[b];
     if (!p1 || !p2) return;
 
-    // linia nie celuje w centrum karty, tylko w dolną krawędź karty
-    // (podniesioną o połowę wysokości czcionki statystyk, ale 1 px niżej)
+    // the line targets the card's bottom edge, not its center
+    // (raised by half the stats font height, but 1 px lower)
     const line = document.createElementNS(NS, 'line');
     line.setAttribute('x1', p1.x.toFixed(1));
     line.setAttribute('y1', (p1.y + half - raise + 1).toFixed(1));
@@ -659,7 +659,7 @@ function renderSquad() {
   const pitch = document.getElementById('squad-pitch');
   if (!pitch) return;
 
-  // boisko na narysowanych liniach; gdy widok jest ukryty, zostaje % z CSS
+  // pitch on the drawn lines; when the view is hidden, the CSS percentage remains
   const rect = squadLayout();
 
   const squad = Save.getActiveSquad();
@@ -689,21 +689,21 @@ function renderSquad() {
   }
 
   const slots = squadSlots(formation);
-  // y slotów to % pasma boiska; środek karty ląduje na tej wysokości.
-  // Górna linia zostawia margines (karta nie wchodzi pod górny pasek),
-  // dół nie jest przycinany - środek karty GK leży dokładnie na dolnej linii.
+  // slot y is a percentage of the pitch band; the card center lands at that height.
+  // The top line keeps a margin (the card does not go under the top bar),
+  // the bottom is not clipped - the GK card center sits exactly on the bottom line.
   const half = (353 * squadCardScale(rect)) / 2;
   const margin = 4;
   const minCenter = half + margin;
   const maxCenter = rect ? rect.height : 0;
 
-  // centra slotów w pikselach boiska - wspólne dla kart i linii zgrania
+  // slot centers in pitch pixels - shared by cards and chemistry lines
   const centers = slots.map(slot => ({
     x: (slot.x / 100) * (rect ? rect.width : 0),
     y: rect ? Math.max(minCenter, Math.min(maxCenter, (slot.y / 100) * rect.height)) : 0
   }));
 
-  // linie zgrania rysowane pod kartami (SQD-13)
+  // chemistry lines drawn under the cards (SQD-13)
   if (rect) {
     const links = squadLinksSvg(formation, squad, centers, rect);
     if (links) pitch.appendChild(links);
@@ -772,7 +772,7 @@ function openSquad() {
   });
 }
 
-/* ---------- wybór zawodnika ---------- */
+/* ---------- player picker ---------- */
 
 const PICKER_FILTER_DIMS = [
   { id: 'picker-position', filter: 'position', field: 'POS', label: 'Any position' },
@@ -841,8 +841,8 @@ function pickerRebuildFilters(anchor) {
   PICKER_FILTER_DIMS.forEach(dim => pickerFillSelect(dim, filters));
 }
 
-// Dozwolone pozycje w filtrze pickera: główna pozycja slotu + pozycje
-// kompatybilne (SLOT_COMPAT). Zwraca null, gdy slot nie jest znany.
+// Allowed positions in the picker filter: the slot's primary position plus
+// compatible positions (SLOT_COMPAT). Returns null for an unknown slot.
 function pickerSlotPositions() {
   const squad = Save.getSquad(pickerState.squadId);
   if (!squad) return null;
@@ -874,7 +874,7 @@ function pickerFillSelect(dim, filters) {
 
   let sorted = [...values].sort((a, b) => display(a).localeCompare(display(b), 'pl'));
 
-  // Pozycja główna slotu zawsze na początku listy (np. LW, potem LM i RW).
+  // The slot's primary position is always first in the list (e.g. LW, then LM and RW).
   if (dim.filter === 'position' && allowed && allowed.length) {
     const main = allowed[0];
     const at = sorted.indexOf(main);
@@ -920,8 +920,8 @@ function pickerResetFilters() {
   pickerRebuildFilters(null);
 }
 
-// Pamięć filtrów pickera per drużyna: po zmianie drużyny filtry wracają do
-// stanu wybranego wcześniej dla tej drużyny (domyślnie puste).
+// Per-squad picker filter memory: switching squads restores the filters
+// previously chosen for that squad (empty by default).
 const pickerFilterMemory = {};
 
 function pickerActiveId() {
@@ -955,7 +955,7 @@ function pickerRemember() {
 function pickerRestore() {
   const id = pickerActiveId();
   pickerApplySnapshot(id ? pickerFilterMemory[id] : null);
-  // Pozycja nie jest częścią zapamiętanego stanu.
+  // Position is not part of the remembered state.
   pickerState.position = '';
   pickerApplyState();
   pickerRebuildFilters(null);
@@ -973,7 +973,7 @@ function openPicker(index) {
   pickerState.squadId = squad.id;
   pickerState.index = index;
   pickerState.shown = PICKER_PAGE;
-  // Filtr pozycji nie jest zapamiętywany - każdy slot otwiera się bez niego.
+  // The position filter is not remembered - every slot opens without it.
   pickerState.position = '';
 
   const slot = squadSlots(squadFormation(squad))[index];
@@ -999,15 +999,17 @@ function closePicker() {
 
 function pickerPool(slot, squad) {
   const usedElsewhere = {};
-  const usedPlayerIds = {};
+  const inSquad = {};
+  const squadPlayerIds = {};
 
   Save.getSquads().forEach(s => {
     s.slots.forEach((cardId, i) => {
       if (!cardId) return;
       if (s.id === squad.id) {
         if (i !== pickerState.index) {
+          inSquad[cardId] = true;
           const card = squadCard(cardId);
-          if (card) usedPlayerIds[card.player_id] = true;
+          if (card) squadPlayerIds[card.player_id] = true;
         }
       } else {
         usedElsewhere[cardId] = true;
@@ -1021,7 +1023,10 @@ function pickerPool(slot, squad) {
   Object.keys(Save.get().club).forEach(cardId => {
     const card = squadCard(cardId);
     if (!card) return;
-    if (usedElsewhere[cardId] || usedPlayerIds[card.player_id]) return;
+    if (usedElsewhere[cardId]) return;
+    // A card from this squad is an option - selecting it moves it from its current slot.
+    // Only a second card of the same player (different version) is blocked.
+    if (squadPlayerIds[card.player_id] && !inSquad[cardId]) return;
     if (query) {
       const surname = String(card.Surname).toLowerCase('pl');
       if (surname.indexOf(query) === -1 && cardId.toLowerCase().indexOf(query) === -1) return;
@@ -1032,7 +1037,7 @@ function pickerPool(slot, squad) {
     if (pickerState.nation && String(card.nation_id) !== pickerState.nation) return;
     if (pickerState.onlyFit && !fitsSlot(slot.pos, card.POS)) return;
 
-    entries.push({ card, cardId });
+    entries.push({ card, cardId, inSquad: !!inSquad[cardId] });
   });
 
   entries.sort((a, b) => b.card.RAT - a.card.RAT || String(a.card.Surname).localeCompare(String(b.card.Surname), 'pl'));
@@ -1044,11 +1049,17 @@ function pickerTile(entry, slot, squad) {
   tile.type = 'button';
   tile.className = 'picker-tile';
 
+  const notes = [];
   const fits = fitsSlot(slot.pos, entry.card.POS);
   if (!fits) {
     tile.classList.add('off-position');
-    tile.title = `${entry.card.POS} does not fit ${slot.pos}`;
+    notes.push(`${entry.card.POS} does not fit ${slot.pos}`);
   }
+  if (entry.inSquad) {
+    tile.classList.add('in-squad');
+    notes.push('Already in this squad - click to move here');
+  }
+  tile.title = notes.join(' · ');
 
   const wrap = document.createElement('div');
   wrap.className = 'club-card-wrap picker-card-wrap';
@@ -1067,8 +1078,15 @@ function pickerTile(entry, slot, squad) {
   name.textContent = `${entry.card.Surname} · ${entry.card.RAT}`;
   tile.appendChild(name);
 
+  if (entry.inSquad) {
+    const badge = document.createElement('span');
+    badge.className = 'picker-in-squad';
+    badge.textContent = 'IN SQUAD';
+    tile.appendChild(badge);
+  }
+
   tile.addEventListener('click', () => {
-    Save.assignSlot(squad.id, pickerState.index, entry.cardId);
+    Save.assignSlotMoving(squad.id, pickerState.index, entry.cardId);
     closePicker();
     renderTeams();
     renderSquad();
