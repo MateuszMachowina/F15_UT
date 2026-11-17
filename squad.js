@@ -104,8 +104,8 @@ const HIDDEN_FORMATIONS = ['3-4-1-2'];
 // missing = not allowed (red).
 const SLOT_COMPAT = {
   GK: [],
-  RB: ['RWB', 'RM', 'CB'],
-  LB: ['LWB', 'LM', 'CB'],
+  RB: ['RWB', 'RM', 'CB', 'LB'],
+  LB: ['LWB', 'LM', 'CB', 'RB'],
   CB: ['CDM', 'LB', 'RB'],
   RWB: ['RB', 'RM'],
   LWB: ['LB', 'LM'],
