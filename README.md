@@ -6,8 +6,8 @@ A browser-based FIFA 15 pack opening simulator: open packs, collect players, bui
 
 ## 🎉 Personal Note
 
-This project was created as a tribute to my very first steps in IT – on the 10th anniversary of my first **FIFA Pack Opener**, built in Scratch over 10 years ago (2015).
-I have always learned by setting myself challenges, building projects and solving problems as they appeared. That approach guided me back then in Scratch and it still guides me today in technologies like **VBA, Power Automate, UiPath and Python**. 🚀
+This project was created as a tribute to my very first steps in IT – on the 11th anniversary of my first **FIFA Pack Opener**, built in Scratch over 11 years ago (2015).
+I have always learned by setting myself challenges, building projects and solving problems as they appeared. That approach guided me back then in Scratch and it still guides me today. 
 
 ## 📚 My Scratch Projects
 
