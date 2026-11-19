@@ -249,7 +249,9 @@ function squadFormationLinks(formation) {
   return FORMATION_LINKS[formation] || autoFormationLinks(squadSlots(formation));
 }
 
-const pickerState = { squadId: null, index: -1, query: '', onlyFit: true, shown: PICKER_PAGE, position: '', league: '', club: '', nation: '' };
+const pickerFitLabels = ['Exact', 'Compatible', 'All'];
+
+const pickerState = { squadId: null, index: -1, query: '', fitLevel: 1, shown: PICKER_PAGE, position: '', league: '', club: '', nation: '' };
 
 // FORMATIONS coordinates are already 0-100 of the pitch band (0 = top, 100 = bottom).
 function squadSlots(formation) {
@@ -283,10 +285,10 @@ function squadCard(cardId) {
 }
 
 // Chemistry in the style of FIFA 14-18 (simplified):
-// - Individual player chemistry (0-10) = position ceiling (exact 10 / alt 6 / bad 3) × link achievement.
-// - Achievement: base 0.7 (all yellow), +0.15 per green (up to 2), -0.15 per red;
+// - Individual player chemistry (0-11) = position ceiling (exact 11 / alt 6 / bad 3) × link achievement.
+// - Achievement: base 0.7 (all yellow), +0.18 per green (up to 3), -0.10 per red;
 //   >=2 green and no red => 1.0 (max for the given range). Only red lowers it.
-// - Team chemistry = average individual (0-10) × 10, i.e. a maximum of 100.
+// - Team chemistry = average individual × 10, i.e. a maximum of 100.
 function squadLinkCounts(squad, index) {
   const counts = { green: 0, yellow: 0, red: 0 };
   const self = squad.slots[index] ? squadCard(squad.slots[index]) : null;
@@ -309,7 +311,7 @@ function squadLinkCounts(squad, index) {
 function squadLinkAchievement(green, yellow, red) {
   if (green + yellow + red === 0) return 1;
   if (green >= 2 && red === 0) return 1;
-  return Math.max(0, Math.min(1, 0.7 + 0.15 * Math.min(green, 2) - 0.15 * red));
+  return Math.max(0, Math.min(1, 0.7 + 0.2 * Math.min(green, 3) - 0.10 * red));
 }
 
 // Rating = average RAT of filled slots.
@@ -330,7 +332,7 @@ function squadStats(squad) {
     else if (match === 'bad') bad++;
     sum += Number(player.RAT) || 0;
     filled++;
-    const ceiling = match === 'exact' ? 10 : match === 'alt' ? 6 : 3;
+    const ceiling = match === 'exact' ? 11 : match === 'alt' ? 6 : 3;
     const links = squadLinkCounts(squad, i);
     chemSum += ceiling * squadLinkAchievement(links.green, links.yellow, links.red);
   });
@@ -384,10 +386,13 @@ function squadInit() {
     });
   }
 
-  const onlyFit = document.getElementById('picker-only-fit');
-  if (onlyFit) {
-    onlyFit.addEventListener('change', () => {
-      pickerState.onlyFit = onlyFit.checked;
+  const fitLevel = document.getElementById('picker-fit-level');
+  const fitValue = document.getElementById('picker-fit-value');
+  if (fitLevel) {
+    fitLevel.addEventListener('input', () => {
+      const v = parseInt(fitLevel.value, 10) || 1;
+      pickerState.fitLevel = v;
+      if (fitValue) fitValue.textContent = pickerFitLabels[v - 1] || '';
       pickerState.shown = PICKER_PAGE;
       renderPicker();
     });
@@ -904,13 +909,17 @@ function pickerFillSelect(dim, filters) {
 function pickerApplyState() {
   const search = document.getElementById('picker-search');
   if (search) search.value = pickerState.query;
-  const onlyFit = document.getElementById('picker-only-fit');
-  if (onlyFit) onlyFit.checked = pickerState.onlyFit;
+  const fitLevel = document.getElementById('picker-fit-level');
+  const fitValue = document.getElementById('picker-fit-value');
+  if (fitLevel) {
+    fitLevel.value = pickerState.fitLevel;
+    if (fitValue) fitValue.textContent = pickerFitLabels[pickerState.fitLevel - 1] || '';
+  }
 }
 
 function pickerResetFilters() {
   pickerState.query = '';
-  pickerState.onlyFit = true;
+  pickerState.fitLevel = 1;
   pickerState.position = '';
   pickerState.league = '';
   pickerState.club = '';
@@ -931,7 +940,7 @@ function pickerActiveId() {
 function pickerSnapshot() {
   return {
     query: pickerState.query,
-    onlyFit: pickerState.onlyFit,
+    fitLevel: pickerState.fitLevel,
     league: pickerState.league,
     club: pickerState.club,
     nation: pickerState.nation
@@ -940,7 +949,7 @@ function pickerSnapshot() {
 
 function pickerApplySnapshot(snap) {
   pickerState.query = snap ? snap.query : '';
-  pickerState.onlyFit = snap ? snap.onlyFit : true;
+  pickerState.fitLevel = snap ? snap.fitLevel : 1;
   pickerState.league = snap ? snap.league : '';
   pickerState.club = snap ? snap.club : '';
   pickerState.nation = snap ? snap.nation : '';
@@ -1035,7 +1044,8 @@ function pickerPool(slot, squad) {
     if (pickerState.league && String(card.league_id) !== pickerState.league) return;
     if (pickerState.club && String(card.club_id) !== pickerState.club) return;
     if (pickerState.nation && String(card.nation_id) !== pickerState.nation) return;
-    if (pickerState.onlyFit && !fitsSlot(slot.pos, card.POS)) return;
+    if (pickerState.fitLevel === 1 && slotMatch(slot.pos, card.POS) !== 'exact') return;
+    if (pickerState.fitLevel === 2 && !fitsSlot(slot.pos, card.POS)) return;
 
     entries.push({ card, cardId, inSquad: !!inSquad[cardId] });
   });
@@ -1050,7 +1060,11 @@ function pickerTile(entry, slot, squad) {
   tile.className = 'picker-tile';
 
   const notes = [];
-  const fits = fitsSlot(slot.pos, entry.card.POS);
+  const match = slotMatch(slot.pos, entry.card.POS);
+  let fits;
+  if (pickerState.fitLevel === 1) fits = match === 'exact';
+  else if (pickerState.fitLevel === 2) fits = match !== 'bad';
+  else fits = true;
   if (!fits) {
     tile.classList.add('off-position');
     notes.push(`${entry.card.POS} does not fit ${slot.pos}`);

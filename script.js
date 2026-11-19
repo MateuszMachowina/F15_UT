@@ -25,20 +25,26 @@ fetch('players.json')
 function updateHud() {
   const coinsEl = document.getElementById('hud-coins');
   const clubEl = document.getElementById('hud-club');
+  const packsEl = document.getElementById('hud-packs');
   const warnEl = document.getElementById('hud-warn');
   if (!coinsEl || !clubEl || typeof Save === 'undefined') return;
 
   const size = Save.clubSize();
+  const stats = Save.get().stats || {};
   coinsEl.textContent = Save.getCoins().toLocaleString('en-US');
   clubEl.textContent = players.length
     ? `${size.unique} / ${players.length}`
     : `${size.unique}`;
   clubEl.title = `${size.total} cards total (including duplicates)`;
+  if (packsEl) packsEl.textContent = stats.packsOpened || 0;
   if (warnEl) warnEl.style.display = Save.isAvailable() ? 'none' : 'block';
 }
 
 if (typeof Save !== 'undefined') Save.onChange(updateHud);
-document.addEventListener('DOMContentLoaded', updateHud);
+document.addEventListener('DOMContentLoaded', () => {
+  updateHud();
+  showView('menu');
+});
 
 // --- views: menu (pack), pack (opened pack), club (TECH-04) ---
 function showView(view) {
@@ -74,10 +80,12 @@ function showView(view) {
     pickerRemember();
   }
 
-  // Reset-save button lives only on the Packs tab (menu view).
+  // Packs-opened counter: shown on menu and while a pack is open
+  const packsItem = document.getElementById('hud-packs-item');
+  if (packsItem) packsItem.style.display = (view === 'menu' || view === 'pack') ? 'flex' : 'none';
   const resetBtn = document.getElementById('reset-save');
-  if (resetBtn) resetBtn.style.display = view === 'menu' ? 'inline-block' : 'none';
-  if (view !== 'menu' && typeof disarmReset === 'function') disarmReset();
+  if (resetBtn) resetBtn.style.display = (view === 'menu' || view === 'pack') ? 'inline-block' : 'none';
+  if (view !== 'menu' && view !== 'pack' && typeof disarmReset === 'function') disarmReset();
 }
 
 // function to pick a single player with rating-based weighting and rarity adjustment

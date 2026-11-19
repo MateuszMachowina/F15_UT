@@ -390,6 +390,8 @@ body {
   font-size: 13px;
 }
 
+#hud-packs-item { display: none; }
+
 #reset-save {
   background: rgba(0, 0, 0, 0.55);
   color: #fff;
@@ -1161,6 +1163,26 @@ body {
 }
 
 .picker-check input { accent-color: #ffd700; }
+
+.picker-fit {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(3px * var(--picker-scale));
+  font-size: calc(11px * var(--picker-scale));
+  color: #b8c0cc;
+  cursor: pointer;
+}
+
+#picker-fit-level {
+  width: 100px;
+  height: 6px;
+  cursor: pointer;
+  accent-color: #ffd700;
+  touch-action: none;
+}
+
+#picker-fit-value { color: #fff; font-weight: bold; }
 
 #picker-clear {
   padding: calc(6px * var(--picker-scale)) calc(10px * var(--picker-scale));
